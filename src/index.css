@@ -1,0 +1,17 @@
+@import "tailwindcss";
+/* Tailwind's default light theme */
+body.light {
+  background-color: #f9fafb;
+  /* light bg */
+  color: #111827;
+  /* light text */
+}
+
+body.dark {
+  background-color: #111827;
+  /* dark bg */
+  color: #f9fafb;
+  /* dark text */
+}
+
+/* Optionally customize more for dark/light mode transitions */

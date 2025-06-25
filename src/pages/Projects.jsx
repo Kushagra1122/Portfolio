@@ -1,0 +1,166 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { useTheme } from "../context/Theme";
+
+const Projects = () => {
+  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [theme] = useTheme();
+  const isLight = theme === "light";
+
+  const projects = [
+    {
+      title: "StreamSync Platform",
+      description:
+        "A live streaming platform with real-time chat, donations, and viewer analytics. Implemented WebRTC for low-latency streaming and built a custom dashboard for streamers.",
+      technologies: [
+        "React",
+        "Node.js",
+        "WebRTC",
+        "MongoDB",
+        "Socket.io",
+        "Tailwind CSS",
+      ],
+      githubLink: "https://github.com/Kushagra1122/streamsync",
+      demoLink: "#",
+    },
+    {
+      title: "Qlueless App",
+      description:
+        "Community-based Q&A mobile app with real-time notifications and chat functionality. Built the complete chat system and notification service from scratch.",
+      technologies: [
+        "React Native",
+        "Firebase",
+        "Node.js",
+        "Socket.io",
+        "Redux Toolkit",
+      ],
+      githubLink: "https://github.com/Kushagra1122/qlueless",
+      demoLink: "#",
+    },
+    {
+      title: "FileForge",
+      description:
+        "Cloud storage solution with file management, sharing, and collaboration features. Implemented secure file uploads/downloads and real-time updates.",
+      technologies: ["React", "Express.js", "AWS S3", "JWT", "Tailwind CSS"],
+      githubLink: "https://github.com/Kushagra1122/fileforge",
+      demoLink: "#",
+    },
+    {
+      title: "YT Summary Chrome Extension",
+      description:
+        "Browser extension that provides AI-generated summaries of YouTube videos. Extracts and processes video transcripts using NLP techniques.",
+      technologies: ["Chrome API", "React", "Node.js", "NLP", "Firebase"],
+      githubLink: "https://github.com/Kushagra1122/yt-summary",
+      demoLink: "#",
+    },
+  ];
+
+  return (
+    <section
+      id="projects"
+      className={`py-28 transition-colors duration-300 ${
+        isLight ? "bg-gray-50 text-gray-900" : "bg-gray-900 text-white"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+          ref={ref}
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            My <span className="text-blue-600">Projects</span>
+          </h2>
+          <p
+            className={`text-lg max-w-2xl mx-auto ${
+              isLight ? "text-gray-600" : "text-gray-400"
+            }`}
+          >
+            A selection of projects showcasing my skills and approach to
+            problem-solving.
+          </p>
+        </motion.div>
+
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {projects.map((project, idx) => (
+            <motion.div
+              key={project.title}
+              className={`rounded-xl overflow-hidden border ${
+                isLight
+                  ? "bg-white border-gray-200 hover:shadow-lg"
+                  : "bg-gray-800 border-gray-700 hover:shadow-xl"
+              } transition-all duration-300`}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="p-6 h-full flex flex-col">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+                  <p
+                    className={`mb-5 ${
+                      isLight ? "text-gray-600" : "text-gray-300"
+                    }`}
+                  >
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className={`text-xs px-3 py-1 rounded-full ${
+                          isLight
+                            ? "bg-blue-100 text-blue-700"
+                            : "bg-blue-900/50 text-blue-400"
+                        }`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Links */}
+                <div className="flex space-x-4">
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
+                      isLight
+                        ? "bg-gray-100 hover:bg-gray-200 text-gray-800"
+                        : "bg-gray-700 hover:bg-gray-600 text-gray-200"
+                    }`}
+                  >
+                    <FaGithub />
+                    <span>View Code</span>
+                  </a>
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white"
+                  >
+                    <FaExternalLinkAlt />
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
