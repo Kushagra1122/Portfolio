@@ -12,7 +12,6 @@ const Sidebar = () => {
   const [theme] = useTheme();
   const isLight = theme === "light";
 
-  // Color definitions for consistent usage
   const colors = {
     light: {
       primary: "text-blue-700",
@@ -41,16 +40,20 @@ const Sidebar = () => {
   const themeColors = isLight ? colors.light : colors.dark;
 
   return (
-    <div className={`${theme} flex transition-colors duration-300 min-h-screen`}>
-      {/* Sidebar */}
+    <div
+      className={`${theme} flex flex-col min-h-screen transition-colors duration-300`}
+    >
+      {/* Sidebar (Desktop only) */}
       <aside
-        className={`fixed top-0 left-0 h-screen w-64 z-50 shadow-lg transform transition-all duration-300 ease-in-out
+        className={`hidden md:flex fixed top-0 left-0 h-screen w-64 z-50 shadow-lg transform transition-all duration-300 ease-in-out
           ${themeColors.background} ${themeColors.border} border-r`}
       >
         <div className="flex flex-col h-full px-6 py-8 space-y-12 overflow-y-auto">
           {/* Logo / Name */}
-          <div className={`text-center font-bold text-3xl tracking-widest p-3 rounded-lg
-            ${themeColors.primaryBgLight} ${themeColors.primary} shadow-sm`}>
+          <div
+            className={`text-center font-bold text-3xl tracking-widest p-3 rounded-lg
+            ${themeColors.primaryBgLight} ${themeColors.primary} shadow-sm`}
+          >
             KT
             <div className={`text-xs font-normal mt-1 ${themeColors.muted}`}>
               Portfolio
@@ -59,17 +62,14 @@ const Sidebar = () => {
 
           {/* Navigation Menu */}
           <Menus />
-          
-          {/* Footer */}
-          <div className={`mt-auto pt-4 border-t ${themeColors.border} border-opacity-20 text-sm text-center ${themeColors.muted}`}>
-            © {new Date().getFullYear()} All rights reserved
-          </div>
         </div>
       </aside>
 
       {/* Main Content */}
-      <main className={`ml-64 w-[calc(100%-16rem)] ${themeColors.background}`}>
-        <div className="max-w-6xl mx-auto px-6 py-8">
+      <main
+        className={`md:ml-64 w-full md:w-[calc(100%-16rem)] ${themeColors.background}`}
+      >
+        <div className="max-w-6xl mx-auto px-4 md:px-6 py-20 md:py-8">
           <Home />
           <About />
           <Education />

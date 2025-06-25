@@ -1,11 +1,9 @@
 import "./App.css";
-import MobileNav from "./components/Mobile";
 import Sidebar from "./components/Sidebar";
 import ScrollToTop from "react-scroll-to-top";
 function App() {
   return (
     <>
-      <MobileNav />
       <Sidebar />
       <ScrollToTop
         smooth
