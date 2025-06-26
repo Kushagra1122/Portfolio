@@ -9,46 +9,17 @@ import {
   BsClock,
 } from "react-icons/bs";
 import { useTheme } from "../context/Theme";
+import { getThemeColors } from "../utils/colors";
 
 const Contact = () => {
   const [theme] = useTheme();
-  const isLight = theme === "light";
-
-  const colors = {
-    light: {
-      bg: "bg-gradient-to-b from-white to-gray-50",
-      text: "text-gray-900",
-      secondaryText: "text-gray-600",
-      accent: "text-blue-600",
-      cardBg: "bg-white/90 backdrop-blur-sm",
-      cardBorder: "border-gray-200",
-      iconBg: "bg-blue-100 text-blue-600",
-      button:
-        "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white",
-      gradientBorder: "from-blue-400 to-purple-500",
-    },
-    dark: {
-      bg: "bg-gradient-to-b from-gray-900 to-gray-800",
-      text: "text-white",
-      secondaryText: "text-gray-400",
-      accent: "text-blue-400",
-      cardBg: "bg-gray-800/90 backdrop-blur-sm",
-      cardBorder: "border-gray-700",
-      iconBg: "bg-blue-900/50 text-blue-400",
-      button:
-        "bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-600 hover:to-blue-700 text-white",
-      gradientBorder: "from-blue-600 to-purple-700",
-    },
-  };
-
-  const themeColors = colors[theme];
+  const themeColors = getThemeColors(theme);
 
   return (
     <section
-      className={`min-h-screen py-20 px-4 sm:px-6 md:px-10 transition-colors duration-500 ${themeColors.bg}`}
+      className={`min-h-screen py-20 px-4 sm:px-6 md:px-10 transition-colors duration-500 ${themeColors.background}`}
     >
       <div className="max-w-6xl mx-auto">
-        {/* Heading */}
         <motion.div
           className="text-center mb-14"
           initial={{ opacity: 0 }}
@@ -64,14 +35,13 @@ const Contact = () => {
             </span>
           </h2>
           <p
-            className={`text-base md:text-lg max-w-2xl mx-auto ${themeColors.secondaryText}`}
+            className={`text-base md:text-lg max-w-2xl mx-auto ${themeColors.muted}`}
           >
             I'm always open to new opportunities, collaborations, or just a
             friendly chat.
           </p>
         </motion.div>
 
-        {/* Card */}
         <motion.div
           className={`rounded-2xl p-6 sm:p-10 shadow-xl ${themeColors.cardBg} ${themeColors.cardBorder} border`}
           initial={{ opacity: 0, y: 20 }}
@@ -79,7 +49,6 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="flex flex-col md:flex-row gap-10">
-            {/* Left Column: Info */}
             <div className="space-y-8 flex-1">
               {[
                 {
@@ -117,7 +86,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4
-                      className={`text-xs font-semibold uppercase tracking-widest mb-1 ${themeColors.secondaryText}`}
+                      className={`text-xs font-semibold uppercase tracking-widest mb-1 ${themeColors.muted}`}
                     >
                       {label}
                     </h4>
@@ -127,10 +96,9 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Right Column: Socials */}
             <div className="flex-1 flex flex-col items-center md:items-start justify-center">
               <h4
-                className={`text-sm font-semibold uppercase tracking-widest mb-6 ${themeColors.secondaryText}`}
+                className={`text-sm font-semibold uppercase tracking-widest mb-6 ${themeColors.muted}`}
               >
                 Connect With Me
               </h4>
@@ -140,30 +108,25 @@ const Contact = () => {
                     icon: BsGithub,
                     url: "https://github.com/Kushagra1122",
                     label: "GitHub",
-                    color: isLight ? "hover:text-black" : "hover:text-white",
                   },
                   {
                     icon: BsLinkedin,
                     url: "https://linkedin.com/in/kushagra-tiwari-aa2354283",
                     label: "LinkedIn",
-                    color: "hover:text-blue-600",
                   },
                   {
                     icon: BsInstagram,
-                    url: "https://instagram.com/_kushagra__23",
+                    url: "https://instagram.com/kushagra_._23_",
                     label: "Instagram",
-                    color: "hover:text-pink-600",
                   },
-                ].map(({ icon: Icon, url, label, color }, idx) => (
+                ].map(({ icon: Icon, url, label }, idx) => (
                   <motion.a
                     key={idx}
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className={`text-3xl transition-colors ${
-                      isLight ? "text-gray-600" : "text-gray-400"
-                    } ${color}`}
+                    className={`text-3xl transition-colors ${themeColors.socialIcon}`}
                     whileHover={{ y: -5, scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >

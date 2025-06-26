@@ -9,44 +9,15 @@ import {
   BsInstagram,
 } from "react-icons/bs";
 import { useTheme } from "../context/Theme";
+import { getThemeColors } from "../utils/colors";
 
 const Home = () => {
   const [theme, setTheme] = useTheme();
-  const isLight = theme === "light";
+  const themeColors = getThemeColors(theme);
 
   const handleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
-
-  // Color definitions
-  const colors = {
-    light: {
-      bg: "bg-gradient-to-br from-blue-50/30 via-white to-blue-50/30",
-      text: "text-gray-900",
-      secondaryText: "text-gray-700",
-      mutedText: "text-gray-600",
-      accent: "text-blue-600",
-      themeBtnBg: "bg-white/80 backdrop-blur-sm",
-      themeBtnIcon: "text-gray-700",
-      themeBtnBorder: "border-gray-200",
-      socialIcon: "text-gray-600 hover:text-blue-600",
-      gradientBorder: "from-blue-400 to-purple-500",
-    },
-    dark: {
-      bg: "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900",
-      text: "text-white",
-      secondaryText: "text-gray-300",
-      mutedText: "text-gray-400",
-      accent: "text-blue-400",
-      themeBtnBg: "bg-gray-800/80 backdrop-blur-sm",
-      themeBtnIcon: "text-yellow-300",
-      themeBtnBorder: "border-gray-700",
-      socialIcon: "text-gray-400 hover:text-blue-400",
-      gradientBorder: "from-blue-600 to-purple-700",
-    },
-  };
-
-  const themeColors = colors[theme];
 
   const socialLinks = [
     { icon: BsGithub, url: "https://github.com/Kushagra1122", label: "GitHub" },
@@ -57,7 +28,7 @@ const Home = () => {
     },
     {
       icon: BsInstagram,
-      url: "https://instagram.com/_kushagra__23",
+      url: "https://instagram.com/kushagra_._23_",
       label: "Instagram",
     },
   ];
@@ -73,12 +44,11 @@ const Home = () => {
   return (
     <section
       id="home"
-      className={`relative min-h-[80vh] flex flex-col justify-center items-center px-6 transition-colors duration-500 ${themeColors.bg}`}
+      className={`relative min-h-[80vh] flex flex-col justify-center items-center px-6 transition-colors duration-500 ${themeColors.background}`}
     >
-      {/* Theme Toggle Button */}
       <motion.button
         onClick={handleTheme}
-        className={`fixed top-6 right-6 p-3 rounded-full border ${themeColors.themeBtnBorder} ${themeColors.themeBtnBg} shadow-lg z-50`}
+        className={`fixed top-6 right-6 p-3 rounded-full border ${themeColors.border} ${themeColors.cardBg} shadow-lg z-50`}
         aria-label="Toggle Theme"
         whileHover={{ scale: 1.1, rotate: 15 }}
         whileTap={{ scale: 0.9 }}
@@ -86,16 +56,13 @@ const Home = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        {isLight ? (
-          <BsFillMoonStarsFill
-            className={`text-xl ${themeColors.themeBtnIcon}`}
-          />
+        {theme === "light" ? (
+          <BsFillMoonStarsFill className={`text-xl ${themeColors.accent}`} />
         ) : (
-          <BsFillSunFill className={`text-xl ${themeColors.themeBtnIcon}`} />
+          <BsFillSunFill className={`text-xl ${themeColors.accent}`} />
         )}
       </motion.button>
 
-      {/* Hero Content */}
       <div className="max-w-5xl mx-auto text-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -117,7 +84,7 @@ const Home = () => {
           </motion.h1>
 
           <motion.h2
-            className={`text-xl sm:text-2xl md:text-3xl font-medium mb-6 min-h-[3rem] ${themeColors.secondaryText}`}
+            className={`text-xl sm:text-2xl md:text-3xl font-medium mb-6 min-h-[3rem] ${themeColors.secondary}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -130,13 +97,13 @@ const Home = () => {
                 delay: 50,
                 deleteSpeed: 30,
                 cursor: "_",
-                cursorClassName: themeColors.mutedText,
+                cursorClassName: themeColors.muted,
               }}
             />
           </motion.h2>
 
           <motion.p
-            className={`max-w-2xl mx-auto text-lg md:text-xl leading-relaxed ${themeColors.mutedText}`}
+            className={`max-w-2xl mx-auto text-lg md:text-xl leading-relaxed ${themeColors.muted}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -147,7 +114,6 @@ const Home = () => {
         </motion.div>
       </div>
 
-      {/* Social Links */}
       <motion.div
         className="mt-12 flex space-x-6"
         initial={{ opacity: 0 }}

@@ -8,37 +8,11 @@ import Contact from "../pages/Contact";
 import Menus from "./Menus";
 import { Element } from "react-scroll";
 import { useTheme } from "../context/Theme";
+import { getThemeColors } from "../utils/colors";
 
 const Sidebar = () => {
   const [theme] = useTheme();
-  const isLight = theme === "light";
-
-  const colors = {
-    light: {
-      primary: "text-blue-700",
-      primaryBg: "bg-blue-600",
-      primaryBgLight: "bg-blue-50",
-      secondary: "text-gray-700",
-      secondaryBg: "bg-gray-100",
-      background: "bg-white",
-      border: "border-gray-200",
-      text: "text-gray-800",
-      muted: "text-gray-500",
-    },
-    dark: {
-      primary: "text-blue-400",
-      primaryBg: "bg-blue-700",
-      primaryBgLight: "bg-blue-900 bg-opacity-40",
-      secondary: "text-gray-300",
-      secondaryBg: "bg-gray-800",
-      background: "bg-gray-900",
-      border: "border-gray-700",
-      text: "text-gray-100",
-      muted: "text-gray-400",
-    },
-  };
-
-  const themeColors = isLight ? colors.light : colors.dark;
+  const themeColors = getThemeColors(theme);
 
   return (
     <div
