@@ -1,7 +1,7 @@
 import React from "react";
 import { List } from "../utils/list";
 import { JackInTheBox } from "react-awesome-reveal";
-import { useTheme } from "../context/Theme"; // Theme hook
+import { useTheme } from "../context/Theme";
 
 const TechStack = () => {
   const [theme] = useTheme();
@@ -14,10 +14,10 @@ const TechStack = () => {
         isLight ? "bg-gray-50 text-gray-900" : "bg-gray-900 text-white"
       }`}
     >
-      <div className="container mx-auto px-6 max-w-6xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             My <span className="text-blue-600">Tech Stack</span>
           </h2>
           <p
@@ -31,7 +31,7 @@ const TechStack = () => {
         </div>
 
         {/* Tech Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
           {List.map((tech) => (
             <JackInTheBox key={tech._id} triggerOnce>
               <div
@@ -39,7 +39,7 @@ const TechStack = () => {
                   isLight ? "bg-white" : "bg-gray-800"
                 }`}
               >
-                <div className="p-6 flex flex-col items-center text-center">
+                <div className="p-4 sm:p-6 flex flex-col items-center text-center">
                   <tech.icon
                     size={48}
                     className="text-blue-600 dark:text-blue-400 mb-4"

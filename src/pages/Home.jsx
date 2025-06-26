@@ -21,26 +21,28 @@ const Home = () => {
   // Color definitions
   const colors = {
     light: {
-      bg: "bg-gradient-to-br from-gray-50 via-gray-50 to-gray-100",
+      bg: "bg-gradient-to-br from-blue-50/30 via-white to-blue-50/30",
       text: "text-gray-900",
       secondaryText: "text-gray-700",
       mutedText: "text-gray-600",
       accent: "text-blue-600",
-      themeBtnBg: "bg-white",
+      themeBtnBg: "bg-white/80 backdrop-blur-sm",
       themeBtnIcon: "text-gray-700",
       themeBtnBorder: "border-gray-200",
       socialIcon: "text-gray-600 hover:text-blue-600",
+      gradientBorder: "from-blue-400 to-purple-500",
     },
     dark: {
-      bg: "bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800",
+      bg: "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900",
       text: "text-white",
       secondaryText: "text-gray-300",
       mutedText: "text-gray-400",
       accent: "text-blue-400",
-      themeBtnBg: "bg-gray-800",
+      themeBtnBg: "bg-gray-800/80 backdrop-blur-sm",
       themeBtnIcon: "text-yellow-300",
       themeBtnBorder: "border-gray-700",
       socialIcon: "text-gray-400 hover:text-blue-400",
+      gradientBorder: "from-blue-600 to-purple-700",
     },
   };
 
@@ -71,12 +73,12 @@ const Home = () => {
   return (
     <section
       id="home"
-      className={`relative min-h-screen flex flex-col justify-center items-center px-6 transition-colors duration-300 ${themeColors.bg}`}
+      className={`relative min-h-[80vh] flex flex-col justify-center items-center px-6 transition-colors duration-500 ${themeColors.bg}`}
     >
-      {/* Theme Toggle Button - More Elegant */}
+      {/* Theme Toggle Button */}
       <motion.button
         onClick={handleTheme}
-        className={`fixed top-8 right-8 p-3 rounded-full border ${themeColors.themeBtnBorder} ${themeColors.themeBtnBg} shadow-sm z-50`}
+        className={`fixed top-6 right-6 p-3 rounded-full border ${themeColors.themeBtnBorder} ${themeColors.themeBtnBg} shadow-lg z-50`}
         aria-label="Toggle Theme"
         whileHover={{ scale: 1.1, rotate: 15 }}
         whileTap={{ scale: 0.9 }}
@@ -94,23 +96,28 @@ const Home = () => {
       </motion.button>
 
       {/* Hero Content */}
-      <div className="max-w-4xl mx-auto text-center px-4">
+      <div className="max-w-5xl mx-auto text-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight ${themeColors.text}`}
+            className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight ${themeColors.text}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            Hi, I'm <span className={themeColors.accent}>Kushagra Tiwari</span>
+            Hi, I'm{" "}
+            <span
+              className={`${themeColors.accent} font-extrabold bg-clip-text bg-gradient-to-r ${themeColors.gradientBorder}`}
+            >
+              Kushagra Tiwari
+            </span>
           </motion.h1>
 
           <motion.h2
-            className={`text-xl sm:text-2xl md:text-3xl font-medium mb-8 min-h-[3rem] ${themeColors.secondaryText}`}
+            className={`text-xl sm:text-2xl md:text-3xl font-medium mb-6 min-h-[3rem] ${themeColors.secondaryText}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -129,7 +136,7 @@ const Home = () => {
           </motion.h2>
 
           <motion.p
-            className={`max-w-2xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed ${themeColors.mutedText}`}
+            className={`max-w-2xl mx-auto text-lg md:text-xl leading-relaxed ${themeColors.mutedText}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -140,14 +147,27 @@ const Home = () => {
         </motion.div>
       </div>
 
-      {/* Social Links - More Subtle */}
+      {/* Social Links */}
       <motion.div
-        className="fixed bottom-8 flex space-x-6"
+        className="mt-12 flex space-x-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
       >
-        
+        {socialLinks.map((social, index) => (
+          <motion.a
+            key={index}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`text-2xl transition-all ${themeColors.socialIcon}`}
+            whileHover={{ y: -5, scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label={social.label}
+          >
+            <social.icon />
+          </motion.a>
+        ))}
       </motion.div>
     </section>
   );

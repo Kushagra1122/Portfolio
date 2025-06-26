@@ -51,9 +51,7 @@ const Education = () => {
       date: "2023 – Present",
       title: "B.Tech in Electrical & Electronics Engineering",
       subtitle: "NIT Karnataka, Surathkal",
-      details: [
-        "<strong>CGPA:</strong> 7.1/10 (Current)",
-      ],
+      details: ["<strong>CGPA:</strong> 7.1/10 (Current)"],
       icon: <MdSchool />,
       iconBg: themeColors.schoolIcon,
       textColor: "text-green-500 dark:text-green-400",
@@ -62,7 +60,7 @@ const Education = () => {
       type: "work",
       date: "Feb 2025 – Mar 2025",
       title: "Frontend Developer Intern",
-      subtitle: "Advista ",
+      subtitle: "Advista",
       details: [
         "Built responsive UIs using React.js and Redux Toolkit",
         "Collaborated with designers for pixel-perfect components",
@@ -76,7 +74,7 @@ const Education = () => {
       type: "work",
       date: "May 2025 – Jul 2025",
       title: "React Native Developer Intern",
-      subtitle: "Qlue ",
+      subtitle: "Qlue",
       details: [
         "Built mobile apps using React Native",
         "Implemented real-time chat with Socket.io & Firebase",

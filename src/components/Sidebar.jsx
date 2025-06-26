@@ -45,7 +45,7 @@ const Sidebar = () => {
     >
       {/* Sidebar (Desktop only) */}
       <aside
-        className={`hidden md:flex fixed top-0 left-0 h-screen w-64 z-50 shadow-lg transform transition-all duration-300 ease-in-out
+        className={`hidden md:flex fixed top-0 left-0 h-screen w-60 z-50 shadow-lg transform transition-all duration-300 ease-in-out
           ${themeColors.background} ${themeColors.border} border-r`}
       >
         <div className="flex flex-col h-full px-6 py-8 space-y-12 overflow-y-auto">
@@ -67,9 +67,9 @@ const Sidebar = () => {
 
       {/* Main Content */}
       <main
-        className={`md:ml-64 w-full md:w-[calc(100%-16rem)] ${themeColors.background}`}
+        className={`md:ml-60 w-full md:w-[calc(100%-16rem)] ${themeColors.background}`}
       >
-        <div className="max-w-6xl mx-auto px-4 md:px-6 py-20 md:py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-8">
           <Home />
           <About />
           <Education />
