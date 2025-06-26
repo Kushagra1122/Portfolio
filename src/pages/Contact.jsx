@@ -45,8 +45,7 @@ const Contact = () => {
 
   return (
     <section
-      id="contact"
-      className={`py-20 px-4 sm:px-6 md:px-10 transition-colors duration-500 ${themeColors.bg}`}
+      className={`min-h-screen py-20 px-4 sm:px-6 md:px-10 transition-colors duration-500 ${themeColors.bg}`}
     >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}

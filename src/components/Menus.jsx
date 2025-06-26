@@ -15,7 +15,6 @@ function Menus() {
   const [theme] = useTheme();
   const isLight = theme === "light";
 
-  // Color definitions
   const colors = {
     light: {
       text: "text-gray-700",
@@ -39,39 +38,41 @@ function Menus() {
 
   const themeColors = isLight ? colors.light : colors.dark;
 
+  const menuItems = [
+    { icon: <FcHome className="text-xl" />, name: "Home", to: "home" },
+    { icon: <FcAbout className="text-xl" />, name: "About", to: "about" },
+    {
+      icon: <FcReadingEbook className="text-xl" />,
+      name: "Education",
+      to: "education",
+    },
+    {
+      icon: <FcBiotech className="text-xl" />,
+      name: "Tech Stack",
+      to: "techstack",
+    },
+    {
+      icon: <FcVideoProjector className="text-xl" />,
+      name: "Projects",
+      to: "projects",
+    },
+    {
+      icon: <FcBusinessContact className="text-xl" />,
+      name: "Contact",
+      to: "contact",
+    },
+  ];
+
   return (
     <nav className="space-y-2">
       <Fade cascade damping={0.1} direction="up" triggerOnce>
-        {[
-          { icon: <FcHome className="text-xl" />, name: "Home", to: "home" },
-          { icon: <FcAbout className="text-xl" />, name: "About", to: "about" },
-          {
-            icon: <FcReadingEbook className="text-xl" />,
-            name: "Education",
-            to: "education",
-          },
-          {
-            icon: <FcBiotech className="text-xl" />,
-            name: "Tech Stack",
-            to: "techstack",
-          },
-          {
-            icon: <FcVideoProjector className="text-xl" />,
-            name: "Projects",
-            to: "projects",
-          },
-          {
-            icon: <FcBusinessContact className="text-xl" />,
-            name: "Contact",
-            to: "contact",
-          },
-        ].map((item) => (
+        {menuItems.map((item) => (
           <Link
             key={item.to}
             to={item.to}
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={-10} // Updated offset
             duration={500}
             className={`flex items-center p-3 rounded-lg transition-all cursor-pointer
               ${themeColors.text} ${themeColors.hoverBg} hover:${themeColors.hoverText}
