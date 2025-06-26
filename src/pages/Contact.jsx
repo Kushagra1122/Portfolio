@@ -46,14 +46,15 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className={`py-24 px-6 transition-colors duration-500 ${themeColors.bg}`}
+      className={`py-20 px-4 sm:px-6 md:px-10 transition-colors duration-500 ${themeColors.bg}`}
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
+        {/* Heading */}
         <motion.div
+          className="text-center mb-14"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Let's{" "}
@@ -64,133 +65,110 @@ const Contact = () => {
             </span>
           </h2>
           <p
-            className={`text-lg max-w-2xl mx-auto ${themeColors.secondaryText}`}
+            className={`text-base md:text-lg max-w-2xl mx-auto ${themeColors.secondaryText}`}
           >
-            I'm always open to discussing new projects, creative ideas, or
-            opportunities to collaborate.
+            I'm always open to new opportunities, collaborations, or just a
+            friendly chat.
           </p>
         </motion.div>
 
+        {/* Card */}
         <motion.div
-          className={`rounded-2xl p-8 md:p-12 shadow-xl ${themeColors.cardBg} ${themeColors.cardBorder} border`}
+          className={`rounded-2xl p-6 sm:p-10 shadow-xl ${themeColors.cardBg} ${themeColors.cardBorder} border`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="grid md:grid-cols-2 gap-10">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              {/* Email */}
-              <motion.div
-                className="flex items-start space-x-4"
-                whileHover={{ x: 5 }}
-              >
-                <div
-                  className={`p-3 rounded-lg ${themeColors.iconBg} shadow-sm`}
+          <div className="flex flex-col md:flex-row gap-10">
+            {/* Left Column: Info */}
+            <div className="space-y-8 flex-1">
+              {[
+                {
+                  Icon: BsEnvelope,
+                  label: "Email",
+                  value: (
+                    <a
+                      href="mailto:kushagratiwari24@gmail.com"
+                      className={`text-lg font-medium ${themeColors.accent} hover:underline`}
+                    >
+                      kushagratiwari24@gmail.com
+                    </a>
+                  ),
+                },
+                {
+                  Icon: BsGeoAlt,
+                  label: "Location",
+                  value: "Surathkal, Karnataka, India",
+                },
+                {
+                  Icon: BsClock,
+                  label: "Availability",
+                  value: "Open to freelance and full-time opportunities",
+                },
+              ].map(({ Icon, label, value }, idx) => (
+                <motion.div
+                  key={idx}
+                  className="flex items-start space-x-4"
+                  whileHover={{ x: 5 }}
                 >
-                  <BsEnvelope size={20} />
-                </div>
-                <div>
-                  <h4
-                    className={`text-sm font-medium uppercase tracking-widest mb-1 ${themeColors.secondaryText}`}
+                  <div
+                    className={`p-3 rounded-lg ${themeColors.iconBg} shadow-sm`}
                   >
-                    Email
-                  </h4>
-                  <a
-                    href="mailto:kushagra.tiwari@example.com"
-                    className={`text-lg font-medium ${themeColors.accent} hover:underline`}
-                  >
-                    kushagratiwari24@gmail.com
-                  </a>
-                </div>
-              </motion.div>
-
-              {/* Location */}
-              <motion.div
-                className="flex items-start space-x-4"
-                whileHover={{ x: 5 }}
-              >
-                <div
-                  className={`p-3 rounded-lg ${themeColors.iconBg} shadow-sm`}
-                >
-                  <BsGeoAlt size={20} />
-                </div>
-                <div>
-                  <h4
-                    className={`text-sm font-medium uppercase tracking-widest mb-1 ${themeColors.secondaryText}`}
-                  >
-                    Location
-                  </h4>
-                  <p className={`text-lg ${themeColors.text}`}>
-                    Surathkal, Karnataka, India
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Availability */}
-              <motion.div
-                className="flex items-start space-x-4"
-                whileHover={{ x: 5 }}
-              >
-                <div
-                  className={`p-3 rounded-lg ${themeColors.iconBg} shadow-sm`}
-                >
-                  <BsClock size={20} />
-                </div>
-                <div>
-                  <h4
-                    className={`text-sm font-medium uppercase tracking-widest mb-1 ${themeColors.secondaryText}`}
-                  >
-                    Availability
-                  </h4>
-                  <p className={`text-lg ${themeColors.text}`}>
-                    Open to freelance and full-time opportunities
-                  </p>
-                </div>
-              </motion.div>
+                    <Icon size={20} />
+                  </div>
+                  <div>
+                    <h4
+                      className={`text-xs font-semibold uppercase tracking-widest mb-1 ${themeColors.secondaryText}`}
+                    >
+                      {label}
+                    </h4>
+                    <p className={`text-md ${themeColors.text}`}>{value}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
 
-            {/* Social Links */}
-            <div className="flex flex-col justify-center">
+            {/* Right Column: Socials */}
+            <div className="flex-1 flex flex-col items-center md:items-start justify-center">
               <h4
-                className={`text-sm font-medium uppercase tracking-widest mb-6 ${themeColors.secondaryText}`}
+                className={`text-sm font-semibold uppercase tracking-widest mb-6 ${themeColors.secondaryText}`}
               >
                 Connect With Me
               </h4>
-              <div className="flex space-x-6">
+              <div className="flex gap-6 flex-wrap justify-center md:justify-start">
                 {[
                   {
                     icon: BsGithub,
                     url: "https://github.com/Kushagra1122",
-                    color: isLight ? "hover:text-gray-900" : "hover:text-white",
                     label: "GitHub",
+                    color: isLight ? "hover:text-black" : "hover:text-white",
                   },
                   {
                     icon: BsLinkedin,
                     url: "https://linkedin.com/in/kushagra-tiwari-aa2354283",
-                    color: "hover:text-blue-600",
                     label: "LinkedIn",
+                    color: "hover:text-blue-600",
                   },
                   {
                     icon: BsInstagram,
                     url: "https://instagram.com/_kushagra__23",
-                    color: "hover:text-pink-600",
                     label: "Instagram",
+                    color: "hover:text-pink-600",
                   },
-                ].map((social, index) => (
+                ].map(({ icon: Icon, url, label, color }, idx) => (
                   <motion.a
-                    key={index}
-                    href={social.url}
+                    key={idx}
+                    href={url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={label}
                     className={`text-3xl transition-colors ${
                       isLight ? "text-gray-600" : "text-gray-400"
-                    } ${social.color}`}
+                    } ${color}`}
                     whileHover={{ y: -5, scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    aria-label={social.label}
                   >
-                    <social.icon />
+                    <Icon />
                   </motion.a>
                 ))}
               </div>
