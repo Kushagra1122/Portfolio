@@ -17,16 +17,16 @@ const Contact = () => {
 
   return (
     <section
-      className={`min-h-screen py-20 px-4 sm:px-6 md:px-10 transition-colors duration-500 ${themeColors.background}`}
+      className={`min-h-screen py-12 md:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${themeColors.background}`}
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
-          className="text-center mb-14"
+          className="text-center mb-10 md:mb-14"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
             Let's{" "}
             <span
               className={`${themeColors.accent} font-extrabold bg-clip-text bg-gradient-to-r ${themeColors.gradientBorder}`}
@@ -35,7 +35,7 @@ const Contact = () => {
             </span>
           </h2>
           <p
-            className={`text-base md:text-lg max-w-2xl mx-auto ${themeColors.muted}`}
+            className={`text-sm sm:text-base md:text-lg max-w-2xl mx-auto ${themeColors.muted} px-2 sm:px-0`}
           >
             I'm always open to new opportunities, collaborations, or just a
             friendly chat.
@@ -43,13 +43,13 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className={`rounded-2xl p-6 sm:p-10 shadow-xl ${themeColors.cardBg} ${themeColors.cardBorder} border`}
+          className={`rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-lg md:shadow-xl ${themeColors.cardBg} ${themeColors.cardBorder} border`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="flex flex-col md:flex-row gap-10">
-            <div className="space-y-8 flex-1">
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-10">
+            <div className="space-y-6 md:space-y-8 flex-1">
               {[
                 {
                   Icon: BsEnvelope,
@@ -57,7 +57,7 @@ const Contact = () => {
                   value: (
                     <a
                       href="mailto:kushagratiwari24@gmail.com"
-                      className={`text-lg font-medium ${themeColors.accent} hover:underline`}
+                      className={`text-base sm:text-lg font-medium ${themeColors.accent} hover:underline break-all`}
                     >
                       kushagratiwari24@gmail.com
                     </a>
@@ -76,13 +76,13 @@ const Contact = () => {
               ].map(({ Icon, label, value }, idx) => (
                 <motion.div
                   key={idx}
-                  className="flex items-start space-x-4"
+                  className="flex items-start space-x-3 sm:space-x-4"
                   whileHover={{ x: 5 }}
                 >
                   <div
-                    className={`p-3 rounded-lg ${themeColors.iconBg} shadow-sm`}
+                    className={`p-2 sm:p-3 rounded-lg ${themeColors.iconBg} shadow-sm`}
                   >
-                    <Icon size={20} />
+                    <Icon className="text-sm sm:text-base" />
                   </div>
                   <div>
                     <h4
@@ -90,19 +90,21 @@ const Contact = () => {
                     >
                       {label}
                     </h4>
-                    <p className={`text-md ${themeColors.text}`}>{value}</p>
+                    <p className={`text-sm sm:text-md ${themeColors.text}`}>
+                      {value}
+                    </p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            <div className="flex-1 flex flex-col items-center md:items-start justify-center">
+            <div className="flex-1 flex flex-col items-center lg:items-start justify-center mt-4 lg:mt-0">
               <h4
-                className={`text-sm font-semibold uppercase tracking-widest mb-6 ${themeColors.muted}`}
+                className={`text-sm font-semibold uppercase tracking-widest mb-4 sm:mb-6 ${themeColors.muted}`}
               >
                 Connect With Me
               </h4>
-              <div className="flex gap-6 flex-wrap justify-center md:justify-start">
+              <div className="flex gap-4 sm:gap-6 flex-wrap justify-center lg:justify-start">
                 {[
                   {
                     icon: BsGithub,
@@ -126,7 +128,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className={`text-3xl transition-colors ${themeColors.socialIcon}`}
+                    className={`text-2xl sm:text-3xl transition-colors ${themeColors.socialIcon}`}
                     whileHover={{ y: -5, scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
