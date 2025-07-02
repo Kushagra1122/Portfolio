@@ -14,7 +14,7 @@ const Projects = () => {
     {
       title: "StreamSync Platform",
       description:
-        "A live streaming platform with real-time chat, donations, and viewer analytics. Implemented WebRTC for low-latency streaming and built a custom dashboard for streamers.",
+        "A full-stack live streaming platform enabling streamers to host real-time video sessions. Features include low-latency WebRTC streams, interactive live chat, SuperChat donations, and viewer subscription support. Built a real-time dashboard for stream analytics.",
       technologies: [
         "React",
         "Node.js",
@@ -29,7 +29,7 @@ const Projects = () => {
     {
       title: "Qlueless App",
       description:
-        "Community-based Q&A mobile app with real-time notifications and chat functionality. Built the complete chat system and notification service from scratch.",
+        "A community-driven Q&A mobile app with real-time notifications, live chat, and user interactions. Built complete chat infrastructure and push notification system using Firebase and Socket.io.",
       technologies: [
         "React Native",
         "Firebase",
@@ -43,15 +43,15 @@ const Projects = () => {
     {
       title: "FileForge",
       description:
-        "Cloud storage solution with file management, sharing, and collaboration features. Implemented secure file uploads/downloads and real-time updates.",
+        "Cloud storage and collaboration platform for file management, secure uploads/downloads, and sharing. Integrated MinIO for object storage and FastAPI for backend services.",
       technologies: ["React", "FastAPI", "MinIo", "JWT", "Tailwind CSS"],
       githubLink: "https://github.com/saketjha34/FileForge",
       demoLink: "#",
     },
     {
-      title: "YT Summary Chrome Extension",
+      title: "Study AI",
       description:
-        "Browser extension that provides AI-generated summaries of YouTube videos. Extracts and processes video transcripts using NLP techniques.",
+        "A Chrome extension that adds a conversational AI chatbot to YouTube. Users can ask any question related to the video, and the AI responds based on the video's transcript. Built with React and Gemini LLM",
       technologies: [
         "Chrome API",
         "React",
