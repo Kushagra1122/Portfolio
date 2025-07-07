@@ -12,28 +12,21 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "StreamSync Platform",
+      title: "StreamSync",
       description:
-        "A full-stack live streaming platform enabling streamers to host real-time video sessions. Features include low-latency WebRTC streams, interactive live chat, SuperChat donations, and viewer subscription support. Built a real-time dashboard for stream analytics.",
-      technologies: [
-        "React",
-        "Node.js",
-        "WebRTC",
-        "MongoDB",
-        "Socket.io",
-        "Tailwind CSS",
-      ],
+        "Built a real-time video streaming platform using React and WebRTC for low-latency playback. Integrated live chat, superchat donations, and user subscriptions using Socket.io. Designed responsive UI with seamless UX.",
+      technologies: ["React", "WebRTC", "Socket.io", "Tailwind CSS"],
       githubLink: "https://github.com/Kushagra1122/streamsync",
       demoLink: "#",
     },
     {
       title: "Qlueless App",
       description:
-        "A community-driven Q&A mobile app with real-time notifications, live chat, and user interactions. Built complete chat infrastructure and push notification system using Firebase and Socket.io.",
+        "Developed a mobile app with real-time notifications and chat using Firebase Realtime DB and FCM. Implemented message delivery receipts, typing indicators, and offline support in React Native.",
       technologies: [
         "React Native",
         "Firebase",
-        "Node.js",
+        "FCM",
         "Socket.io",
         "Tailwind CSS",
       ],
@@ -43,20 +36,27 @@ const Projects = () => {
     {
       title: "FileForge",
       description:
-        "Cloud storage and collaboration platform for file management, secure uploads/downloads, and sharing. Integrated MinIO for object storage and FastAPI for backend services.",
-      technologies: ["React", "FastAPI", "MinIo", "JWT", "Tailwind CSS"],
+        "Built the frontend for a cloud file-sharing platform using React.js and Tailwind CSS. Integrated secure file upload, preview, and sharing APIs with FastAPI backend. Used PostgreSQL, MinIO, and JWT authentication.",
+      technologies: [
+        "React.js",
+        "FastAPI",
+        "PostgreSQL",
+        "MinIO",
+        "JWT",
+        "Tailwind CSS",
+      ],
       githubLink: "https://github.com/saketjha34/FileForge",
       demoLink: "#",
     },
     {
       title: "Study AI",
       description:
-        "A Chrome extension that adds a conversational AI chatbot to YouTube. Users can ask any question related to the video, and the AI responds based on the video's transcript. Built with React and Gemini LLM",
+        "Built a Chrome extension that activates on YouTube video pages and injects a Gemini chatbot button. The chatbot allows contextual questions based on video transcript using the Gemini API and a secure Express.js backend.",
       technologies: [
         "Chrome API",
         "React",
-        "Node.js",
         "Gemini",
+        "Express.js",
         "Tailwind CSS",
       ],
       githubLink: "https://github.com/Kushagra1122/Study_AI",

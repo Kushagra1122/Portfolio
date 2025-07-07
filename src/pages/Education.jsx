@@ -45,48 +45,47 @@ const Education = () => {
 
   const themeColors = colors[theme];
 
-  const timelineElements = [
-    {
-      type: "education",
-      date: "2023 – Present",
-      title: "B.Tech in Electrical & Electronics Engineering",
-      subtitle: "NIT Karnataka, Surathkal",
-      details: [
-        "<strong>CGPA:</strong> 7.1/10 (Current)",
-      ],
-      icon: <MdSchool />,
-      iconBg: themeColors.schoolIcon,
-      textColor: "text-green-500 dark:text-green-400",
-    },
-    {
-      type: "work",
-      date: "Feb 2025 – Mar 2025",
-      title: "Frontend Developer Intern",
-      subtitle: "Advista ",
-      details: [
-        "Built responsive UIs using React.js and Redux Toolkit",
-        "Collaborated with designers for pixel-perfect components",
-        "Improved performance via code-splitting and lazy loading",
-      ],
-      icon: <MdWork />,
-      iconBg: themeColors.workIcon,
-      textColor: "text-blue-600 dark:text-blue-400",
-    },
-    {
-      type: "work",
-      date: "May 2025 – Jul 2025",
-      title: "React Native Developer Intern",
-      subtitle: "Qlue ",
-      details: [
-        "Built mobile apps using React Native",
-        "Implemented real-time chat with Socket.io & Firebase",
-        "Created push notification system increasing engagement by 40%",
-      ],
-      icon: <MdWork />,
-      iconBg: themeColors.workIcon,
-      textColor: "text-blue-600 dark:text-blue-400",
-    },
-  ];
+ const timelineElements = [
+   {
+     type: "education",
+     date: "Aug 2023 – Apr 2027",
+     title: "B.Tech in Electrical and Electronics Engineering",
+     subtitle: "NIT Karnataka, Surathkal",
+     details: ["<strong>CGPA:</strong> 7.1/10 (Current)"],
+     icon: <MdSchool />,
+     iconBg: themeColors.schoolIcon,
+     textColor: "text-green-500 dark:text-green-400",
+   },
+   {
+     type: "work",
+     date: "Jan 2025 – Feb 2025",
+     title: "Frontend Developer Intern",
+     subtitle: "Advista",
+     details: [
+       "Developed modular and responsive UI components using React.js and Tailwind CSS",
+       "Boosted performance via code splitting, lazy loading, and efficient routing",
+       "Converted Figma designs into interactive web interfaces",
+     ],
+     icon: <MdWork />,
+     iconBg: themeColors.workIcon,
+     textColor: "text-blue-600 dark:text-blue-400",
+   },
+   {
+     type: "work",
+     date: "May 2025 – Jul 2025",
+     title: "React Native Developer Intern",
+     subtitle: "Qlue",
+     details: [
+       "Built cross-platform mobile apps using React Native",
+       "Implemented real-time chat features using Socket.io and Firebase Firestore",
+       "Integrated push notifications via Firebase Cloud Messaging (FCM)",
+     ],
+     icon: <MdWork />,
+     iconBg: themeColors.workIcon,
+     textColor: "text-blue-600 dark:text-blue-400",
+   },
+ ];
+
 
   return (
     <motion.div
