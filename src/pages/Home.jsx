@@ -182,7 +182,7 @@ const Home = () => {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className={`${themeColors.muted} text-lg`}>Projects</span>
-                  <span className={`${themeColors.accent} font-bold text-2xl`}>15</span>
+                  <span className={`${themeColors.accent} font-bold text-2xl`}>15+</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className={`${themeColors.muted} text-lg`}>Technologies</span>

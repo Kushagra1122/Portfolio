@@ -220,7 +220,7 @@ exceptional user experiences.
 QUICK STATS:
 ─────────────────────────────────────────────────────────────
 Experience:       2+ Years
-Projects:         15 Completed
+Projects:         15+ Completed
 Technologies:     20+ Skills
 Languages:        6+
 Frameworks:       8+

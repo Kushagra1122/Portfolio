@@ -8,169 +8,147 @@ import "react-vertical-timeline-component/style.min.css";
 import { useTheme } from "../context/Theme";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { getThemeColors } from "../utils/colors";
 
 const Education = () => {
   const [theme] = useTheme();
   const isLight = theme === "light";
   const [ref, inView] = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
     triggerOnce: true,
   });
 
-  // Color definitions
-  const colors = {
-    light: {
-      bg: "bg-gradient-to-b from-gray-50 to-gray-100",
-      text: "text-gray-900",
-      secondaryText: "text-gray-600",
-      accent: "text-blue-600",
-      cardBg: "#ffffff",
-      cardText: "text-gray-800",
-      timelineLine: "#e5e7eb",
-      schoolIcon: "#0f766e",
-      workIcon: "#1e40af",
-    },
-    dark: {
-      bg: "bg-gradient-to-b from-gray-900 to-gray-800",
-      text: "text-white",
-      secondaryText: "text-gray-400",
-      accent: "text-blue-400",
-      cardBg: "#1f2937",
-      cardText: "text-gray-300",
-      timelineLine: "#374151",
-      schoolIcon: "#14b8a6",
-      workIcon: "#3b82f6",
-    },
-  };
+  const themeColors = getThemeColors(theme);
 
-  const themeColors = colors[theme];
-
- const timelineElements = [
-   {
-     type: "education",
-     date: "Aug 2023 – Apr 2027",
-     title: "B.Tech in Electrical and Electronics Engineering",
-     subtitle: "NIT Karnataka, Surathkal",
-     details: ["<strong>CGPA:</strong> 7.1/10 (Current)"],
-     icon: <MdSchool />,
-     iconBg: themeColors.schoolIcon,
-     textColor: "text-green-500 dark:text-green-400",
-   },
-   {
-     type: "work",
-     date: "Jan 2025 – Feb 2025",
-     title: "Frontend Developer",
-     subtitle: "Advista (Remote)",
-     details: [
-       "Built modular, <strong>responsive UI</strong> with <strong>React.js</strong> & <strong>Tailwind CSS</strong>.",
-       "Optimized performance using <strong>code splitting</strong>, <strong>lazy loading</strong>, and refined <strong>routing</strong>.",
-       "Transformed <strong>Figma designs</strong> into interactive interfaces with efficient <strong>state management</strong>.",
-     ],
-     icon: <MdWork />,
-     iconBg: themeColors.workIcon,
-     textColor: "text-blue-600 dark:text-blue-400",
-   },
-   {
-     type: "work",
-     date: "May 2025 – Jul 2025",
-     title: "React Native Developer",
-     subtitle: "Qlue (Remote)",
-     details: [
-       "Engineered <strong>cross-platform mobile apps</strong> using <strong>React Native</strong> with modular architecture.",
-       "Implemented <strong>real-time chat</strong> with <strong>Socket.io</strong> & <strong>Firebase Firestore</strong>, achieving <strong>99% delivery rate</strong>.",
-       "Integrated <strong>FCM push notifications</strong> to boost user engagement.",
-     ],
-     icon: <MdWork />,
-     iconBg: themeColors.workIcon,
-     textColor: "text-blue-600 dark:text-blue-400",
-   },
- ];
+  const timelineElements = [
+    {
+      type: "education",
+      date: "Aug 2023 – Apr 2027",
+      title: "B.Tech in Electrical and Electronics Engineering",
+      subtitle: "NIT Karnataka, Surathkal",
+      details: ["<strong>CGPA:</strong> 7.1/10 (Current)"],
+      icon: <MdSchool />,
+      iconBg: themeColors.schoolIcon,
+      textColor: themeColors.accent,
+    },
+    {
+      type: "work",
+      date: "Jan 2025 – Feb 2025",
+      title: "Frontend Developer",
+      subtitle: "Advista (Remote)",
+      details: [
+        "Built modular, <strong>responsive UI</strong> with <strong>React.js</strong> & <strong>Tailwind CSS</strong>.",
+        "Optimized performance using <strong>code splitting</strong>, <strong>lazy loading</strong>, and refined <strong>routing</strong>.",
+        "Transformed <strong>Figma designs</strong> into interactive interfaces with efficient <strong>state management</strong>.",
+      ],
+      icon: <MdWork />,
+      iconBg: themeColors.workIcon,
+      textColor: themeColors.accent,
+    },
+    {
+      type: "work",
+      date: "May 2025 – Jul 2025",
+      title: "React Native Developer",
+      subtitle: "Qlue (Remote)",
+      details: [
+        "Engineered <strong>cross-platform mobile apps</strong> using <strong>React Native</strong> with modular architecture.",
+        "Implemented <strong>real-time chat</strong> with <strong>Socket.io</strong> & <strong>Firebase Firestore</strong>, achieving <strong>99% delivery rate</strong>.",
+        "Integrated <strong>FCM push notifications</strong> to boost user engagement.",
+      ],
+      icon: <MdWork />,
+      iconBg: themeColors.workIcon,
+      textColor: themeColors.accent,
+    },
+  ];
 
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={inView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.5 }}
-      className={`py-20 px-6 transition-colors duration-300 ${themeColors.bg}`}
+    <section
       id="education"
+      ref={ref}
+      className={`py-24 transition-colors duration-500 ${themeColors.background}`}
     >
-      <div className="max-w-7xl mx-auto">
-        <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-4"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          Education & <span className={themeColors.accent}>Experience</span>
-        </motion.h2>
-        <motion.p
-          className={`text-center mb-16 text-lg ${themeColors.secondaryText}`}
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.2 }}
-        >
-          A timeline of my academic achievements and professional growth in tech
-        </motion.p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Education &{" "}
+            <span className={`${themeColors.accent} font-extrabold bg-clip-text bg-gradient-to-r ${themeColors.gradientBorder}`}>
+              Experience
+            </span>
+          </h2>
+          <p className={`text-lg max-w-2xl mx-auto ${themeColors.muted}`}>
+            A timeline of my academic achievements and professional growth in tech
+          </p>
+        </motion.div>
 
         <VerticalTimeline
           lineColor={themeColors.timelineLine}
           layout="1-column-left"
         >
-          {timelineElements.map((item, index) => (
-            <VerticalTimelineElement
-              key={index}
-              className="vertical-timeline-element"
-              date={item.date}
-              dateClassName={`${themeColors.text} font-medium`}
-              contentStyle={{
-                background: themeColors.cardBg,
-                color: isLight ? "#000" : "#fff",
-                boxShadow: isLight
-                  ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-                  : "0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)",
-                borderRadius: "0.75rem",
-              }}
-              contentArrowStyle={{
-                borderRight: `7px solid ${themeColors.cardBg}`,
-              }}
-              iconStyle={{
-                background: item.iconBg,
-                color: "#fff",
-                boxShadow: `0 0 0 4px ${
-                  isLight ? "#fff" : "#1f2937"
-                }, 0 2px 5px 0 rgba(0,0,0,0.25)`,
-              }}
-              icon={item.icon}
-              visible={inView}
-            >
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: index * 0.15 }}
+          {timelineElements.map((item, index) => {
+            const cardBgColor = isLight ? "#ffffff" : "#1f2937";
+            const cardBorderColor = isLight ? "#e5e7eb" : "#374151";
+            
+            return (
+              <VerticalTimelineElement
+                key={index}
+                className="vertical-timeline-element"
+                date={item.date}
+                dateClassName={`${themeColors.text} font-medium`}
+                contentStyle={{
+                  background: cardBgColor,
+                  color: isLight ? "#1e293b" : "#f1f5f9",
+                  boxShadow: isLight
+                    ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+                    : "0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 0 20px rgba(34, 197, 94, 0.1)",
+                  borderRadius: "1rem",
+                  border: `1px solid ${cardBorderColor}`,
+                }}
+                contentArrowStyle={{
+                  borderRight: `7px solid ${cardBgColor}`,
+                }}
+                iconStyle={{
+                  background: item.iconBg,
+                  color: "#fff",
+                  boxShadow: isLight
+                    ? `0 0 0 4px #ffffff, 0 2px 5px 0 rgba(0,0,0,0.25)`
+                    : `0 0 0 4px #1f2937, 0 2px 5px 0 rgba(0,0,0,0.25), 0 0 20px rgba(34, 197, 94, 0.3)`,
+                }}
+                icon={item.icon}
+                visible={inView}
               >
-                <h3 className={`text-xl font-semibold ${item.textColor}`}>
-                  {item.title}
-                </h3>
-                <h4 className={`text-md font-medium ${themeColors.cardText}`}>
-                  {item.subtitle}
-                </h4>
-                <div className="mt-3 space-y-2">
-                  {item.details.map((detail, i) => (
-                    <p
-                      key={i}
-                      className={`text-sm ${themeColors.cardText}`}
-                      dangerouslySetInnerHTML={{ __html: detail }}
-                    />
-                  ))}
-                </div>
-              </motion.div>
-            </VerticalTimelineElement>
-          ))}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: index * 0.15, duration: 0.6 }}
+                >
+                  <h3 className={`text-xl font-bold ${item.textColor} mb-2`}>
+                    {item.title}
+                  </h3>
+                  <h4 className={`text-md font-medium ${themeColors.secondary} mb-3`}>
+                    {item.subtitle}
+                  </h4>
+                  <div className="mt-3 space-y-2">
+                    {item.details.map((detail, i) => (
+                      <p
+                        key={i}
+                        className={`text-sm leading-relaxed ${themeColors.secondary}`}
+                        dangerouslySetInnerHTML={{ __html: detail }}
+                      />
+                    ))}
+                  </div>
+                </motion.div>
+              </VerticalTimelineElement>
+            );
+          })}
         </VerticalTimeline>
       </div>
-    </motion.div>
+    </section>
   );
 };
 
