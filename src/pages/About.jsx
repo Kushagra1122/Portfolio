@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import profileImg from "../assets/images/profile.jpeg";
 import { useTheme } from "../context/Theme";
 import { getThemeColors } from "../utils/colors";
 
@@ -15,9 +14,11 @@ const About = () => {
   const themeColors = getThemeColors(theme);
 
   const highlights = [
-    "2x Internship Experience — Frontend (React.js) & Mobile (React Native)",
-    "Built full-stack projects using MERN stack, Firebase, WebRTC, and modern CSS frameworks",
-    "Strong foundation in data structures, algorithms, and system design",
+    "🚀 2x Internship Experience — Frontend (React.js) & Mobile (React Native)",
+    "💻 Built full-stack projects using MERN stack, Firebase, WebRTC, and modern frameworks",
+    "🧠 Strong foundation in data structures, algorithms, and system design",
+    "🔬 Continuously exploring AI, Web3, and emerging technologies",
+    "⚡ Passionate about performance optimization and scalable architecture",
   ];
 
   return (
@@ -27,91 +28,77 @@ const About = () => {
       className={`py-24 px-6 transition-colors duration-500 ${themeColors.background}`}
     >
       <div className="max-w-7xl mx-auto">
-        <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-16"
+        <motion.div
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          About{" "}
-          <span
-            className={`${themeColors.accent} font-extrabold bg-clip-text bg-gradient-to-r ${themeColors.gradientBorder}`}
-          >
-            Me
-          </span>
-        </motion.h2>
+          <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${themeColors.text}`}>
+            About{" "}
+            <span className={`${themeColors.accent} bg-gradient-to-r ${themeColors.gradientBorder} bg-clip-text text-transparent`}>
+              Me
+            </span>
+          </h2>
+        </motion.div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="flex justify-center">
           <motion.div
-            className="lg:w-2/5 relative"
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="relative group">
-              <div
-                className={`absolute -inset-2 bg-gradient-to-r ${themeColors.gradientBorder} rounded-3xl opacity-75 blur-lg group-hover:opacity-90 transition-all duration-500`}
-              ></div>
-              <img
-                src={profileImg}
-                alt="Profile"
-                className={`relative rounded-2xl w-full max-w-md border-4 ${themeColors.cardBorder} shadow-xl transition-transform duration-500 group-hover:scale-[1.02]`}
-              />
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="lg:w-3/5 space-y-8"
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            className="w-full max-w-4xl space-y-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <div>
-              <h3 className={`text-3xl font-bold mb-6 ${themeColors.text}`}>
-                Full Stack Developer & UI Enthusiast
-              </h3>
-              <p className={`text-lg leading-relaxed ${themeColors.secondary}`}>
+            <div className="text-center lg:text-left">
+              
+              <p className={`text-lg leading-relaxed ${themeColors.secondary} mb-4`}>
                 I'm a{" "}
-                <span className={`${themeColors.accent} font-medium`}>
-                  problem-solver
+                <span className={`${themeColors.accent} font-semibold bg-gradient-to-r ${themeColors.gradientBorder} bg-clip-text text-transparent`}>
+                  tech explorer
                 </span>{" "}
-                at heart who enjoys turning ideas into scalable, real-world
-                applications.
+                who thrives on pushing boundaries, experimenting with cutting-edge technologies, 
+                and building solutions that make an impact.
+              </p>
+              <p className={`text-base leading-relaxed ${themeColors.muted}`}>
+                From Web3 to AI, I'm always on the lookout for the next big thing in tech, 
+                constantly learning and contributing to the developer community.
               </p>
 
-              <div
-                className={`mt-8 p-6 rounded-xl border-l-4 ${themeColors.cardBg} ${themeColors.cardBorder} ${themeColors.text} shadow-md`}
-              >
-                <p className="font-medium leading-relaxed">
-                  Currently pursuing B.Tech in Electrical and Electronics
-                  Engineering at NIT Surathkal.
-                </p>
+              <div className={`mt-8 p-6 rounded-xl border-l-4 ${themeColors.cardBg} ${themeColors.cardBorder} border-l-cyan-500 ${themeColors.text} ${themeColors.glow} shadow-lg`}>
+                <div className="flex items-start gap-3 justify-center lg:justify-start">
+                  <span className="text-2xl">🎓</span>
+                  <div className="text-center lg:text-left">
+                    <p className="font-semibold mb-1">Education</p>
+                    <p className={`font-medium leading-relaxed text-sm ${themeColors.muted}`}>
+                      B.Tech in Electrical and Electronics Engineering at NIT Surathkal
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 text-center lg:text-left">
               <h4 className={`text-xl font-semibold ${themeColors.text}`}>
                 Key Highlights
               </h4>
-              <ul className={`space-y-3 text-md ${themeColors.secondary}`}>
+              <ul className={`space-y-4 text-md ${themeColors.secondary}`}>
                 {highlights.map((highlight, index) => (
                   <motion.li
                     key={index}
-                    className="flex items-start"
+                    className={`flex items-start p-3 rounded-lg ${themeColors.cardBg} ${themeColors.cardBorder} border transition-all hover:scale-[1.02] text-left`}
                     initial={{ opacity: 0, x: 20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.2 + index * 0.1 }}
                   >
-                    <span
-                      className={`inline-block w-2 h-2 rounded-full mt-2 mr-3 ${themeColors.highlight}`}
-                    ></span>
-                    <span>{highlight}</span>
+                    <span className="text-xl mr-3">{highlight.split(' ')[0]}</span>
+                    <span>{highlight.substring(highlight.indexOf(' ') + 1)}</span>
                   </motion.li>
                 ))}
               </ul>
             </div>
 
             <motion.div
+              className="text-center lg:text-left pt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}

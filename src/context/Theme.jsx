@@ -5,8 +5,8 @@ const ThemeContext = createContext();
 
 // Theme Provider component
 const ThemeProvider = ({ children }) => {
-  // Retrieve theme from localStorage, default to light
-  const savedTheme = localStorage.getItem("theme") || "light";
+  // Retrieve theme from localStorage, default to dark
+  const savedTheme = localStorage.getItem("theme") || "dark";
   const [theme, setTheme] = useState(savedTheme);
 
   useEffect(() => {

@@ -59,12 +59,12 @@ const Education = () => {
    {
      type: "work",
      date: "Jan 2025 – Feb 2025",
-     title: "Frontend Developer Intern",
-     subtitle: "Advista",
+     title: "Frontend Developer",
+     subtitle: "Advista (Remote)",
      details: [
-       "Developed modular and responsive UI components using React.js and Tailwind CSS",
-       "Boosted performance via code splitting, lazy loading, and efficient routing",
-       "Converted Figma designs into interactive web interfaces",
+       "Built modular, <strong>responsive UI</strong> with <strong>React.js</strong> & <strong>Tailwind CSS</strong>.",
+       "Optimized performance using <strong>code splitting</strong>, <strong>lazy loading</strong>, and refined <strong>routing</strong>.",
+       "Transformed <strong>Figma designs</strong> into interactive interfaces with efficient <strong>state management</strong>.",
      ],
      icon: <MdWork />,
      iconBg: themeColors.workIcon,
@@ -73,12 +73,12 @@ const Education = () => {
    {
      type: "work",
      date: "May 2025 – Jul 2025",
-     title: "React Native Developer Intern",
-     subtitle: "Qlue",
+     title: "React Native Developer",
+     subtitle: "Qlue (Remote)",
      details: [
-       "Built cross-platform mobile apps using React Native",
-       "Implemented real-time chat features using Socket.io and Firebase Firestore",
-       "Integrated push notifications via Firebase Cloud Messaging (FCM)",
+       "Engineered <strong>cross-platform mobile apps</strong> using <strong>React Native</strong> with modular architecture.",
+       "Implemented <strong>real-time chat</strong> with <strong>Socket.io</strong> & <strong>Firebase Firestore</strong>, achieving <strong>99% delivery rate</strong>.",
+       "Integrated <strong>FCM push notifications</strong> to boost user engagement.",
      ],
      icon: <MdWork />,
      iconBg: themeColors.workIcon,
@@ -111,7 +111,7 @@ const Education = () => {
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.2 }}
         >
-          A timeline of my academic background and professional journey
+          A timeline of my academic achievements and professional growth in tech
         </motion.p>
 
         <VerticalTimeline

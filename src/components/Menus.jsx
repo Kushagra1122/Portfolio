@@ -10,33 +10,11 @@ import {
 } from "react-icons/fc";
 import { Link } from "react-scroll";
 import { useTheme } from "../context/Theme";
+import { getThemeColors } from "../utils/colors";
 
-function Menus() {
+function Menus({ onLinkClick }) {
   const [theme] = useTheme();
-  const isLight = theme === "light";
-
-  const colors = {
-    light: {
-      text: "text-gray-700",
-      hoverText: "text-blue-600",
-      icon: "text-gray-600",
-      hoverBg: "hover:bg-blue-50",
-      activeBg: "bg-blue-100/80",
-      activeBorder: "border-l-blue-500",
-      activeText: "text-blue-700",
-    },
-    dark: {
-      text: "text-gray-300",
-      hoverText: "text-blue-400",
-      icon: "text-gray-400",
-      hoverBg: "hover:bg-gray-700",
-      activeBg: "bg-gray-700/80",
-      activeBorder: "border-l-blue-400",
-      activeText: "text-blue-400",
-    },
-  };
-
-  const themeColors = isLight ? colors.light : colors.dark;
+  const themeColors = getThemeColors(theme);
 
   const menuItems = [
     { icon: <FcHome className="text-xl" />, name: "Home", to: "home" },
@@ -72,12 +50,13 @@ function Menus() {
             to={item.to}
             spy={true}
             smooth={true}
-            offset={-10} // Updated offset
+            offset={-10}
             duration={500}
+            onClick={onLinkClick}
             className={`flex items-center p-3 rounded-lg transition-all cursor-pointer
-              ${themeColors.text} ${themeColors.hoverBg} hover:${themeColors.hoverText}
-              group transition-colors duration-200`}
-            activeClass={`${themeColors.activeBg} ${themeColors.activeText} ${themeColors.activeBorder} border-l-4 font-medium`}
+              ${themeColors.text} hover:bg-green-50/50 dark:hover:bg-green-900/20 hover:text-green-600 dark:hover:text-green-400
+              group transition-colors duration-300`}
+            activeClass={`bg-green-100/80 dark:bg-green-900/30 ${themeColors.accent} border-l-green-500 dark:border-l-green-400 border-l-4 font-medium`}
           >
             <span className="mr-4">{item.icon}</span>
             <span>{item.name}</span>

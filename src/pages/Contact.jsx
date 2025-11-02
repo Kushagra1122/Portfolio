@@ -43,7 +43,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className={`rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-lg md:shadow-xl ${themeColors.cardBg} ${themeColors.cardBorder} border`}
+          className={`rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-lg md:shadow-xl ${themeColors.cardBg} ${themeColors.cardBorder} border relative overflow-hidden`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
