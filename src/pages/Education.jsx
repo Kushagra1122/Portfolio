@@ -68,7 +68,7 @@ const Education = () => {
       ref={ref}
       className={`py-24 transition-colors duration-500 ${themeColors.background}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ const Education = () => {
             </span>
           </h2>
           <p className={`text-lg max-w-2xl mx-auto ${themeColors.muted}`}>
-            A timeline of my academic achievements and professional growth in tech
+            A simple timeline of school and work so far.
           </p>
         </motion.div>
 

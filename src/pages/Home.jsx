@@ -54,11 +54,10 @@ const Home = () => {
   ];
 
   const typewriterStrings = [
-    "Tech Enthusiast",
-    "Full Stack Developer",
-    "AI & Web3 Explorer",
-    "Innovation Catalyst",
-    "Code Architect",
+    "Web and mobile developer",
+    "Design‑minded engineer",
+    "Focused on clean UX",
+    "Always learning",
   ];
 
 
@@ -90,7 +89,7 @@ const Home = () => {
         <InteractiveTerminal onClose={() => setShowTerminal(false)} />
       )}
 
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Column - Terminal Command Style */}
           <motion.div
@@ -137,8 +136,8 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Full Stack Developer passionate about building innovative solutions, 
-              exploring emerging technologies, and creating exceptional user experiences.
+              I’m a full‑stack developer who enjoys building thoughtful, practical products
+              and polishing the little details that make experiences feel great.
             </motion.p>
 
             <motion.div

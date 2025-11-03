@@ -46,7 +46,7 @@ const TechStack = () => {
         <div className={`absolute bottom-20 right-10 w-64 h-64 ${theme === 'dark' ? 'bg-blue-500/5' : 'bg-blue-400/5'} rounded-full blur-3xl`}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ const TechStack = () => {
             My <span className={`${themeColors.accent} bg-gradient-to-r ${themeColors.gradientBorder} bg-clip-text text-transparent`}>Tech Stack</span>
           </h2>
           <p className={`text-lg max-w-2xl mx-auto ${themeColors.muted}`}>
-            A curated set of technologies I've used across the full stack.
+            The tools I reach for when building.
           </p>
         </motion.div>
 

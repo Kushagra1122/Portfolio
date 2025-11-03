@@ -14,11 +14,11 @@ const About = () => {
   const themeColors = getThemeColors(theme);
 
   const highlights = [
-    "🚀 2x Internship Experience — Frontend (React.js) & Mobile (React Native)",
-    "💻 Built full-stack projects using MERN stack, Firebase, WebRTC, and modern frameworks",
-    "🧠 Strong foundation in data structures, algorithms, and system design",
-    "🔬 Continuously exploring AI, Web3, and emerging technologies",
-    "⚡ Passionate about performance optimization and scalable architecture",
+    "Two internships — React.js (web) and React Native (mobile)",
+    "Built full‑stack projects with MERN, Firebase, and WebRTC",
+    "Comfortable with data structures, algorithms, and system design",
+    "Exploring AI and Web3 through small, focused builds",
+    "Care about fast UIs and pragmatic, scalable architecture",
   ];
 
   return (
@@ -27,7 +27,7 @@ const About = () => {
       ref={ref}
       className={`py-24 px-6 transition-colors duration-500 ${themeColors.background}`}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -52,21 +52,15 @@ const About = () => {
             <div className="text-center lg:text-left">
               
               <p className={`text-lg leading-relaxed ${themeColors.secondary} mb-4`}>
-                I'm a{" "}
-                <span className={`${themeColors.accent} font-semibold bg-gradient-to-r ${themeColors.gradientBorder} bg-clip-text text-transparent`}>
-                  tech explorer
-                </span>{" "}
-                who thrives on pushing boundaries, experimenting with cutting-edge technologies, 
-                and building solutions that make an impact.
+                I like turning ideas into simple, useful products. Most days I'm shipping small features,
+                cleaning up rough edges, and learning something new along the way.
               </p>
               <p className={`text-base leading-relaxed ${themeColors.muted}`}>
-                From Web3 to AI, I'm always on the lookout for the next big thing in tech, 
-                constantly learning and contributing to the developer community.
+                Lately I’ve been exploring AI and Web3 through small projects and sharing what works.
               </p>
 
               <div className={`mt-8 p-6 rounded-xl border-l-4 ${themeColors.cardBg} ${themeColors.cardBorder} border-l-cyan-500 ${themeColors.text} ${themeColors.glow} shadow-lg`}>
                 <div className="flex items-start gap-3 justify-center lg:justify-start">
-                  <span className="text-2xl">🎓</span>
                   <div className="text-center lg:text-left">
                     <p className="font-semibold mb-1">Education</p>
                     <p className={`font-medium leading-relaxed text-sm ${themeColors.muted}`}>
@@ -79,19 +73,19 @@ const About = () => {
 
             <div className="space-y-4 text-center lg:text-left">
               <h4 className={`text-xl font-semibold ${themeColors.text}`}>
-                Key Highlights
+                Highlights
               </h4>
               <ul className={`space-y-4 text-md ${themeColors.secondary}`}>
                 {highlights.map((highlight, index) => (
                   <motion.li
                     key={index}
-                    className={`flex items-start p-3 rounded-lg ${themeColors.cardBg} ${themeColors.cardBorder} border transition-all hover:scale-[1.02] text-left`}
+                    className={`flex items-start gap-3 p-3 rounded-lg ${themeColors.cardBg} ${themeColors.cardBorder} border transition-all hover:scale-[1.02] text-left`}
                     initial={{ opacity: 0, x: 20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.2 + index * 0.1 }}
                   >
-                    <span className="text-xl mr-3">{highlight.split(' ')[0]}</span>
-                    <span>{highlight.substring(highlight.indexOf(' ') + 1)}</span>
+                    <span className="mt-1 inline-block w-2 h-2 rounded-full bg-green-500"></span>
+                    <span>{highlight}</span>
                   </motion.li>
                 ))}
               </ul>

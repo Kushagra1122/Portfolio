@@ -14,13 +14,13 @@ const Projects = () => {
     {
       title: "Approval Orchestrator",
       description:
-        "A modern, intelligent approval workflow system transforming manual approvals into automated, auditable workflows.",
+        "An approval workflow system that turns manual reviews into clear, trackable steps.",
       period: "Sep 2025 -- Oct 2025",
       achievements: [
-        "Built a modern, intelligent <strong>approval workflow system</strong> transforming manual approvals into automated, auditable workflows.",
-        "Implemented <strong>multi-channel notifications</strong> (Slack, Email, Web) for real-time status updates.",
-        "Developed analytics dashboards powered by <strong>Recharts</strong> with process and timeline visualization.",
-        "Enabled <strong>rollback system</strong>, smart routing, timeout handling, and background <strong>cron jobs</strong> for clean process automation.",
+        "Shipped an <strong>approval workflow</strong> with clear states, audit trails, and retries.",
+        "Added <strong>notifications</strong> via Slack, Email, and Web for timely updates.",
+        "Built simple analytics with <strong>Recharts</strong> to visualize progress and blockers.",
+        "Handled rollbacks, routing, timeouts, and background <strong>cron jobs</strong> for reliability.",
       ],
       technologies: ["Node.js", "SQLite", "React", "Cron Jobs", "Webhooks"],
       githubLink: "https://github.com/Kushagra1122/approval-orchestrator",
@@ -29,13 +29,13 @@ const Projects = () => {
     {
       title: "StreamSync",
       description:
-        "Real-time video streaming platform supporting multiple concurrent streams with minimal latency.",
+        "A real‑time video streaming app that supports multiple concurrent streams with low latency.",
       period: "Mar 2025 -- Jul 2025",
       achievements: [
-        "Created a <strong>real-time video streaming</strong> platform supporting multiple concurrent streams with minimal latency.",
-        "Introduced <strong>live chat</strong>, superchat donations, and subscription management.",
-        "Enabled <strong>screen sharing</strong> and seamless session joining for collaboration.",
-        "Enhanced scalability by refining <strong>WebRTC</strong> signaling for low-latency peer connections.",
+        "Built <strong>real‑time streaming</strong> with focus on stability and low delay.",
+        "Added <strong>live chat</strong>, donations, and subscription options.",
+        "Supported <strong>screen sharing</strong> and quick, shareable session joins.",
+        "Improved <strong>WebRTC</strong> signaling for smoother peer connections at scale.",
       ],
       technologies: ["Node.js", "React.js", "Express.js", "MongoDB", "WebRTC", "Socket.io"],
       githubLink: "https://github.com/Kushagra1122/StreamSync",
@@ -44,13 +44,13 @@ const Projects = () => {
     {
       title: "Get Social",
       description:
-        "Social media app featuring real-time messaging, friend requests, and profile management.",
+        "A social app with real‑time chat, friend requests, and simple profiles.",
       period: "Jan 2025 -- Feb 2025",
       achievements: [
-        "Designed a <strong>social media app</strong> featuring <strong>real-time</strong> messaging, friend requests, and profile management.",
-        "Applied secure <strong>authentication</strong> with <strong>JWT</strong>, role-based access, and encrypted storage.",
-        "Improved <strong>MongoDB</strong> for scalability and faster queries.",
-        "Implemented globally unique identifiers with <strong>UUID</strong> for distributed system consistency.",
+        "Shipped <strong>real‑time chat</strong>, friend requests, and profile editing.",
+        "Used <strong>JWT</strong> auth with role checks and encrypted storage.",
+        "Tuned <strong>MongoDB</strong> indexes to handle growing data.",
+        "Used <strong>UUIDs</strong> to keep identifiers consistent across services.",
       ],
       technologies: ["React Native", "Node.js", "MongoDB", "Express.js", "Socket.io"],
       githubLink: "https://github.com/Kushagra1122/Texting",
@@ -59,13 +59,13 @@ const Projects = () => {
     {
       title: "Study AI",
       description:
-        "Contextual AI chatbot for YouTube videos enabling interactive, topic-specific learning.",
+        "An AI helper for YouTube that summarizes videos and answers questions in context.",
       period: "Jun 2025 -- Jul 2025",
       achievements: [
-        "Developed a <strong>contextual AI chatbot</strong> for YouTube videos enabling interactive, topic-specific learning.",
-        "Connected <strong>Gemini API</strong> for automatic transcript summarization and question-answer generation.",
-        "Used <strong>FastAPI</strong> and <strong>Express.js</strong> microservices to process requests asynchronously with low latency.",
-        "Packaged extension for Chrome Web Store with persistent in-page floating UI button for seamless access.",
+        "Built a <strong>contextual AI chatbot</strong> that understands video transcripts.",
+        "Used the <strong>Gemini API</strong> to summarize and answer questions.",
+        "Split work across <strong>FastAPI</strong> and <strong>Express.js</strong> services for responsiveness.",
+        "Packaged a Chrome extension with a small in‑page button for quick access.",
       ],
       technologies: ["FastAPI", "Express.js", "Gemini API", "Chrome Extension"],
       githubLink: "https://github.com/Kushagra1122/Study-AI",
@@ -79,7 +79,7 @@ const Projects = () => {
       ref={ref}
       className={`py-24 transition-colors duration-500 ${themeColors.background}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}

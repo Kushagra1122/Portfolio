@@ -10,15 +10,15 @@ const InteractiveTerminal = ({ onClose }) => {
   const [output, setOutput] = useState([
     {
       type: "system",
-      content: "╔══════════════════════════════════════════════════════════╗",
+      content: "────────────────────────────────────────────────────────────",
     },
     {
       type: "system",
-      content: "║     Welcome to kushagra@portfolio Terminal             ║",
+      content: "Welcome to kushagra@portfolio",
     },
     {
       type: "system",
-      content: "╚══════════════════════════════════════════════════════════╝",
+      content: "Type 'help' to see commands. ESC to close.",
     },
     {
       type: "system",
@@ -26,7 +26,7 @@ const InteractiveTerminal = ({ onClose }) => {
     },
     {
       type: "system",
-      content: "Portfolio CLI - Navigate through directories and view files.",
+      content: "Portfolio CLI — browse sections and open simple text files.",
     },
     {
       type: "system",
@@ -39,15 +39,15 @@ const InteractiveTerminal = ({ onClose }) => {
     },
     {
       type: "system",
-      content: "  $ ls                    - List all directories",
+      content: "  $ ls                    - list directories",
     },
     {
       type: "system",
-      content: "  $ cd <directory>        - Change directory",
+      content: "  $ cd <directory>        - change directory",
     },
     {
       type: "system",
-      content: "  $ cat <file>             - View file contents",
+      content: "  $ cat <file>            - view file",
     },
     {
       type: "system",
@@ -203,17 +203,16 @@ Example: cat home/${filePath} or cd home then cat ${filePath}`;
 ╚═══════════════════════════════════════════════════════════╝
 
 Name:              Kushagra Tiwari
-Role:              Full Stack Developer & Tech Enthusiast
+Role:              Full‑stack developer
 Location:          Surathkal, Karnataka, India
-Status:            Available for freelance and full-time opportunities
+Status:            Open to freelance and full‑time roles
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 BIOGRAPHY:
 ─────────────────────────────────────────────────────────────
-Full Stack Developer passionate about building innovative 
-solutions, exploring emerging technologies, and creating 
-exceptional user experiences.
+I like building practical products for the web and polishing the
+small details that make them feel great.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -225,7 +224,7 @@ Technologies:     20+ Skills
 Languages:        6+
 Frameworks:       8+
 Internships:      2
-Status:           Available
+Status:           Actively building
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -240,34 +239,30 @@ Instagram: https://instagram.com/kushagra_._23_`;
 ╚═══════════════════════════════════════════════════════════╝
 
 Name:              Kushagra Tiwari
-Role:              Full Stack Developer & Tech Enthusiast
+Role:              Full‑stack developer
 Location:          Surathkal, Karnataka, India
 Education:         B.Tech in Electrical and Electronics Engineering
 Institution:       NIT Karnataka, Surathkal
 CGPA:              7.1/10 (Current)
-Status:            Available for freelance and full-time opportunities
+Status:            Open to freelance and full‑time roles
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 BIOGRAPHY:
 ─────────────────────────────────────────────────────────────
-I'm a tech explorer who thrives on pushing boundaries, 
-experimenting with cutting-edge technologies, and building 
-solutions that make an impact.
-
-From Web3 to AI, I'm always on the lookout for the next big 
-thing in tech, constantly learning and contributing to the 
-developer community.
+I enjoy turning ideas into simple, useful products. Most days it's
+shipping small features, cleaning up rough edges, and learning along
+the way. Lately I've been exploring AI and Web3 through small builds.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 KEY HIGHLIGHTS:
 ─────────────────────────────────────────────────────────────
-🚀 2x Internship Experience — Frontend (React.js) & Mobile (React Native)
-💻 Built full-stack projects using MERN stack, Firebase, WebRTC
-🧠 Strong foundation in data structures, algorithms, and system design
-🔬 Continuously exploring AI, Web3, and emerging technologies
-⚡ Passionate about performance optimization and scalable architecture
+• Two internships so far — React.js (web) and React Native (mobile)
+• Built full‑stack side projects with MERN, Firebase, and WebRTC
+• Comfortable with DSA and system design trade‑offs
+• Currently learning by building small AI and Web3 experiments
+• Care about clean, fast UIs and pragmatic architecture
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -289,19 +284,14 @@ TOTAL PROJECTS: 4
 1. APPROVAL ORCHESTRATOR
    ─────────────────────────────────────────────────────────
    Period:         Sep 2025 -- Oct 2025
-   Description:    Modern, intelligent approval workflow system 
-                   transforming manual approvals into automated, 
-                   auditable workflows.
+   Description:    An approval workflow that turns manual reviews into
+                   clear, trackable steps.
    
    Achievements:
-   • Built modern, intelligent approval workflow system transforming
-     manual approvals into automated, auditable workflows.
-   • Implemented multi-channel notifications (Slack, Email, Web) for
-     real-time status updates.
-   • Developed analytics dashboards powered by Recharts with process
-     and timeline visualization.
-   • Enabled rollback system, smart routing, timeout handling, and
-     background cron jobs for clean process automation.
+   • Shipped an approval flow with states, audit trails, and retries.
+   • Added notifications (Slack, Email, Web) for timely updates.
+   • Built simple analytics with Recharts to spot progress and blockers.
+   • Handled rollbacks, routing, timeouts, and cron jobs for reliability.
    
    Technologies:   Node.js, SQLite, React, Cron Jobs, Webhooks
    GitHub:         https://github.com/Kushagra1122/approval-orchestrator
@@ -312,18 +302,14 @@ TOTAL PROJECTS: 4
 2. STREAMSYNC
    ─────────────────────────────────────────────────────────
    Period:         Mar 2025 -- Jul 2025
-   Description:    Real-time video streaming platform supporting 
-                   multiple concurrent streams with minimal latency.
+   Description:    A real‑time video streaming app with low delay and
+                   multiple concurrent streams.
    
    Achievements:
-   • Created real-time video streaming platform supporting multiple
-     concurrent streams with minimal latency.
-   • Introduced live chat, superchat donations, and subscription
-     management.
-   • Enabled screen sharing and seamless session joining for
-     collaboration.
-   • Enhanced scalability by refining WebRTC signaling for low-latency
-     peer connections.
+   • Built real‑time streaming with focus on stability and low delay.
+   • Added live chat, donations, and subscription options.
+   • Supported screen sharing and quick session joins.
+   • Improved WebRTC signaling for smoother peer connections.
    
    Technologies:   Node.js, React.js, Express.js, MongoDB, WebRTC, Socket.io
    GitHub:         https://github.com/Kushagra1122/StreamSync
@@ -334,17 +320,14 @@ TOTAL PROJECTS: 4
 3. GET SOCIAL
    ─────────────────────────────────────────────────────────
    Period:         Jan 2025 -- Feb 2025
-   Description:    Social media app featuring real-time messaging, 
-                   friend requests, and profile management.
+   Description:    A social app with real‑time chat, friend requests,
+                   and simple profiles.
    
    Achievements:
-   • Designed social media app featuring real-time messaging, friend
-     requests, and profile management.
-   • Applied secure authentication with JWT, role-based access, and
-     encrypted storage.
-   • Improved MongoDB for scalability and faster queries.
-   • Implemented globally unique identifiers with UUID for distributed
-     system consistency.
+   • Shipped real‑time chat, friend requests, and profile editing.
+   • Used JWT auth with role checks and encrypted storage.
+   • Tuned MongoDB indexes to handle growing data.
+   • Adopted UUIDs to keep identifiers consistent across services.
    
    Technologies:   React Native, Node.js, MongoDB, Express.js, Socket.io
    GitHub:         https://github.com/Kushagra1122/Texting
@@ -355,18 +338,14 @@ TOTAL PROJECTS: 4
 4. STUDY AI
    ─────────────────────────────────────────────────────────
    Period:         Jun 2025 -- Jul 2025
-   Description:    Contextual AI chatbot for YouTube videos enabling 
-                   interactive, topic-specific learning.
+   Description:    An AI helper for YouTube that summarizes videos and
+                   answers questions in context.
    
    Achievements:
-   • Developed contextual AI chatbot for YouTube videos enabling
-     interactive, topic-specific learning.
-   • Connected Gemini API for automatic transcript summarization and
-     question-answer generation.
-   • Used FastAPI and Express.js microservices to process requests
-     asynchronously with low latency.
-   • Packaged extension for Chrome Web Store with persistent in-page
-     floating UI button for seamless access.
+   • Built a contextual AI chatbot that understands video transcripts.
+   • Used the Gemini API to summarize and answer questions.
+   • Split work across FastAPI and Express.js services for responsiveness.
+   • Packaged a Chrome extension with a small in‑page button.
    
    Technologies:   FastAPI, Express.js, Gemini API, Chrome Extension
    GitHub:         https://github.com/Kushagra1122/Study-AI
@@ -715,10 +694,10 @@ Available commands:
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-        className="w-full max-w-5xl h-[700px] border-2 border-green-500/50 rounded-lg overflow-hidden bg-black shadow-2xl"
+        className="w-full max-w-5xl h-[700px] border border-green-500/30 rounded-xl overflow-hidden bg-black shadow-2xl"
         onClick={(e) => e.stopPropagation()}
         style={{
-          boxShadow: "0 20px 60px rgba(34, 197, 94, 0.4), 0 0 0 1px rgba(34, 197, 94, 0.1)",
+          boxShadow: "0 20px 60px rgba(34, 197, 94, 0.25), 0 0 0 1px rgba(34, 197, 94, 0.1)",
         }}
       >
         {/* Terminal Header */}
@@ -752,11 +731,13 @@ Available commands:
         {/* Terminal Body */}
         <div
           ref={terminalRef}
-          className="h-[calc(100%-60px)] overflow-y-auto p-6 font-mono text-sm bg-black text-green-400 relative"
+          className="h-[calc(100%-60px)] overflow-y-auto p-6 font-mono bg-black text-green-400 relative"
           style={{ 
             scrollbarWidth: "thin",
             scrollbarColor: "#22c55e #000000",
-            fontFamily: "'JetBrains Mono', 'Fira Code', 'Courier New', monospace"
+            fontFamily: "'JetBrains Mono', 'Fira Code', 'Courier New', monospace",
+            fontSize: "14px",
+            lineHeight: 1.6
           }}
         >
           {/* Terminal Grid Background */}
@@ -783,7 +764,7 @@ Available commands:
                   </div>
                 )}
                 {item.type === "output" && (
-                  <div className="ml-8 text-green-100 whitespace-pre-wrap leading-relaxed font-mono text-[13px] break-words">
+                  <div className="ml-8 text-green-100 whitespace-pre-wrap leading-relaxed font-mono break-words">
                     {item.content}
                   </div>
                 )}
@@ -799,9 +780,9 @@ Available commands:
           {/* Command Input */}
           <div className="relative mt-4 pt-4 border-t border-green-500/20">
             <div className="flex items-center gap-2">
-              <span className="text-green-400 font-bold font-mono text-sm">kushagra@portfolio</span>
+              <span className="text-green-400 font-bold font-mono">kushagra@portfolio</span>
               <span className="text-green-500">:</span>
-              <span className="text-cyan-400 font-mono text-sm">{currentDirectory.replace("~/portfolio", "~")}</span>
+              <span className="text-cyan-400 font-mono">{currentDirectory.replace("~/portfolio", "~")}</span>
               <span className="text-green-400 font-bold font-mono text-sm">$</span>
               <input
                 ref={inputRef}
@@ -809,8 +790,8 @@ Available commands:
                 value={currentCommand}
                 onChange={(e) => setCurrentCommand(e.target.value)}
                 onKeyDown={handleKeyDown}
-                className="flex-1 bg-transparent border-none outline-none text-green-400 font-mono text-sm placeholder-green-500/40 focus:placeholder-green-500/20 transition-colors"
-                placeholder="Type a command..."
+                className="flex-1 bg-transparent border-none outline-none text-green-400 font-mono placeholder-green-500/40 focus:placeholder-green-500/20 transition-colors"
+                placeholder="try: help   |   ls   |   cat home/home.txt"
                 autoFocus
                 spellCheck={false}
               />

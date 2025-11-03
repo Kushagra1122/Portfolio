@@ -37,8 +37,7 @@ const Contact = () => {
           <p
             className={`text-sm sm:text-base md:text-lg max-w-2xl mx-auto ${themeColors.muted} px-2 sm:px-0`}
           >
-            I'm always open to new opportunities, collaborations, or just a
-            friendly chat.
+            Open to new roles, collaborations, or a quick chat.
           </p>
         </motion.div>
 
@@ -71,7 +70,7 @@ const Contact = () => {
                 {
                   Icon: BsClock,
                   label: "Availability",
-                  value: "Open to freelance and full-time opportunities",
+                  value: "Open to freelance and full‑time roles",
                 },
               ].map(({ Icon, label, value }, idx) => (
                 <motion.div
