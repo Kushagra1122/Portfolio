@@ -100,7 +100,7 @@ const InteractiveTerminal = ({ onClose }) => {
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   ls [directory]            List directory contents
-  cd <directory>            Change directory
+  cd <directory>            Change directory (use 'cd ..' to go up)
   cat <file>                Display file contents
   pwd                       Print working directory
   clear, cls                Clear terminal screen
@@ -114,10 +114,13 @@ const InteractiveTerminal = ({ onClose }) => {
 Directories:
   home/      about/     projects/   techstack/   contact/   education/
 
-Example:
-  $ cd home
-  $ ls
-  $ cat home.txt`;
+Examples:
+  $ cd home                 - Change to home directory
+  $ cd ..                   - Go up one directory level
+  $ cd ~                    - Go to root directory
+  $ ls                      - List current directory
+  $ cat home.txt            - View file (when in directory)
+  $ cat home/home.txt       - View file with path`;
         break;
 
       case "guide":
@@ -146,19 +149,80 @@ Available commands:
         break;
       case "cd":
         if (args.length === 0) {
-          commandOutput = currentDirectory;
+          // cd without arguments goes to home directory
+          setCurrentDirectory("~/portfolio");
+          commandOutput = "Changed directory to ~/portfolio";
         } else {
-          const dir = args[0].toLowerCase();
+          const dir = args[0];
           const validDirs = ["home", "about", "projects", "techstack", "contact", "education"];
           
-          if (validDirs.includes(dir)) {
-            setCurrentDirectory(`~/portfolio/${dir}`);
-            commandOutput = `Changed directory to ${dir}/`;
-          } else {
-            commandOutput = `Error: Directory "${dir}" not found.
+          // Handle special cases: .., ., ~
+          if (dir === "..") {
+            // Go up one level
+            const parts = currentDirectory.split("/");
+            if (parts.length > 2) {
+              const newDir = parts.slice(0, -1).join("/");
+              setCurrentDirectory(newDir);
+              commandOutput = `Changed directory to ${newDir.replace("~/portfolio", "~")}`;
+            } else {
+              // Already at root
+              commandOutput = "Already at root directory (~/portfolio)";
+            }
+          } else if (dir === ".") {
+            // Stay in current directory
+            commandOutput = `Already in ${currentDirectory.replace("~/portfolio", "~")}`;
+          } else if (dir === "~" || dir.startsWith("~/")) {
+            // Go to home directory
+            setCurrentDirectory("~/portfolio");
+            commandOutput = "Changed directory to ~/portfolio";
+          } else if (dir.includes("/")) {
+            // Handle absolute or relative paths
+            let targetDir = dir;
+            if (!dir.startsWith("~/")) {
+              // Relative path - resolve from current directory
+              if (currentDirectory === "~/portfolio") {
+                targetDir = `~/portfolio/${dir}`;
+              } else {
+                const currentParts = currentDirectory.split("/");
+                const relativeParts = dir.split("/");
+                let resolvedParts = [...currentParts];
+                
+                for (const part of relativeParts) {
+                  if (part === "..") {
+                    if (resolvedParts.length > 2) {
+                      resolvedParts.pop();
+                    }
+                  } else if (part !== "." && part !== "") {
+                    resolvedParts.push(part);
+                  }
+                }
+                targetDir = resolvedParts.join("/");
+              }
+            }
+            
+            // Validate the target directory
+            const dirName = targetDir.split("/").pop();
+            if (validDirs.includes(dirName) || targetDir === "~/portfolio") {
+              setCurrentDirectory(targetDir);
+              commandOutput = `Changed directory to ${targetDir.replace("~/portfolio", "~")}`;
+            } else {
+              commandOutput = `Error: Directory "${dir}" not found.
 
 Available directories:
   home/      about/     projects/   techstack/   contact/   education/`;
+            }
+          } else {
+            // Simple directory name
+            const dirLower = dir.toLowerCase();
+            if (validDirs.includes(dirLower)) {
+              setCurrentDirectory(`~/portfolio/${dirLower}`);
+              commandOutput = `Changed directory to ${dirLower}/`;
+            } else {
+              commandOutput = `Error: Directory "${dir}" not found.
+
+Available directories:
+  home/      about/     projects/   techstack/   contact/   education/`;
+            }
           }
         }
         break;
