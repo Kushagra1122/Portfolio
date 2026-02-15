@@ -14,7 +14,7 @@ const About = () => {
   const themeColors = getThemeColors(theme);
 
   const highlights = [
-    "Two internships — React.js (web) and React Native (mobile)",
+    "Multiple internships — Backend & AI (IIT Bombay), SDE (Acredge, LeastActions), Frontend (Advista), React Native (Qlue)",
     "Built full‑stack projects with MERN, Firebase, and WebRTC",
     "Comfortable with data structures, algorithms, and system design",
     "Exploring AI and Web3 through small, focused builds",
@@ -25,7 +25,7 @@ const About = () => {
     <section
       id="about"
       ref={ref}
-      className={`py-24 px-6 transition-colors duration-500 ${themeColors.background}`}
+      className={`py-20 md:py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${themeColors.background}`}
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -98,7 +98,7 @@ const About = () => {
               transition={{ delay: 0.5 }}
             >
               <a
-                href="/docs/MyResume.pdf"
+                href="/MyResume.pdf"
                 download="Kushagra_Tiwari_Resume.pdf"
                 className={`inline-block px-8 py-3 ${themeColors.button} font-medium rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1`}
               >

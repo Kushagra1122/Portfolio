@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 
 const InteractiveTerminal = ({ onClose }) => {
@@ -10,53 +9,29 @@ const InteractiveTerminal = ({ onClose }) => {
   const [output, setOutput] = useState([
     {
       type: "system",
-      content: "────────────────────────────────────────────────────────────",
+      content: "╭─────────────────────────────────────────────────────────────────╮",
     },
     {
       type: "system",
-      content: "Welcome to kushagra@portfolio",
-    },
-    {
-      type: "system",
-      content: "Type 'help' to see commands. ESC to close.",
-    },
-    {
-      type: "system",
-      content: "",
-    },
-    {
-      type: "system",
-      content: "Portfolio CLI — browse sections and open simple text files.",
-    },
-    {
-      type: "system",
-      content: "",
-    },
-    {
-      type: "system",
-      content: "Quick start:",
+      content: "│  Portfolio CLI  —  Kushagra Tiwari · Full‑stack Developer          │",
       style: "bold",
     },
     {
       type: "system",
-      content: "  $ ls                    - list directories",
+      content: "╰─────────────────────────────────────────────────────────────────╯",
     },
+    { type: "system", content: "" },
     {
       type: "system",
-      content: "  $ cd <directory>        - change directory",
+      content: "Browse sections as directories. Type help for commands. ESC to close.",
     },
+    { type: "system", content: "" },
     {
       type: "system",
-      content: "  $ cat <file>            - view file",
+      content: "Quick start:  ls  ·  cd <dir>  ·  cat <dir>/<file>.txt",
+      style: "bold",
     },
-    {
-      type: "system",
-      content: "",
-    },
-    {
-      type: "system",
-      content: "Type 'help' for more commands.",
-    },
+    { type: "system", content: "" },
   ]);
   const [isFocused] = useState(true);
   const inputRef = useRef(null);
@@ -96,35 +71,35 @@ const InteractiveTerminal = ({ onClose }) => {
     switch (command) {
       case "help":
       case "?":
-        commandOutput = `Available Commands:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        commandOutput = `COMMANDS
+────────────────────────────────────────────────────────────────────
+  ls [directory]     List directory contents
+  cd <directory>     Change directory (cd .. to go up, cd ~ for root)
+  cat <file>         Display file (e.g. cat home/home.txt)
+  pwd                Print working directory
+  whoami             Display current user
+  clear, cls         Clear screen
+  history            Show command history
+  echo <text>        Echo text
+  help, ?            Show this help
+  exit, quit         Close terminal
 
-  ls [directory]            List directory contents
-  cd <directory>            Change directory (use 'cd ..' to go up)
-  cat <file>                Display file contents
-  pwd                       Print working directory
-  clear, cls                Clear terminal screen
-  history                    Show command history
-  echo <text>                Echo text to terminal
-  help, ?                   Show this help message
-  exit, quit                 Close terminal
+DIRECTORIES
+────────────────────────────────────────────────────────────────────
+  home/   about/   projects/   techstack/   contact/   education/
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXAMPLES
+────────────────────────────────────────────────────────────────────
+  $ ls                    List root contents
+  $ cd projects           Enter projects
+  $ cat about/about.txt   View about file`;
+        break;
 
-Directories:
-  home/      about/     projects/   techstack/   contact/   education/
-
-Examples:
-  $ cd home                 - Change to home directory
-  $ cd ..                   - Go up one directory level
-  $ cd ~                    - Go to root directory
-  $ ls                      - List current directory
-  $ cat home.txt            - View file (when in directory)
-  $ cat home/home.txt       - View file with path`;
+      case "whoami":
+        commandOutput = "Kushagra Tiwari\nFull‑stack developer · Open to opportunities";
         break;
 
       case "guide":
-      case "whoami":
       case "date":
       case "uname":
       case "git":
@@ -141,6 +116,7 @@ Available commands:
   ls [directory]    - List directory contents
   cat <file>        - Display file contents
   pwd               - Print working directory
+  whoami            - Display current user
   clear, cls        - Clear terminal screen
   history           - Show command history
   echo <text>       - Echo text to terminal
@@ -285,9 +261,9 @@ QUICK STATS:
 Experience:       2+ Years
 Projects:         15+ Completed
 Technologies:     20+ Skills
-Languages:        6+
+Languages:        6
 Frameworks:       8+
-Internships:      2
+Internships:      5
 Status:           Actively building
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -307,7 +283,7 @@ Role:              Full‑stack developer
 Location:          Surathkal, Karnataka, India
 Education:         B.Tech in Electrical and Electronics Engineering
 Institution:       NIT Karnataka, Surathkal
-CGPA:              7.1/10 (Current)
+CGPA:              7.14/10 (Current)
 Status:            Open to freelance and full‑time roles
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -341,29 +317,55 @@ CORE SKILLS:
 ║                   PROJECTS.TXT                      ║
 ╚═══════════════════════════════════════════════════════════╝
 
-TOTAL PROJECTS: 4
+TOTAL PROJECTS: 5
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. APPROVAL ORCHESTRATOR
+1. POKESHOOT
+   ─────────────────────────────────────────────────────────
+   Period:         Oct 2025 -- Nov 2025
+   Description:    Real-time multiplayer game with Phaser.js and
+                   Socket.io; Solidity smart contracts on Moonbeam
+                   (ERC-721, escrow, DAO, marketplace) and XCM
+                   cross-chain NFT transfers.
+   
+   Achievements:
+   • Built a real-time multiplayer game using Phaser.js and
+     Socket.io with ELO-based ranking.
+   • Deployed Solidity smart contracts on Moonbeam implementing
+     ERC-721 NFTs, escrow, DAO, and marketplace.
+   • Enabled XCM cross-chain NFT transfers across Moonbeam, Astar,
+     and Asset Hub parachains.
+   • Integrated Web3 authentication (SIWE), IPFS storage, and MongoDB.
+   
+   Technologies:   React, Phaser.js, Node.js, Solidity, Moonbeam
+   GitHub:         https://github.com/Kushagra1122/PokeShoot
+   Type:           Full Stack / Web3 Game
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. APPROVAL ORCHESTRATOR
    ─────────────────────────────────────────────────────────
    Period:         Sep 2025 -- Oct 2025
    Description:    An approval workflow that turns manual reviews into
                    clear, trackable steps.
    
    Achievements:
-   • Shipped an approval flow with states, audit trails, and retries.
-   • Added notifications (Slack, Email, Web) for timely updates.
-   • Built simple analytics with Recharts to spot progress and blockers.
-   • Handled rollbacks, routing, timeouts, and cron jobs for reliability.
+   • Developed a workflow automation system with audit trails,
+     rollback, and conditional routing.
+   • Integrated multi-channel notifications (Slack, Email, Web)
+     with approval timeouts.
+   • Built a real-time analytics dashboard using Recharts.
+   • Implemented cron-based schedulers for cleanup, retries, and
+     state synchronization.
    
-   Technologies:   Node.js, SQLite, React, Cron Jobs, Webhooks
+   Technologies:   Node.js, React, SQLite, Socket.io
    GitHub:         https://github.com/Kushagra1122/approval-orchestrator
    Type:           Full Stack Web Application
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-2. STREAMSYNC
+3. STREAMSYNC
    ─────────────────────────────────────────────────────────
    Period:         Mar 2025 -- Jul 2025
    Description:    A real‑time video streaming app with low delay and
@@ -381,7 +383,7 @@ TOTAL PROJECTS: 4
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-3. GET SOCIAL
+4. GET SOCIAL
    ─────────────────────────────────────────────────────────
    Period:         Jan 2025 -- Feb 2025
    Description:    A social app with real‑time chat, friend requests,
@@ -399,7 +401,7 @@ TOTAL PROJECTS: 4
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-4. STUDY AI
+5. STUDY AI
    ─────────────────────────────────────────────────────────
    Period:         Jun 2025 -- Jul 2025
    Description:    An AI helper for YouTube that summarizes videos and
@@ -419,51 +421,29 @@ TOTAL PROJECTS: 4
 ║                  TECHSTACK.TXT                         ║
 ╚═══════════════════════════════════════════════════════════╝
 
-PROGRAMMING LANGUAGES:
+LANGUAGES:
 ─────────────────────────────────────────────────────────────
-JavaScript      - Core language for web development
-TypeScript      - Typed superset of JavaScript for large-scale apps
-Python          - Backend scripting and automation
-C++             - System programming and algorithms
-Swift           - iOS mobile development
-SQL             - Database querying and management
+JavaScript, TypeScript, Python, C++, SQL, Solidity
 
-FRONTEND TECHNOLOGIES:
+FRONTEND:
 ─────────────────────────────────────────────────────────────
-React.js        - Component-based UI library for web applications
-Next.js         - React framework for production with SSR/SSG
-React Native    - Cross-platform mobile app development
-Tailwind CSS    - Utility-first CSS framework for rapid UI development
-HTML/CSS        - Core web markup and styling
+React, Next.js, HTML, CSS
 
-BACKEND TECHNOLOGIES:
+BACKEND & APIs:
 ─────────────────────────────────────────────────────────────
-Node.js         - JavaScript runtime for server-side development
-Express.js      - Minimal web framework for Node.js
-FastAPI         - Modern Python web framework for APIs
+Node.js, Express, Django, FastAPI, REST, WebSockets, WebRTC
 
-DATABASES:
+AI / ML:
 ─────────────────────────────────────────────────────────────
-MongoDB         - NoSQL document database
-PostgreSQL      - Advanced open-source relational database
-SQLite          - Lightweight embedded database
-Firebase        - Google's mobile and web app platform
+LangChain, LangGraph, RAG, LLM APIs, Whisper, Embeddings
 
-WEB3 & BLOCKCHAIN:
+DATABASES & CLOUD:
 ─────────────────────────────────────────────────────────────
-Solidity        - Smart contract programming for Ethereum
-Web3.js         - JavaScript library for Ethereum blockchain
+MongoDB, PostgreSQL, Redis, Firebase, GCS
 
-TOOLS & UTILITIES:
+DEVOPS & TESTING:
 ─────────────────────────────────────────────────────────────
-Git             - Version control system
-GitHub          - Code hosting and collaboration platform
-Figma           - UI/UX design and prototyping tool
-Socket.io       - Real-time bidirectional event-based communication
-WebRTC          - Real-time peer-to-peer communication
-JWT             - JSON Web Tokens for authentication
-REST APIs       - RESTful API design and integration
-Chrome APIs     - Browser extension development`;
+Docker, CI/CD, Nginx, Git, AWS EC2, System Design`;
             } else if (dir === "contact" && file === "contact.txt") {
               commandOutput = `╔═══════════════════════════════════════════════════════════╗
 ║                    CONTACT.TXT                      ║
@@ -512,27 +492,62 @@ Institution:       National Institute of Technology Karnataka
                   (NIT Surathkal)
 Location:          Surathkal, Karnataka, India
 Duration:          Aug 2023 – Apr 2027
-CGPA:              7.1/10 (Current)
+CGPA:              7.14/10 (Current)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 PROFESSIONAL EXPERIENCE:
 ─────────────────────────────────────────────────────────────
 
-1. FRONTEND DEVELOPER @ ADVISTA (REMOTE)
-   Period:          Jan 2025 – Feb 2025
-   Role:            Frontend Developer
+1. BAITAI (REMOTE)
+   Period:          Dec 2025
+   Role:            Freelance project
    
    Achievements:
-   • Built modular, responsive UI with React.js & Tailwind CSS
-   • Optimized performance using code splitting, lazy loading, and
-     refined routing
-   • Transformed Figma designs into interactive interfaces with
-     efficient state management
+   • Developed an AI-powered interview system using Django for
+     backend orchestration and API management
+   • Integrated OpenAI Whisper with PCM16 audio pipelines for
+     accurate real-time speech-to-text transcription
+   • Designed scalable media storage using Google Cloud Storage
+     (GCS) for interview audio and metadata
+   • Implemented end-to-end interview workflows including audio
+     capture, transcription, and structured response persistence
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-2. REACT NATIVE DEVELOPER @ QLUE (REMOTE)
+2. SPOKEN TUTORIAL, IIT BOMBAY (REMOTE)
+   Period:          Nov 2025 – Dec 2025
+   Role:            Backend and AI Intern
+   
+   Achievements:
+   • Designed and deployed a LangGraph-based course outline
+     chatbot generating personalized curricula
+   • Engineered a context-aware conversational AI agent
+     supporting 10+ turn dialogues with improved response relevance
+   • Implemented Google OAuth with domain-level access control
+     to secure internal tools
+   • Optimized agent workflows and prompt routing, achieving
+     ~35% faster response times and reduced token usage
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. ACREDGE (REMOTE)
+   Period:          Aug 2025 – Oct 2025
+   Role:            Software Development Engineer Intern
+   
+   Achievements:
+   • Improved search performance by 60% by refactoring sequential
+     pipelines into a parallel processing architecture
+   • Built an intent-driven real estate chatbot using n8n with
+     workflow-based natural language understanding
+   • Developed a recommendation engine using Recombee with
+     collaborative and personalized filtering strategies
+   • Resolved critical production issues, improving overall system
+     reliability and user experience
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. REACT NATIVE DEVELOPER @ QLUE (REMOTE)
    Period:          May 2025 – Jul 2025
    Role:            React Native Developer
    
@@ -541,7 +556,36 @@ PROFESSIONAL EXPERIENCE:
      modular architecture
    • Implemented real-time chat with Socket.io & Firebase Firestore,
      achieving 99% delivery rate
-   • Integrated FCM push notifications to boost user engagement`;
+   • Integrated FCM push notifications to boost user engagement
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. LEASTACTIONS (REMOTE)
+   Period:          Jun 2025 – Aug 2025
+   Role:            Software Development Engineer Intern
+   
+   Achievements:
+   • Developed a modular IDE frontend using TypeScript and
+     TanStack Router
+   • Built RESTful backend APIs enabling code execution, file
+     management, and collaborative workflows
+   • Implemented comprehensive unit tests and integration tests
+     to ensure API reliability and prevent regressions
+   • Deployed services on AWS EC2 with Nginx and configured
+     CI/CD pipelines for automated testing and deployment
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. FRONTEND DEVELOPER @ ADVISTA (REMOTE)
+   Period:          Jan 2025 – Feb 2025
+   Role:            Frontend Developer
+   
+   Achievements:
+   • Built modular, responsive UI with React.js & Tailwind CSS
+   • Optimized performance using code splitting, lazy loading, and
+     refined routing
+   • Transformed Figma designs into interactive interfaces with
+     efficient state management`;
             } else {
               commandOutput = `Error: File "${filePath}" not found. 
 
@@ -682,6 +726,7 @@ Available commands:
   ls [directory]    - List directory contents
   cat <file>        - Display file contents
   pwd               - Print working directory
+  whoami            - Display current user
   clear, cls        - Clear terminal screen
   history           - Show command history
   echo <text>       - Echo text to terminal
@@ -750,90 +795,93 @@ Available commands:
   };
 
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/98 backdrop-blur-sm"
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
       onClick={handleBackdropClick}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Portfolio terminal"
     >
       <motion.div
-        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+        initial={{ opacity: 0, scale: 0.96, y: 24 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.9, y: 20 }}
-        className="w-full max-w-5xl h-[700px] border border-green-500/30 rounded-xl overflow-hidden bg-black shadow-2xl"
+        exit={{ opacity: 0, scale: 0.96, y: 24 }}
+        transition={{ type: "spring", damping: 28, stiffness: 300 }}
+        className="w-full max-w-4xl h-[min(75vh,700px)] border border-green-500/20 rounded-lg overflow-hidden bg-slate-950 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
         style={{
-          boxShadow: "0 20px 60px rgba(34, 197, 94, 0.25), 0 0 0 1px rgba(34, 197, 94, 0.1)",
+          boxShadow: "0 25px 50px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(34, 197, 94, 0.08)",
         }}
       >
         {/* Terminal Header */}
-        <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 px-4 py-3 flex items-center justify-between border-b border-green-500/40">
+        <div className="bg-slate-900/95 px-4 py-3 flex items-center justify-between border-b border-green-500/30">
           <div className="flex items-center gap-4">
-            <div className="flex gap-2">
-              <div 
-                className="w-3 h-3 rounded-full bg-red-500 cursor-pointer hover:bg-red-400 transition-all hover:scale-110" 
+            <div className="flex gap-2" aria-hidden>
+              <div
+                className="w-3 h-3 rounded-full bg-red-500/90 cursor-pointer hover:bg-red-400 transition-colors"
                 onClick={onClose}
-                title="Close terminal"
-              ></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                title="Close"
+                aria-label="Close terminal"
+              />
+              <div className="w-3 h-3 rounded-full bg-amber-500/80" title="Minimize" />
+              <div className="w-3 h-3 rounded-full bg-emerald-500/80" title="Maximize" />
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-400 text-sm font-mono font-semibold">kushagra@portfolio</span>
-              <span className="text-green-500">:</span>
-              <span className="text-cyan-400">{currentDirectory.replace("~/portfolio", "~")}</span>
+            <span className="text-slate-400 text-xs font-mono">Portfolio CLI</span>
+            <div className="flex items-center gap-1.5 text-sm font-mono">
+              <span className="text-green-400">kushagra@portfolio</span>
+              <span className="text-green-600">:</span>
+              <span className="text-emerald-400">{currentDirectory.replace("~/portfolio", "~")}</span>
             </div>
           </div>
-          <div className="flex items-center gap-3">
-            <button
-              onClick={onClose}
-              className="text-xs text-green-500/70 hover:text-green-400 font-mono px-3 py-1 rounded border border-green-500/30 hover:border-green-500 transition-all"
-            >
-              ESC
-            </button>
-          </div>
+          <button
+            onClick={onClose}
+            className="text-xs text-slate-400 hover:text-green-400 font-mono px-2.5 py-1 rounded border border-slate-600 hover:border-green-500/50 transition-all"
+            aria-label="Close (Escape)"
+          >
+            ESC
+          </button>
         </div>
 
         {/* Terminal Body */}
         <div
           ref={terminalRef}
-          className="h-[calc(100%-60px)] overflow-y-auto p-6 font-mono bg-black text-green-400 relative"
-          style={{ 
+          className="h-[calc(100%-52px)] overflow-y-auto p-5 font-mono bg-slate-950 text-green-400/90 relative"
+          style={{
             scrollbarWidth: "thin",
-            scrollbarColor: "#22c55e #000000",
-            fontFamily: "'JetBrains Mono', 'Fira Code', 'Courier New', monospace",
-            fontSize: "14px",
-            lineHeight: 1.6
+            scrollbarColor: "rgba(34, 197, 94, 0.4) #0f172a",
+            fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+            fontSize: "13px",
+            lineHeight: 1.65,
           }}
         >
-          {/* Terminal Grid Background */}
-          <div 
-            className="absolute inset-0 pointer-events-none opacity-[0.03]"
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.04]"
             style={{
               backgroundImage: `
-                linear-gradient(rgba(34, 197, 94, 0.15) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(34, 197, 94, 0.15) 1px, transparent 1px)
+                linear-gradient(rgba(34, 197, 94, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(34, 197, 94, 0.2) 1px, transparent 1px)
               `,
-              backgroundSize: "24px 24px"
+              backgroundSize: "20px 20px",
             }}
           />
           <AnimatePresence>
             {output.map((item, idx) => (
-              <div
-                key={idx}
-                className="mb-2 relative z-10"
-              >
+              <div key={idx} className="mb-1.5 relative z-10">
                 {item.type === "command" && (
-                  <div className="flex items-start gap-2 mb-1.5">
-                    <span className="text-green-400 font-bold select-none">$</span>
-                    <span className="text-cyan-400 font-mono font-medium">{item.content.substring(2)}</span>
+                  <div className="flex items-start gap-2 mb-1">
+                    <span className="text-green-500 font-semibold select-none shrink-0">$</span>
+                    <span className="text-emerald-300/95 font-mono">{item.content.substring(2)}</span>
                   </div>
                 )}
                 {item.type === "output" && (
-                  <div className="ml-8 text-green-100 whitespace-pre-wrap leading-relaxed font-mono break-words">
+                  <pre className="ml-4 text-green-200/90 whitespace-pre-wrap font-mono break-words leading-relaxed text-[13px]">
                     {item.content}
-                  </div>
+                  </pre>
                 )}
                 {item.type === "system" && (
-                  <div className={`text-green-400/70 mb-1 ${item.style === "bold" ? "font-bold text-green-300" : ""} leading-relaxed font-mono text-[13px]`}>
+                  <div
+                    className={`mb-1 font-mono text-[13px] leading-relaxed text-green-400/80 ${item.style === "bold" ? "font-semibold text-green-300/90" : ""}`}
+                  >
                     {item.content}
                   </div>
                 )}
@@ -842,24 +890,26 @@ Available commands:
           </AnimatePresence>
 
           {/* Command Input */}
-          <div className="relative mt-4 pt-4 border-t border-green-500/20">
-            <div className="flex items-center gap-2">
-              <span className="text-green-400 font-bold font-mono">kushagra@portfolio</span>
-              <span className="text-green-500">:</span>
-              <span className="text-cyan-400 font-mono">{currentDirectory.replace("~/portfolio", "~")}</span>
-              <span className="text-green-400 font-bold font-mono text-sm">$</span>
+          <div className="relative mt-3 pt-3 border-t border-green-500/15">
+            <div className="flex items-center gap-2 min-h-[1.5em]">
+              <span className="text-green-500 font-semibold font-mono shrink-0">$</span>
+              <span className="text-green-400/80 font-mono shrink-0">kushagra@portfolio</span>
+              <span className="text-green-600 shrink-0">:</span>
+              <span className="text-emerald-400/90 font-mono shrink-0">{currentDirectory.replace("~/portfolio", "~")}</span>
+              <span className="text-green-500 font-mono shrink-0">$</span>
               <input
                 ref={inputRef}
                 type="text"
                 value={currentCommand}
                 onChange={(e) => setCurrentCommand(e.target.value)}
                 onKeyDown={handleKeyDown}
-                className="flex-1 bg-transparent border-none outline-none text-green-400 font-mono placeholder-green-500/40 focus:placeholder-green-500/20 transition-colors"
-                placeholder="try: help   |   ls   |   cat home/home.txt"
+                className="flex-1 min-w-0 bg-transparent border-none outline-none text-green-300 font-mono placeholder-green-600/50 focus:placeholder-green-500/30 text-[13px]"
+                placeholder=" Type a command (help for options)"
                 autoFocus
                 spellCheck={false}
+                aria-label="Terminal input"
               />
-              <span className="text-green-400 animate-pulse font-bold text-lg leading-none select-none">█</span>
+              <span className="text-green-500 animate-pulse font-normal text-base leading-none select-none shrink-0" aria-hidden>▌</span>
             </div>
           </div>
         </div>

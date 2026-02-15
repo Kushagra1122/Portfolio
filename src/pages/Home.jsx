@@ -64,7 +64,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className={`relative min-h-[90vh] flex flex-col justify-center items-center px-6 transition-colors duration-500 ${themeColors.background} overflow-hidden`}
+      className={`relative min-h-[90vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${themeColors.background} overflow-hidden`}
     >
       <motion.button
         onClick={handleTheme}
@@ -156,13 +156,18 @@ const Home = () => {
               </motion.a>
               <motion.button
                 onClick={() => setShowTerminal(true)}
+                title="Open terminal (Ctrl+`)"
+                aria-label="Open portfolio terminal"
                 className={`border-2 ${themeColors.cardBorder} ${themeColors.text} px-6 py-3 rounded-lg font-semibold hover:${themeColors.accent} hover:border-green-500 dark:hover:border-green-400 transition-all duration-300`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Use CLI
+                Open Terminal
               </motion.button>
             </motion.div>
+            <p className={`mt-3 text-sm ${themeColors.muted}`}>
+              <kbd className="px-1.5 py-0.5 rounded border border-current/30 font-mono text-xs">Ctrl+`</kbd> to open terminal from anywhere
+            </p>
           </motion.div>
 
           {/* Right Column - Stats */}
@@ -199,7 +204,7 @@ const Home = () => {
               <div className={`mt-8 pt-6 border-t ${themeColors.border}`}>
                 <div className="grid grid-cols-2 gap-4">
                   <div className={`p-4 rounded-lg ${themeColors.secondaryBg} text-center`}>
-                    <div className={`${themeColors.accent} font-bold text-2xl mb-1`}>6+</div>
+                    <div className={`${themeColors.accent} font-bold text-2xl mb-1`}>6</div>
                     <div className={`${themeColors.muted} text-sm`}>Languages</div>
                   </div>
                   <div className={`p-4 rounded-lg ${themeColors.secondaryBg} text-center`}>
@@ -207,7 +212,7 @@ const Home = () => {
                     <div className={`${themeColors.muted} text-sm`}>Frameworks</div>
                   </div>
                   <div className={`p-4 rounded-lg ${themeColors.secondaryBg} text-center`}>
-                    <div className={`${themeColors.accent} font-bold text-2xl mb-1`}>2</div>
+                    <div className={`${themeColors.accent} font-bold text-2xl mb-1`}>5</div>
                     <div className={`${themeColors.muted} text-sm`}>Internships</div>
                   </div>
                   <div className={`p-4 rounded-lg ${themeColors.secondaryBg} text-center`}>

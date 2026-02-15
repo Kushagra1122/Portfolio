@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components -- Theme file exports Provider and useTheme hook */
 import React, { useState, createContext, useContext, useEffect } from "react";
 
 // Create Context

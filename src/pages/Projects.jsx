@@ -12,17 +12,32 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "PokeShoot",
+      description:
+        "Real-time multiplayer game with Phaser.js and Socket.io; Solidity smart contracts on Moonbeam (ERC-721, escrow, DAO, marketplace) and XCM cross-chain NFT transfers.",
+      period: "Oct 2025 -- Nov 2025",
+      achievements: [
+        "Built a <strong>real-time multiplayer game</strong> using <strong>Phaser.js</strong> and <strong>Socket.io</strong> with ELO-based ranking.",
+        "Deployed <strong>Solidity smart contracts</strong> on <strong>Moonbeam</strong> implementing ERC-721 NFTs, escrow, DAO, and marketplace.",
+        "Enabled <strong>XCM cross-chain NFT transfers</strong> across Moonbeam, Astar, and Asset Hub parachains.",
+        "Integrated <strong>Web3 authentication (SIWE)</strong>, IPFS storage, and MongoDB.",
+      ],
+      technologies: ["React", "Phaser.js", "Node.js", "Solidity", "Moonbeam"],
+      githubLink: "https://github.com/Kushagra1122/PokeShoot",
+      demoLink: "#",
+    },
+    {
       title: "Approval Orchestrator",
       description:
         "An approval workflow system that turns manual reviews into clear, trackable steps.",
       period: "Sep 2025 -- Oct 2025",
       achievements: [
-        "Shipped an <strong>approval workflow</strong> with clear states, audit trails, and retries.",
-        "Added <strong>notifications</strong> via Slack, Email, and Web for timely updates.",
-        "Built simple analytics with <strong>Recharts</strong> to visualize progress and blockers.",
-        "Handled rollbacks, routing, timeouts, and background <strong>cron jobs</strong> for reliability.",
+        "Developed a <strong>workflow automation system</strong> with audit trails, rollback, and conditional routing.",
+        "Integrated <strong>multi-channel notifications</strong> (Slack, Email, Web) with approval timeouts.",
+        "Built a real-time analytics dashboard using <strong>Recharts</strong>.",
+        "Implemented <strong>cron-based schedulers</strong> for cleanup, retries, and state synchronization.",
       ],
-      technologies: ["Node.js", "SQLite", "React", "Cron Jobs", "Webhooks"],
+      technologies: ["Node.js", "React", "SQLite", "Socket.io"],
       githubLink: "https://github.com/Kushagra1122/approval-orchestrator",
       demoLink: "#",
     },
@@ -77,9 +92,9 @@ const Projects = () => {
     <section
       id="projects"
       ref={ref}
-      className={`py-24 transition-colors duration-500 ${themeColors.background}`}
+      className={`py-20 md:py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${themeColors.background}`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -166,11 +181,12 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className={`flex space-x-4 mt-auto pt-4 border-t ${themeColors.border}`}>
+                <div className={`flex flex-wrap gap-3 mt-auto pt-4 border-t ${themeColors.border}`}>
                   <motion.a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`View ${project.title} source code on GitHub`}
                     className={`flex items-center space-x-2 px-5 py-2.5 rounded-lg text-sm font-semibold ${themeColors.button} transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -178,17 +194,25 @@ const Projects = () => {
                     <FaGithub className="text-base" />
                     <span>View Code</span>
                   </motion.a>
-                  {project.demoLink !== "#" && (
+                  {project.demoLink !== "#" ? (
                     <motion.a
                       href={project.demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Open ${project.title} live demo`}
                       className={`flex items-center space-x-2 px-5 py-2.5 rounded-lg text-sm font-semibold ${themeColors.cardBorder} border-2 ${themeColors.text} hover:${themeColors.accent} transition-all`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
                       <span>Live Demo →</span>
                     </motion.a>
+                  ) : (
+                    <span
+                      className={`flex items-center px-5 py-2.5 rounded-lg text-sm font-medium ${themeColors.muted} border ${themeColors.cardBorder} cursor-default`}
+                      title="Demo available on request"
+                    >
+                      Demo on request
+                    </span>
                   )}
                 </div>
               </div>
