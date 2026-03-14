@@ -499,7 +499,23 @@ CGPA:              7.14/10 (Current)
 PROFESSIONAL EXPERIENCE:
 ─────────────────────────────────────────────────────────────
 
-1. BAITAI (REMOTE)
+1. PIPESHUB (REMOTE)
+   Period:          Jan 2026 – Present
+   Role:            Backend and AI Engineer
+   
+   Achievements:
+   • Built multiple platform connectors integrating external
+     services into the agent ecosystem
+   • Implemented integration test suites to ensure reliability
+     and stability of service connectors
+   • Developed production AI agents capable of orchestrating
+     complex multi-step workflows
+   • Worked on backend infrastructure supporting agent execution
+     pipelines and large-scale service integrations
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. BAITAI (REMOTE)
    Period:          Dec 2025
    Role:            Freelance project
    
@@ -515,7 +531,7 @@ PROFESSIONAL EXPERIENCE:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-2. SPOKEN TUTORIAL, IIT BOMBAY (REMOTE)
+3. SPOKEN TUTORIAL, IIT BOMBAY (REMOTE)
    Period:          Nov 2025 – Dec 2025
    Role:            Backend and AI Intern
    
@@ -531,7 +547,7 @@ PROFESSIONAL EXPERIENCE:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-3. ACREDGE (REMOTE)
+4. ACREDGE (REMOTE)
    Period:          Aug 2025 – Oct 2025
    Role:            Software Development Engineer Intern
    
@@ -547,7 +563,7 @@ PROFESSIONAL EXPERIENCE:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-4. REACT NATIVE DEVELOPER @ QLUE (REMOTE)
+5. REACT NATIVE DEVELOPER @ QLUE (REMOTE)
    Period:          May 2025 – Jul 2025
    Role:            React Native Developer
    
@@ -560,7 +576,7 @@ PROFESSIONAL EXPERIENCE:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-5. LEASTACTIONS (REMOTE)
+6. LEASTACTIONS (REMOTE)
    Period:          Jun 2025 – Aug 2025
    Role:            Software Development Engineer Intern
    
@@ -576,7 +592,7 @@ PROFESSIONAL EXPERIENCE:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-6. FRONTEND DEVELOPER @ ADVISTA (REMOTE)
+7. FRONTEND DEVELOPER @ ADVISTA (REMOTE)
    Period:          Jan 2025 – Feb 2025
    Role:            Frontend Developer
    

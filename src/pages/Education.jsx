@@ -33,6 +33,21 @@ const Education = () => {
     },
     {
       type: "work",
+      date: "Jan 2026 – Present",
+      title: "Backend and AI Engineer",
+      subtitle: "PipesHub (Remote)",
+      details: [
+        "Built multiple <strong>platform connectors</strong> integrating external services into the <strong>agent ecosystem</strong>.",
+        "Implemented <strong>integration test suites</strong> to ensure reliability and stability of service connectors.",
+        "Developed <strong>production AI agents</strong> capable of orchestrating complex <strong>multi-step workflows</strong>.",
+        "Worked on backend infrastructure supporting <strong>agent execution pipelines</strong> and large-scale service integrations.",
+      ],
+      icon: <MdWork />,
+      iconBg: themeColors.workIcon,
+      textColor: themeColors.accent,
+    },
+    {
+      type: "work",
       date: "Dec 2025",
       title: "Freelance project",
       subtitle: "BaitAI (Remote)",
