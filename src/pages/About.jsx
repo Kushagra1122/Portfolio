@@ -14,7 +14,7 @@ const About = () => {
   const themeColors = getThemeColors(theme);
 
   const highlights = [
-    "Multiple internships — Backend & AI (IIT Bombay), SDE (Acredge, LeastActions), Frontend (Advista), React Native (Qlue)",
+    "Multiple internships — Backend & AI (IIT Bombay), SDE (Acredge, LeastActions), Frontend (Advista), iOS (Qlue)",
     "Built full‑stack projects with MERN, Firebase, and WebRTC",
     "Comfortable with data structures, algorithms, and system design",
     "Exploring AI and Web3 through small, focused builds",

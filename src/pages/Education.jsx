@@ -22,16 +22,6 @@ const Education = () => {
 
   const timelineElements = [
     {
-      type: "education",
-      date: "Aug 2023 – Apr 2027",
-      title: "B.Tech in Electrical and Electronics Engineering",
-      subtitle: "NIT Karnataka, Surathkal",
-      details: ["<strong>CGPA:</strong> 7.14/10 (Current)"],
-      icon: <MdSchool />,
-      iconBg: themeColors.schoolIcon,
-      textColor: themeColors.accent,
-    },
-    {
       type: "work",
       date: "Jan 2026 – Present",
       title: "Backend and AI Engineer",
@@ -78,6 +68,21 @@ const Education = () => {
     },
     {
       type: "work",
+      date: "Oct 2025 – Dec 2025",
+      title: "iOS Developer",
+      subtitle: "Qlue (Remote)",
+      details: [
+        "Built native <strong>iOS applications</strong> using <strong>Swift</strong>, <strong>UIKit</strong>, and <strong>SwiftUI</strong> following <strong>MVVM</strong> architecture.",
+        "Integrated <strong>REST APIs</strong>, authentication flows, and persistent local storage.",
+        "Implemented push notifications using <strong>APNs</strong> and <strong>Firebase Cloud Messaging</strong>.",
+        "Optimized app performance, memory usage, and <strong>UI responsiveness</strong>.",
+      ],
+      icon: <MdWork />,
+      iconBg: themeColors.workIcon,
+      textColor: themeColors.accent,
+    },
+    {
+      type: "work",
       date: "Aug 2025 – Oct 2025",
       title: "Software Development Engineer Intern",
       subtitle: "Acredge (Remote)",
@@ -86,20 +91,6 @@ const Education = () => {
         "Built an <strong>intent-driven real estate chatbot</strong> using <strong>n8n</strong> with workflow-based natural language understanding.",
         "Developed a <strong>recommendation engine</strong> using <strong>Recombee</strong> with collaborative and personalized filtering strategies.",
         "Resolved critical production issues, improving overall system reliability and user experience.",
-      ],
-      icon: <MdWork />,
-      iconBg: themeColors.workIcon,
-      textColor: themeColors.accent,
-    },
-    {
-      type: "work",
-      date: "May 2025 – Jul 2025",
-      title: "React Native Developer",
-      subtitle: "Qlue (Remote)",
-      details: [
-        "Engineered <strong>cross-platform mobile apps</strong> using <strong>React Native</strong> with modular architecture.",
-        "Implemented <strong>real-time chat</strong> with <strong>Socket.io</strong> & <strong>Firebase Firestore</strong>, achieving <strong>99% delivery rate</strong>.",
-        "Integrated <strong>FCM push notifications</strong> to boost user engagement.",
       ],
       icon: <MdWork />,
       iconBg: themeColors.workIcon,
@@ -132,6 +123,16 @@ const Education = () => {
       ],
       icon: <MdWork />,
       iconBg: themeColors.workIcon,
+      textColor: themeColors.accent,
+    },
+    {
+      type: "education",
+      date: "Aug 2023 – Apr 2027",
+      title: "B.Tech in Electrical and Electronics Engineering",
+      subtitle: "NIT Karnataka, Surathkal",
+      details: ["<strong>CGPA:</strong> 7.14/10 (Current)"],
+      icon: <MdSchool />,
+      iconBg: themeColors.schoolIcon,
       textColor: themeColors.accent,
     },
   ];

@@ -298,7 +298,7 @@ the way. Lately I've been exploring AI and Web3 through small builds.
 
 KEY HIGHLIGHTS:
 ─────────────────────────────────────────────────────────────
-• Two internships so far — React.js (web) and React Native (mobile)
+• Two internships so far — React.js (web) and iOS/Swift (mobile)
 • Built full‑stack side projects with MERN, Firebase, and WebRTC
 • Comfortable with DSA and system design trade‑offs
 • Currently learning by building small AI and Web3 experiments
@@ -484,19 +484,7 @@ PREFERRED METHODS OF CONTACT:
 ║                  EDUCATION.TXT                      ║
 ╚═══════════════════════════════════════════════════════════╝
 
-ACADEMIC QUALIFICATIONS:
-─────────────────────────────────────────────────────────────
-Degree:            B.Tech (Bachelor of Technology)
-Field:             Electrical and Electronics Engineering
-Institution:       National Institute of Technology Karnataka
-                  (NIT Surathkal)
-Location:          Surathkal, Karnataka, India
-Duration:          Aug 2023 – Apr 2027
-CGPA:              7.14/10 (Current)
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-PROFESSIONAL EXPERIENCE:
+PROFESSIONAL EXPERIENCE (most recent first):
 ─────────────────────────────────────────────────────────────
 
 1. PIPESHUB (REMOTE)
@@ -547,7 +535,22 @@ PROFESSIONAL EXPERIENCE:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-4. ACREDGE (REMOTE)
+4. IOS DEVELOPER @ QLUE (REMOTE)
+   Period:          Oct 2025 – Dec 2025
+   Role:            iOS Developer
+   
+   Achievements:
+   • Built native iOS applications using Swift, UIKit, and SwiftUI
+     following MVVM architecture
+   • Integrated REST APIs, authentication flows, and persistent local
+     storage
+   • Implemented push notifications using APNs and Firebase Cloud
+     Messaging
+   • Optimized app performance, memory usage, and UI responsiveness
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. ACREDGE (REMOTE)
    Period:          Aug 2025 – Oct 2025
    Role:            Software Development Engineer Intern
    
@@ -560,19 +563,6 @@ PROFESSIONAL EXPERIENCE:
      collaborative and personalized filtering strategies
    • Resolved critical production issues, improving overall system
      reliability and user experience
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-5. REACT NATIVE DEVELOPER @ QLUE (REMOTE)
-   Period:          May 2025 – Jul 2025
-   Role:            React Native Developer
-   
-   Achievements:
-   • Engineered cross-platform mobile apps using React Native with
-     modular architecture
-   • Implemented real-time chat with Socket.io & Firebase Firestore,
-     achieving 99% delivery rate
-   • Integrated FCM push notifications to boost user engagement
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -601,7 +591,19 @@ PROFESSIONAL EXPERIENCE:
    • Optimized performance using code splitting, lazy loading, and
      refined routing
    • Transformed Figma designs into interactive interfaces with
-     efficient state management`;
+     efficient state management
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ACADEMIC QUALIFICATIONS:
+─────────────────────────────────────────────────────────────
+Degree:            B.Tech (Bachelor of Technology)
+Field:             Electrical and Electronics Engineering
+Institution:       National Institute of Technology Karnataka
+                  (NIT Surathkal)
+Location:          Surathkal, Karnataka, India
+Duration:          Aug 2023 – Apr 2027
+CGPA:              7.14/10 (Current)`;
             } else {
               commandOutput = `Error: File "${filePath}" not found. 
 
