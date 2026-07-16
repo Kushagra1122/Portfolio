@@ -4,14 +4,14 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://kushagraportfolio12.netlify.app",
   name: "Kushagra Tiwari",
   description:
-    "Backend, systems, and AI infrastructure engineer building reliable platforms, retrieval systems, and developer tools. Portfolio of Kushagra Tiwari.",
+    "Software engineer focused on backend systems and AI-enabled products, with full-stack, DevOps, QA, and frontend experience. Portfolio of Kushagra Tiwari.",
   locale: "en_US",
 } as const;
 
 export const content: SiteContent = {
   name: "Kushagra Tiwari",
-  title: "Backend, Systems & AI Infrastructure Engineer",
-  tagline: "Distributed systems. AI infrastructure. Production backends.",
+  title: "Software Engineer · Backend, AI, Full-Stack & DevOps",
+  tagline: "Backend systems. AI workflows. Full-stack delivery.",
   location: "India",
   email: "kushagratiwari24@gmail.com",
   phone: "+91 8318661731",
@@ -23,11 +23,11 @@ export const content: SiteContent = {
   ],
   story: {
     eyebrow: "About",
-    headline: "I build backend and AI systems that are fast, reliable, and safe to operate.",
+    headline: "I build backend and AI-heavy software that is useful, reliable, and ready to ship.",
     paragraphs: [
-      "I'm a backend and systems engineer focused on production APIs, distributed automation, AI product infrastructure, and secure desktop-to-cloud bridges. I care about latency, correctness, and systems that stay predictable under load.",
-      "Recently I've shipped automation engines, SaaS connectors for AI search, retrieval pipelines that cut latency by 60%, and local-first memory systems powered by RAG.",
-      "I study Electrical and Electronics Engineering at NITK Surathkal, and I build in TypeScript, Go, Python, and systems tooling every day.",
+      "I'm a software engineer strongest in backend systems, AI workflows, and platform-style product engineering, while staying comfortable across frontend, full-stack development, DevOps, and QA.",
+      "Recently I've shipped automation engines, SaaS connectors, retrieval pipelines, secure desktop-to-cloud bridges, and production tooling across TypeScript, Go, Python, and cloud-facing workflows.",
+      "I study Electrical and Electronics Engineering at NITK Surathkal, and I like roles where I can build, debug, test, deploy, and improve real product systems end to end.",
     ],
   },
   experience: [
@@ -277,7 +277,7 @@ export const content: SiteContent = {
     },
   ],
   cta: {
-    headline: "Let’s build something robust.",
-    body: "Open to full-time and internship opportunities across backend, AI infrastructure, developer tooling, and platform engineering.",
+    headline: "Let’s build something reliable.",
+    body: "Open to full-time and internship opportunities across frontend, backend, full-stack, DevOps, QA, systems, and product engineering.",
   },
 };

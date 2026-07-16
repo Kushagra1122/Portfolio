@@ -45,20 +45,20 @@ export function Story() {
         <div className="mt-14 grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
           {[
             [
-              "Backend architecture",
-              "Designing APIs, contracts, auth, validation, and database-backed services that stay predictable as complexity grows.",
+              "Full-stack product work",
+              "Building frontend flows, APIs, auth, validation, and database-backed features that feel cohesive from UI to service layer.",
             ],
             [
-              "Distributed systems",
-              "Building job runtimes, queues, retries, sync engines, and orchestration paths with clear failure behavior.",
+              "Systems and backend",
+              "Designing services, job runtimes, queues, retries, sync engines, and orchestration paths with clear failure behavior.",
             ],
             [
-              "AI infrastructure",
-              "Shipping retrieval, embeddings, agent workflows, tool execution, and AI product backends beyond prototype quality.",
+              "DevOps and delivery",
+              "Working with CI/CD, deployments, environment config, logs, monitoring, docs, and release handoff details.",
             ],
             [
-              "Reliability mindset",
-              "Optimizing latency, observability, correctness, and operational clarity so systems are easy to debug under pressure.",
+              "QA mindset",
+              "Testing user paths, debugging edge cases, improving observability, and keeping product behavior reliable under change.",
             ],
           ].map(([title, body]) => (
             <article
@@ -85,7 +85,7 @@ export function Story() {
             Download full resume →
           </a>
           <div className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.22em] text-[var(--muted)]">
-            TypeScript · Go · Python · Node.js · FastAPI · AWS · RAG
+            TypeScript · React · Next.js · Node.js · Python · Go · FastAPI · CI/CD · QA
           </div>
         </div>
       </div>

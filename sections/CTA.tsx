@@ -29,7 +29,7 @@ export function CTA() {
       <div className="terminal-panel relative mx-auto max-w-4xl overflow-hidden p-6 md:p-10" data-reveal>
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-5 font-[family-name:var(--font-mono)] text-xs text-[var(--muted)]">
           <span className="text-[var(--accent)]">contact.ready</span>
-          <span>available for backend / AI infra roles</span>
+          <span>backend / AI preferred · open to full-stack / DevOps / frontend / QA</span>
         </div>
         <div className="pt-8 text-center">
           <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.28em] text-[var(--accent)]">

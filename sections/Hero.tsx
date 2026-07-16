@@ -11,31 +11,31 @@ import { useEffect, useRef, useState } from "react";
 const heroScrollStages = [
   {
     label: "01",
-    detail: "Platform foundations",
-    title: "Design the system before the service.",
-    body: "Architecture, API boundaries, data models, auth paths, scale assumptions, and failure modes are shaped before implementation gets clever.",
-    evidence: ["system design", "typed contracts", "secure defaults"],
+    detail: "Backend systems",
+    title: "Design reliable backend foundations.",
+    body: "APIs, data models, auth paths, system boundaries, scale assumptions, and failure modes are shaped before features get complex.",
+    evidence: ["backend", "system design", "typed APIs"],
   },
   {
     label: "02",
-    detail: "Distributed execution",
-    title: "Move work through reliable systems.",
-    body: "Queues, workers, schedulers, retries, and observability keep background workflows understandable in production.",
-    evidence: ["workers", "queues", "job orchestration"],
+    detail: "AI and automation",
+    title: "Make AI workflows usable in products.",
+    body: "Retrieval, agent APIs, automation jobs, tool execution, and guardrails are built as systems teams can operate.",
+    evidence: ["AI workflows", "RAG", "automation"],
   },
   {
     label: "03",
-    detail: "AI infrastructure",
-    title: "Make AI features measurable and operable.",
-    body: "Retrieval, agent APIs, evaluation hooks, and guardrails turn prototypes into systems that teams can trust.",
-    evidence: ["RAG", "agent APIs", "eval loops"],
+    detail: "Full-stack quality",
+    title: "Connect UI, services, and user paths.",
+    body: "React/Next.js flows, backend APIs, validation, QA checks, debugging, and regression thinking keep product behavior trustworthy.",
+    evidence: ["full-stack", "frontend", "QA"],
   },
   {
     label: "04",
-    detail: "Production delivery",
-    title: "Ship with DevOps and operations covered.",
-    body: "CI/CD, deployment paths, environment config, logs, monitoring, docs, and handoff details are part of the build, not afterthoughts.",
-    evidence: ["CI/CD", "deployments", "observability"],
+    detail: "DevOps and launch",
+    title: "Ship with operations covered.",
+    body: "CI/CD, deployments, environment config, logs, monitoring, docs, and handoff details are part of the build, not afterthoughts.",
+    evidence: ["DevOps", "CI/CD", "deployments"],
   },
 ];
 
@@ -122,19 +122,19 @@ export function Hero() {
             <p
               className={`mb-5 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.28em] text-[var(--accent)] transition duration-700 ${ready || reduced ? "opacity-100" : "opacity-0"}`}
             >
-              Backend · Systems · AI Infrastructure
+              Backend · AI · Full-stack · DevOps
             </p>
             <h1 className="max-w-4xl font-[family-name:var(--font-display)] text-4xl leading-[0.98] tracking-[-0.045em] text-[var(--fg)] sm:text-5xl md:text-6xl lg:text-7xl">
               {content.name}
             </h1>
             <p className="mt-5 max-w-3xl font-[family-name:var(--font-display)] text-xl leading-[1.16] tracking-tight text-[var(--fg)] md:text-3xl">
-              I build dependable backend and AI systems for real products.
+              I build backend and AI-heavy software that ships as real products.
             </p>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--fg)]/85 md:text-lg">
-              Focused on production APIs, distributed execution, retrieval pipelines, secure local-to-cloud workflows, and developer tooling that stays easy to operate.
+              Strongest in backend, systems, and AI workflows; also open to full-stack, frontend, DevOps, and QA roles where reliable delivery matters.
             </p>
             <p className="mt-4 max-w-2xl font-[family-name:var(--font-mono)] text-[11px] leading-5 text-[var(--muted)] md:text-xs">
-              TypeScript · Go · Python · Node.js · FastAPI · distributed systems · RAG · infrastructure tooling
+              TypeScript · Node.js · Python · Go · FastAPI · React · Next.js · RAG · CI/CD · testing
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button href={content.resumePath}>Download Resume</Button>

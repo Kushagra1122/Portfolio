@@ -13,7 +13,7 @@ export const welcomeLines: OutputLine[] = [
   },
   {
     type: "system",
-    content: "Kushagra Tiwari / Backend & AI Systems Engineer",
+    content: "Kushagra Tiwari / Backend + AI leaning Software Engineer",
     style: "bold",
   },
   {
@@ -89,7 +89,7 @@ ${content.title}
 
 ${content.tagline}
 
-Open to opportunities in backend, AI systems, and platform engineering.`,
+Backend and AI preferred; open to full-stack, frontend, DevOps, QA, systems, and product engineering roles.`,
 
   "about/about.txt": content.story.paragraphs.join("\n\n"),
 

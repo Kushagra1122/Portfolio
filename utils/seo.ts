@@ -12,7 +12,7 @@ export function organizationJsonLd() {
     "@type": "Person",
     name: siteConfig.name,
     url: siteConfig.url,
-    jobTitle: "Backend, Systems & AI Infrastructure Engineer",
+    jobTitle: "Software Engineer · Backend, AI, Full-Stack & DevOps",
     sameAs: [
       "https://github.com/Kushagra1122",
       "https://linkedin.com/in/kushagra-tiwari-aa2354283",
