@@ -18,7 +18,7 @@ export const welcomeLines: OutputLine[] = [
   },
   {
     type: "system",
-    content: "────────────────────────────────────────────────────────────",
+    content: "───────────────────────────────────────────────────────────",
   },
   { type: "system", content: "" },
   {
