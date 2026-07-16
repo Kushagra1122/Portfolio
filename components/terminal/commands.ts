@@ -9,16 +9,16 @@ export type OutputLine = {
 export const welcomeLines: OutputLine[] = [
   {
     type: "system",
-    content: "╭──────────────────────────────────────────────────────────────╮",
+    content: "portfolio-cli",
   },
   {
     type: "system",
-    content: "│  Portfolio CLI  —  Kushagra Tiwari · Software Engineer        │",
+    content: "Kushagra Tiwari / Backend & AI Systems Engineer",
     style: "bold",
   },
   {
     type: "system",
-    content: "╰──────────────────────────────────────────────────────────────╯",
+    content: "────────────────────────────────────────────────────────────",
   },
   { type: "system", content: "" },
   {
@@ -38,10 +38,10 @@ export const filesystem: Record<string, string[]> = {
   "~/portfolio": [
     "home/",
     "about/",
+    "education/",
     "experience/",
     "projects/",
     "skills/",
-    "education/",
     "contact/",
     "resume.pdf",
   ],
@@ -137,4 +137,4 @@ export const helpText = `COMMANDS
 
 DIRECTORIES
 ────────────────────────────────────────────────────────────
-  home/  about/  experience/  projects/  skills/  education/  contact/`;
+  home/  about/  education/  experience/  projects/  skills/  contact/`;

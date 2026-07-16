@@ -4,14 +4,14 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://kushagraportfolio12.netlify.app",
   name: "Kushagra Tiwari",
   description:
-    "Software engineer building event-driven systems, AI workflows, and production backends. Portfolio of Kushagra Tiwari.",
+    "Backend, systems, and AI infrastructure engineer building reliable platforms, retrieval systems, and developer tools. Portfolio of Kushagra Tiwari.",
   locale: "en_US",
 } as const;
 
 export const content: SiteContent = {
   name: "Kushagra Tiwari",
-  title: "Software Development Engineer",
-  tagline: "Event-driven systems. AI workflows. Production backends.",
+  title: "Backend, Systems & AI Infrastructure Engineer",
+  tagline: "Distributed systems. AI infrastructure. Production backends.",
   location: "India",
   email: "kushagratiwari24@gmail.com",
   phone: "+91 8318661731",
@@ -23,33 +23,47 @@ export const content: SiteContent = {
   ],
   story: {
     eyebrow: "About",
-    headline: "I design reliable systems that agents and humans can both trust.",
+    headline: "I build backend and AI systems that are fast, reliable, and safe to operate.",
     paragraphs: [
-      "I'm a Software Development Engineer focused on event-driven schedulers, AI orchestration, and secure desktop-to-cloud bridges. I care about latency, correctness, and APIs that stay predictable under load.",
-      "Recently I've shipped recurring job systems, SaaS connectors for AI search, retrieval pipelines that cut latency by 60%, and local-first memory engines with RAG.",
+      "I'm a backend and systems engineer focused on production APIs, distributed automation, AI product infrastructure, and secure desktop-to-cloud bridges. I care about latency, correctness, and systems that stay predictable under load.",
+      "Recently I've shipped automation engines, SaaS connectors for AI search, retrieval pipelines that cut latency by 60%, and local-first memory systems powered by RAG.",
       "I study Electrical and Electronics Engineering at NITK Surathkal, and I build in TypeScript, Go, Python, and systems tooling every day.",
     ],
   },
   experience: [
     {
       company: "Magi",
-      role: "Software Development Engineer Intern",
-      period: "Apr 2026 – Present",
-      location: "Remote",
+      role: "SDE Intern",
+      period: "Apr 2026 – Present · 4 mos",
+      location: "San Francisco Bay Area · Remote",
       summary:
-        "Event-driven scheduling and AI workflow APIs exposed as MCP tools.",
+        "Backend automation platform for AI workflows, production jobs, and agent-facing APIs.",
       highlights: [
-        "Built an event-driven scheduler for recurring jobs, delayed execution, distributed automation, contextual dispatch, and retries.",
-        "Integrated scheduler execution with a workflow orchestrator for task chaining, workflow state, and agent-triggered jobs.",
+        "Built a distributed automation layer for recurring jobs, delayed execution, contextual dispatch, and retries.",
+        "Integrated job execution with workflow orchestration for task chaining, workflow state, and agent-triggered operations.",
         "Designed backend APIs for AI generation workflows, competitive intelligence, content pipelines, and job lifecycle state.",
-        "Exposed workflows as MCP tools so agents can discover APIs, validate inputs, and execute backend capabilities.",
+        "Created structured tool interfaces so agents can discover capabilities, validate inputs, and execute backend operations safely.",
       ],
     },
     {
-      company: "PipesHub",
-      role: "Software Development Engineer Intern",
-      period: "Jan 2026 – Jun 2026",
-      location: "Remote",
+      company: "Spoken Tutorial",
+      role: "AI Intern",
+      period: "Dec 2025 – Present · 8 mos",
+      location: "Mumbai, Maharashtra, India · Remote",
+      summary:
+        "AI internship across educational agents, course intelligence, and secure internal tooling.",
+      highlights: [
+        "Designed and deployed educational AI workflows for personalized course outline generation.",
+        "Engineered context-aware conversational agents supporting multi-turn academic guidance.",
+        "Implemented secure internal tooling with authentication and domain-level access controls.",
+        "Optimized agent workflows and prompt routing for faster, more relevant responses.",
+      ],
+    },
+    {
+      company: "Pipeshub",
+      role: "SDE Intern",
+      period: "Dec 2025 – Jun 2026 · 7 mos",
+      location: "San Francisco, California, United States · Remote",
       summary:
         "Production SaaS connectors and a secure Electron filesystem bridge.",
       highlights: [
@@ -61,9 +75,9 @@ export const content: SiteContent = {
     },
     {
       company: "Acredge",
-      role: "Software Development Engineer Intern",
-      period: "Nov 2025 – Apr 2026",
-      location: "Remote",
+      role: "SDE Intern",
+      period: "Nov 2025 – Apr 2026 · 6 mos",
+      location: "Gurugram, Haryana, India · Remote",
       summary:
         "Retrieval, ranking, and real-estate AI orchestration at production scale.",
       highlights: [
@@ -74,10 +88,10 @@ export const content: SiteContent = {
       ],
     },
     {
-      company: "LeastActions",
-      role: "Software Development Engineer Intern",
-      period: "Oct 2025 – Feb 2026",
-      location: "Remote",
+      company: "LeastAction Labs",
+      role: "Software Engineer",
+      period: "Oct 2025 – Feb 2026 · 5 mos",
+      location: "Vancouver, British Columbia, Canada · Remote",
       summary:
         "Sandboxed code execution APIs and AWS production hardening.",
       highlights: [
@@ -85,6 +99,59 @@ export const content: SiteContent = {
         "Designed modular API contracts, validation layers, and request flows to reduce regressions.",
         "Deployed services on AWS EC2 with CI/CD, Nginx reverse proxying, and process management.",
         "Improved reliability by refining APIs, simplifying deployments, and debugging runtime failures.",
+      ],
+    },
+    {
+      company: "Bait AI",
+      role: "Freelance Developer",
+      period: "Dec 2025 – Jan 2026 · 2 mos",
+      location: "Remote",
+      summary:
+        "AI-powered interview platform with speech transcription, media storage, and structured interview workflows.",
+      highlights: [
+        "Developed an AI-powered interview system using Django for backend orchestration and API management.",
+        "Integrated OpenAI Whisper with PCM16 audio pipelines for accurate real-time speech-to-text transcription.",
+        "Designed scalable media storage using Google Cloud Storage for interview audio and metadata.",
+        "Implemented end-to-end interview workflows covering capture, transcription, and response persistence.",
+      ],
+    },
+    {
+      company: "Qlue",
+      role: "iOS Developer",
+      period: "Jun 2025 – Aug 2025 · 3 mos",
+      location: "Remote",
+      summary:
+        "Native iOS application work across UIKit, SwiftUI, authentication, notifications, and performance.",
+      highlights: [
+        "Built native iOS application features using Swift, UIKit, and SwiftUI following MVVM architecture.",
+        "Integrated REST APIs, authentication flows, and persistent local storage.",
+        "Worked across notification flows, app performance, memory usage, and UI responsiveness.",
+      ],
+    },
+    {
+      company: "Advista.live",
+      role: "Frontend Developer",
+      period: "Jan 2025 – Feb 2025 · 2 mos",
+      location: "Remote",
+      summary:
+        "Responsive React interfaces translated from Figma with performance-conscious routing and state management.",
+      highlights: [
+        "Built modular, responsive UI with React.js and Tailwind CSS.",
+        "Optimized performance using code splitting, lazy loading, and refined routing.",
+        "Transformed Figma designs into interactive interfaces with efficient state management.",
+      ],
+    },
+    {
+      company: "Synkerr",
+      role: "Web Developer",
+      period: "May 2024 – Oct 2024 · 6 mos",
+      location: "Remote",
+      summary:
+        "Web development internship across responsive interfaces, frontend implementation, and product-facing pages.",
+      highlights: [
+        "Built responsive web pages and reusable UI sections for product experiences.",
+        "Implemented frontend layouts with attention to cross-device behavior and interaction polish.",
+        "Collaborated on iterative improvements to page structure, styling, and user-facing content.",
       ],
     },
   ],
@@ -101,7 +168,7 @@ export const content: SiteContent = {
         "OpenAPI 3.1 generation, docs UIs, RFC 9457 problem details, and testing helpers.",
       ],
       technologies: ["Go", "net/http", "OpenAPI 3.1", "CLI", "Validation"],
-      github: "https://github.com/Kushagra1122",
+      github: "https://github.com/Kushagra1122/gapi",
     },
     {
       title: "VaultLens",
@@ -115,7 +182,7 @@ export const content: SiteContent = {
         "Retrieval tracing, task extraction, timeline reconstruction, and memory workflows.",
       ],
       technologies: ["Electron", "TypeScript", "SQLite", "RAG", "Embeddings"],
-      github: "https://github.com/Kushagra1122",
+      github: "https://github.com/Kushagra1122/VaultLens",
     },
     {
       title: "PokeShoot",
@@ -123,10 +190,26 @@ export const content: SiteContent = {
         "Real-time multiplayer game with Phaser.js, Socket.io, and Moonbeam NFT contracts.",
       period: "Oct 2025 – Nov 2025",
       highlights: [
-        "ELO ranking, SIWE auth, IPFS storage, and XCM cross-chain NFT transfers.",
+        "Built low-latency multiplayer gameplay loops with Phaser.js rendering and Socket.io event synchronization.",
+        "Implemented SIWE authentication, ELO ranking, player state, and realtime room/session management.",
+        "Integrated Moonbeam smart contracts, IPFS asset storage, and XCM cross-chain NFT transfer flows.",
       ],
       technologies: ["React", "Phaser.js", "Node.js", "Solidity", "Moonbeam"],
-      github: "https://github.com/Kushagra1122/PokeShoot",
+      github: "https://github.com/Kushagra1122/Pokeshoot",
+    },
+    {
+      title: "ReplayX",
+      description:
+        "Codex-first incident response system that turns production failures into diagnosis, fixes, verification plans, and postmortems.",
+      period: "Apr 2026",
+      highlights: [
+        "Built an incident orchestration pipeline covering intake, skill matching, repro, diagnosis, challenger review, fix planning, and artifact generation.",
+        "Implemented a Next.js dashboard with replay and live-run modes so incidents can be visualized safely during demos.",
+        "Added Slack intake and WebSocket updates to move incidents from report to structured engineering workflow.",
+        "Generated reusable incident knowledge, postmortems, and verification plans from each analyzed failure.",
+      ],
+      technologies: ["TypeScript", "Next.js", "WebSockets", "Slack", "Codex SDK"],
+      github: "https://github.com/Kushagra1122/ReplayX",
     },
     {
       title: "Approval Orchestrator",
@@ -134,7 +217,9 @@ export const content: SiteContent = {
         "Workflow automation with audit trails, rollback, and multi-channel approvals.",
       period: "Sep 2025 – Oct 2025",
       highlights: [
-        "Slack/Email/Web notifications, Recharts dashboard, cron-based retries.",
+        "Designed multi-step approval workflows with audit trails, rollback paths, and stateful decision history.",
+        "Implemented Slack, email, and web notification channels for approval routing and operational visibility.",
+        "Built retry scheduling, cron-based recovery, and a Recharts dashboard for workflow monitoring.",
       ],
       technologies: ["Node.js", "React", "SQLite", "Socket.io"],
       github: "https://github.com/Kushagra1122/approval-orchestrator",
@@ -145,7 +230,9 @@ export const content: SiteContent = {
         "Low-latency real-time video streaming with chat, donations, and WebRTC.",
       period: "Mar 2025 – Jul 2025",
       highlights: [
-        "Concurrent streams, screen sharing, and improved WebRTC signaling.",
+        "Built WebRTC-based live streaming with concurrent rooms, chat, donations, and screen-sharing workflows.",
+        "Improved signaling reliability with Socket.io session events, peer negotiation handling, and reconnect-aware flows.",
+        "Designed Node.js and MongoDB backend paths for stream metadata, chat persistence, and creator interactions.",
       ],
       technologies: ["Node.js", "React", "MongoDB", "WebRTC", "Socket.io"],
       github: "https://github.com/Kushagra1122/StreamSync",
@@ -162,7 +249,7 @@ export const content: SiteContent = {
     },
     {
       label: "AI",
-      items: ["RAG", "AI Agents", "MCP", "LangChain", "LangGraph", "Tool Calling", "Embeddings", "Vector Search"],
+      items: ["RAG", "AI Agents", "Agent APIs", "LangChain", "LangGraph", "Tool Calling", "Embeddings", "Vector Search"],
     },
     {
       label: "Systems",
@@ -190,7 +277,7 @@ export const content: SiteContent = {
     },
   ],
   cta: {
-    headline: "Let's build something precise.",
-    body: "Open to full-time and internship opportunities in backend, AI systems, and platform engineering.",
+    headline: "Let’s build something robust.",
+    body: "Open to full-time and internship opportunities across backend, AI infrastructure, developer tooling, and platform engineering.",
   },
 };

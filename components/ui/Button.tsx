@@ -16,26 +16,32 @@ export function Button({
   ...props
 }: Props) {
   const styles = cn(
-    "inline-flex items-center justify-center gap-2 rounded-sm px-5 py-3 text-sm font-medium tracking-wide transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]",
+    "inline-flex items-center justify-center gap-2 border px-5 py-3 font-[family-name:var(--font-mono)] text-xs font-medium uppercase tracking-[0.16em] transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]",
     variant === "primary" &&
-      "bg-[var(--accent)] text-[var(--bg)] hover:bg-[var(--accent-soft)]",
+      "border-[var(--accent)] bg-[var(--accent)] font-semibold hover:bg-[var(--accent-soft)]",
     variant === "ghost" &&
-      "bg-transparent text-[var(--fg)] hover:bg-white/5",
+      "border-transparent bg-transparent text-[var(--fg)] hover:border-white/15 hover:bg-white/5",
     variant === "outline" &&
       "border border-white/20 bg-transparent text-[var(--fg)] hover:border-[var(--accent)] hover:text-[var(--accent)]",
     className,
   );
+  const primaryStyle = variant === "primary" ? { color: "#03100d" } : undefined;
 
   if (href) {
     return (
-      <a href={href} className={styles}>
+      <a href={href} className={styles} style={primaryStyle}>
         {children}
       </a>
     );
   }
 
   return (
-    <button type="button" className={styles} {...props}>
+    <button
+      type="button"
+      className={styles}
+      {...props}
+      style={{ ...props.style, ...primaryStyle }}
+    >
       {children}
     </button>
   );

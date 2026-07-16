@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 const links = [
   { href: "#story", label: "About" },
+  { href: "#education", label: "Education" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
@@ -45,7 +46,7 @@ export function Nav({ onOpenTerminal }: Props) {
           href="#hero"
           className="font-[family-name:var(--font-display)] text-lg tracking-tight text-[var(--fg)]"
         >
-          {content.name.split(" ")[0]}
+          {content.name.split(" ")[0]}.dev
           <span className="text-[var(--accent)]">.</span>
         </a>
 
@@ -64,9 +65,9 @@ export function Nav({ onOpenTerminal }: Props) {
             <button
               type="button"
               onClick={onOpenTerminal}
-              className="rounded-sm border border-white/15 px-3 py-1.5 font-[family-name:var(--font-mono)] text-xs text-[var(--accent)] transition hover:border-[var(--accent)]"
+              className="border border-white/15 px-3 py-1.5 font-[family-name:var(--font-mono)] text-xs text-[var(--accent)] transition hover:border-[var(--accent)] hover:bg-[var(--accent)]/10"
             >
-              Terminal
+              ./terminal
             </button>
           </li>
           <li>

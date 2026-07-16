@@ -11,10 +11,10 @@ export default function HomePage() {
     <>
       <Hero />
       <Story />
+      <Education />
       <Experience />
       <Projects />
       <Skills />
-      <Education />
       <CTA />
     </>
   );

@@ -2,21 +2,26 @@
 @import "lenis/dist/lenis.css";
 
 :root {
-  --bg: #07090c;
-  --bg-elevated: #0c1016;
-  --fg: #e8edf2;
-  --muted: #8b97a8;
-  --accent: #2dd4bf;
-  --accent-soft: #5eead4;
-  --font-display: var(--font-syne);
-  --font-sans: var(--font-dm-sans);
+  --bg: #05070b;
+  --bg-elevated: #080c12;
+  --panel: rgba(11, 18, 28, 0.78);
+  --panel-strong: rgba(16, 27, 40, 0.88);
+  --line: rgba(255, 255, 255, 0.12);
+  --fg: #f5f7fb;
+  --muted: #9ca9bb;
+  --accent: #32f5d0;
+  --accent-soft: #8cfce8;
+  --violet: #8b5cf6;
+  --amber: #f59e0b;
+  --font-display: var(--font-jetbrains);
+  --font-sans: var(--font-jetbrains);
   --font-mono: var(--font-jetbrains);
 }
 
 @theme inline {
   --color-background: var(--bg);
   --color-foreground: var(--fg);
-  --font-sans: var(--font-dm-sans);
+  --font-sans: var(--font-jetbrains);
   --font-mono: var(--font-jetbrains);
 }
 
@@ -26,11 +31,88 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(50, 245, 208, 0.1), transparent 24rem),
+    radial-gradient(circle at 86% 6%, rgba(139, 92, 246, 0.1), transparent 30rem),
+    linear-gradient(180deg, #030509 0%, #070b11 48%, #040609 100%);
   color: var(--fg);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   min-height: 100%;
   overflow-x: hidden;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(rgba(50, 245, 208, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(50, 245, 208, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+.grain {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.35'/%3E%3C/svg%3E");
+  opacity: 0.18;
+  mix-blend-mode: soft-light;
+}
+
+.glass {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 42%),
+    var(--panel);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(20px);
+}
+
+.terminal-panel {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.115);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 38%),
+    linear-gradient(135deg, rgba(50, 245, 208, 0.055), transparent 42%),
+    rgba(4, 8, 14, 0.82);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 28px 90px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(18px);
+}
+
+.terminal-panel::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.035) 0,
+    rgba(255, 255, 255, 0.035) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  opacity: 0.18;
+  mix-blend-mode: soft-light;
+}
+
+.terminal-line {
+  border-left: 1px solid rgba(50, 245, 208, 0.25);
+  background: linear-gradient(90deg, rgba(50, 245, 208, 0.08), transparent 72%);
+}
+
+.signal-dot {
+  box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 62%, transparent);
+}
+
+.text-gradient {
+  background: linear-gradient(115deg, #ffffff 0%, #dffdf7 42%, var(--accent) 70%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 ::selection {

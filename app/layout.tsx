@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "Software Engineer",
     "Backend",
     "AI Agents",
-    "MCP",
+    "Platform Engineering",
     "Next.js",
     "Portfolio",
   ],

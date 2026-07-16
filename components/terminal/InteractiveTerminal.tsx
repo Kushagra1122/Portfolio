@@ -111,7 +111,7 @@ export function InteractiveTerminal({ open, onClose }: Props) {
                 <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
                 <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
                 <span className="ml-3 font-[family-name:var(--font-mono)] text-xs text-[var(--muted)]">
-                  portfolio — zsh
+                  portfolio-cli — zsh
                 </span>
               </div>
               <button

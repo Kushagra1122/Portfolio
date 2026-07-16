@@ -25,15 +25,18 @@ export function Education() {
       className="px-5 py-24 md:px-8 md:py-28"
     >
       <div className="mx-auto max-w-6xl">
-        <SectionHeading eyebrow="Education" title="Where I’m studying." />
+        <SectionHeading eyebrow="Education" title="Academic background." />
         {content.education.map((edu) => (
           <div
             key={edu.school}
             data-reveal
-            className="border-t border-white/10 pt-10 md:flex md:items-end md:justify-between"
+            className="terminal-panel overflow-hidden p-6 md:flex md:items-end md:justify-between md:p-8"
           >
             <div>
-              <h3 className="font-[family-name:var(--font-display)] text-2xl text-[var(--fg)] md:text-3xl">
+              <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.22em] text-[var(--accent)]">
+                current program
+              </p>
+              <h3 className="mt-3 font-[family-name:var(--font-display)] text-2xl text-[var(--fg)] md:text-3xl">
                 {edu.school}
               </h3>
               <p className="mt-2 text-[var(--muted)]">{edu.degree}</p>
