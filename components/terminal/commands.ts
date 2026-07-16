@@ -57,7 +57,7 @@ export const filesystem: Record<string, string[]> = {
 function experienceBlock() {
   return content.experience
     .map(
-      (job) => `${job.company} — ${job.role}
+      (job) => `${job.company} - ${job.role}
 ${job.period} · ${job.location}
 ${job.summary}
 ${job.highlights.map((h) => `  • ${h}`).join("\n")}`,

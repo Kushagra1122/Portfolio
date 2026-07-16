@@ -34,7 +34,7 @@ export function Nav({ onOpenTerminal }: Props) {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
         scrolled || open
-          ? "border-b border-white/10 bg-[var(--bg)]/80 backdrop-blur-md"
+          ? "border-b border-[var(--line)] bg-[var(--bg)]/86 backdrop-blur-md"
           : "bg-transparent",
       )}
     >
@@ -44,10 +44,9 @@ export function Nav({ onOpenTerminal }: Props) {
       >
         <a
           href="#hero"
-          className="font-[family-name:var(--font-display)] text-lg tracking-tight text-[var(--fg)]"
+          className="font-[family-name:var(--font-display)] text-lg tracking-[-0.035em] text-[var(--fg)]"
         >
-          {content.name.split(" ")[0]}.dev
-          <span className="text-[var(--accent)]">.</span>
+          {content.name}
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -65,9 +64,9 @@ export function Nav({ onOpenTerminal }: Props) {
             <button
               type="button"
               onClick={onOpenTerminal}
-              className="border border-white/15 px-3 py-1.5 font-[family-name:var(--font-mono)] text-xs text-[var(--accent)] transition hover:border-[var(--accent)] hover:bg-[var(--accent)]/10"
+              className="border border-[var(--line)] px-3 py-1.5 font-[family-name:var(--font-mono)] text-xs text-[var(--accent)] transition hover:border-[var(--accent)] hover:bg-[var(--fg)]/[0.04]"
             >
-              ./terminal
+              terminal
             </button>
           </li>
           <li>
@@ -104,7 +103,7 @@ export function Nav({ onOpenTerminal }: Props) {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden border-t border-white/10 md:hidden"
+            className="overflow-hidden border-t border-[var(--line)] md:hidden"
           >
             <ul className="flex flex-col gap-1 px-5 py-4">
               {links.map((link) => (

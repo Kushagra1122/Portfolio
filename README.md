@@ -1,4 +1,4 @@
-# Kushagra Tiwari — Cinematic Portfolio
+# Kushagra Tiwari - Cinematic Portfolio
 
 Premium personal portfolio built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, **GSAP ScrollTrigger**, **Lenis**, and **Framer Motion**.
 
@@ -68,7 +68,7 @@ The hero pins for ~2× viewport height. ScrollTrigger progress (0→1) maps to:
 video.currentTime = progress * video.duration
 ```
 
-- Video stays `muted` + `playsInline` and is never autoplayed as a timeline — only scrubbed.
+- Video stays `muted` + `playsInline` and is never autoplayed as a timeline, only scrubbed.
 - `matchMedia` shortens the pin distance on mobile.
 - Reduced motion: scrub is skipped; poster shows.
 
@@ -76,9 +76,9 @@ video.currentTime = progress * video.duration
 
 Current hero assets (well under 5MB initial payload):
 
-- `public/media/hero/hero.webm` — primary
-- `public/media/hero/hero.mp4` — fallback
-- `public/media/hero/poster.jpg` — LCP-friendly poster
+- `public/media/hero/hero.webm` - primary
+- `public/media/hero/hero.mp4` - fallback
+- `public/media/hero/poster.jpg` - LCP-friendly poster
 
 Guidelines when replacing:
 

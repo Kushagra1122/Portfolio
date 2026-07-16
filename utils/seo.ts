@@ -24,7 +24,7 @@ export function websiteJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: `${siteConfig.name} — Portfolio`,
+    name: `${siteConfig.name} - Portfolio`,
     url: siteConfig.url,
     description: siteConfig.description,
     inLanguage: "en",

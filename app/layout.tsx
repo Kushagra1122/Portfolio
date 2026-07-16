@@ -31,8 +31,8 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${content.name} — ${content.title}`,
-    template: `%s — ${content.name}`,
+    default: `${content.name} - ${content.title}`,
+    template: `%s - ${content.name}`,
   },
   description: siteConfig.description,
   keywords: [
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: siteConfig.locale,
     url: absoluteUrl("/"),
-    title: `${content.name} — ${content.title}`,
+    title: `${content.name} - ${content.title}`,
     description: siteConfig.description,
     siteName: `${content.name} Portfolio`,
     images: [
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${content.name} — ${content.title}`,
+    title: `${content.name} - ${content.title}`,
     description: siteConfig.description,
     images: [absoluteUrl("/media/hero/poster.jpg")],
   },

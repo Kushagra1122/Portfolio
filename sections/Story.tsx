@@ -1,75 +1,51 @@
-"use client";
-
-import { createTextMask } from "@/animations/factories";
-import { MaskedText } from "@/components/ui/MaskedText";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { content } from "@/content/site";
-import { useEffect, useRef } from "react";
 
 export function Story() {
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const section = ref.current;
-    if (!section) return;
-    createTextMask({
-      id: "story-mask",
-      trigger: section,
-      targets: section.querySelectorAll("[data-mask]"),
-    });
-  }, []);
-
   return (
     <section
       id="story"
-      ref={ref}
       className="relative overflow-hidden px-5 py-24 md:px-8 md:py-36"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_88%_10%,rgba(50,245,208,0.1),transparent_30rem)]" />
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr]">
+        <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
           <SectionHeading
             eyebrow={content.story.eyebrow}
             title={content.story.headline}
             className="mb-0"
           />
-          <div className="space-y-5 border-l border-[var(--accent)]/20 pl-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+          <div className="max-w-3xl space-y-6 border-l border-[var(--line)] pl-6 text-lg leading-8 text-[var(--muted)] md:text-xl md:leading-9">
             {content.story.paragraphs.map((p) => (
-              <MaskedText key={p.slice(0, 24)} as="p" data-mask className="block">
+              <p key={p.slice(0, 24)}>
                 {p}
-              </MaskedText>
+              </p>
             ))}
           </div>
         </div>
 
-        <div className="mt-14 grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-20 grid gap-10 border-y border-[var(--line)] py-10 md:grid-cols-3">
           {[
             [
-              "Full-stack product work",
-              "Building frontend flows, APIs, auth, validation, and database-backed features that feel cohesive from UI to service layer.",
+              "Shape",
+              "Clarify the system boundary, data model, and failure behavior before adding surface area.",
             ],
             [
-              "Systems and backend",
-              "Designing services, job runtimes, queues, retries, sync engines, and orchestration paths with clear failure behavior.",
+              "Build",
+              "Implement APIs, workers, sync paths, and product flows with typed contracts and reviewable seams.",
             ],
             [
-              "DevOps and delivery",
-              "Working with CI/CD, deployments, environment config, logs, monitoring, docs, and release handoff details.",
-            ],
-            [
-              "QA mindset",
-              "Testing user paths, debugging edge cases, improving observability, and keeping product behavior reliable under change.",
+              "Ship",
+              "Cover deployment, validation, debugging, and handoff details so the work survives production change.",
             ],
           ].map(([title, body]) => (
             <article
               key={title}
-              data-mask
-              className="bg-[var(--bg-elevated)] p-6 transition duration-300 hover:bg-[var(--accent)]/[0.035]"
+              className="max-w-sm"
             >
-              <p className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.22em] text-[var(--accent)]">
+              <p className="font-[family-name:var(--font-display)] text-3xl leading-none tracking-[-0.05em] text-[var(--fg)]">
                 {title}
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
+              <p className="mt-4 text-sm leading-6 text-[var(--muted)]">
                 {body}
               </p>
             </article>
@@ -80,11 +56,11 @@ export function Story() {
           <a
             href={content.resumePath}
             download
-            className="font-[family-name:var(--font-mono)] text-sm text-[var(--accent)] underline-offset-4 hover:underline"
+            className="text-sm font-semibold text-[var(--accent)] underline-offset-4 hover:underline"
           >
             Download full resume →
           </a>
-          <div className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.22em] text-[var(--muted)]">
+          <div className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.18em] text-[var(--muted-2)]">
             TypeScript · React · Next.js · Node.js · Python · Go · FastAPI · CI/CD · QA
           </div>
         </div>

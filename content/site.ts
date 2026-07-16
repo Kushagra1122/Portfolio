@@ -4,14 +4,14 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://kushagraportfolio12.netlify.app",
   name: "Kushagra Tiwari",
   description:
-    "Software engineer focused on backend systems and AI-enabled products, with full-stack, DevOps, QA, and frontend experience. Portfolio of Kushagra Tiwari.",
+    "Kushagra Tiwari is a software engineer building APIs, automation runtimes, retrieval systems, and reliable product infrastructure.",
   locale: "en_US",
 } as const;
 
 export const content: SiteContent = {
   name: "Kushagra Tiwari",
-  title: "Software Engineer · Backend, AI, Full-Stack & DevOps",
-  tagline: "Backend systems. AI workflows. Full-stack delivery.",
+  title: "Software Engineer · Backend Systems · Applied AI",
+  tagline: "Systems-minded software for products that need to keep working.",
   location: "India",
   email: "kushagratiwari24@gmail.com",
   phone: "+91 8318661731",
@@ -23,26 +23,25 @@ export const content: SiteContent = {
   ],
   story: {
     eyebrow: "About",
-    headline: "I build backend and AI-heavy software that is useful, reliable, and ready to ship.",
+    headline: "I work closest to the parts users rarely see, but always feel.",
     paragraphs: [
-      "I'm a software engineer strongest in backend systems, AI workflows, and platform-style product engineering, while staying comfortable across frontend, full-stack development, DevOps, and QA.",
-      "Recently I've shipped automation engines, SaaS connectors, retrieval pipelines, secure desktop-to-cloud bridges, and production tooling across TypeScript, Go, Python, and cloud-facing workflows.",
-      "I study Electrical and Electronics Engineering at NITK Surathkal, and I like roles where I can build, debug, test, deploy, and improve real product systems end to end.",
+      "I build service layers, automation runtimes, retrieval paths, and developer-facing tools across TypeScript, Go, and Python.",
+      "Recent work includes recurring job schedulers, SaaS connectors, local-first memory systems, secure desktop-to-cloud bridges, and AWS-backed services with CI/CD.",
+      "I'm studying Electrical and Electronics Engineering at NITK Surathkal, and I'm looking for software roles where I can own systems from design through launch.",
     ],
   },
   experience: [
     {
       company: "Magi",
-      role: "SDE Intern",
-      period: "Apr 2026 – Present · 4 mos",
-      location: "San Francisco Bay Area · Remote",
+      role: "Software Development Engineer Intern",
+      period: "Apr 2026 – Present",
+      location: "Remote",
       summary:
-        "Backend automation platform for AI workflows, production jobs, and agent-facing APIs.",
+        "Recurring automation, workflow state, and backend APIs for agent-triggered jobs.",
       highlights: [
-        "Built a distributed automation layer for recurring jobs, delayed execution, contextual dispatch, and retries.",
-        "Integrated job execution with workflow orchestration for task chaining, workflow state, and agent-triggered operations.",
-        "Designed backend APIs for AI generation workflows, competitive intelligence, content pipelines, and job lifecycle state.",
-        "Created structured tool interfaces so agents can discover capabilities, validate inputs, and execute backend operations safely.",
+        "Built an event-driven scheduler covering recurring jobs, delayed execution, contextual dispatch, retries, and recovery.",
+        "Integrated scheduler execution with a workflow orchestrator to chain tasks, manage workflow state, and launch agent-triggered jobs.",
+        "Designed REST APIs for competitive intelligence, content pipelines, job lifecycle management, and schema-validated MCP tools.",
       ],
     },
     {
@@ -51,54 +50,51 @@ export const content: SiteContent = {
       period: "Dec 2025 – Present · 8 mos",
       location: "Mumbai, Maharashtra, India · Remote",
       summary:
-        "AI internship across educational agents, course intelligence, and secure internal tooling.",
+        "Educational agent workflows, course generation, and secure internal tools.",
       highlights: [
-        "Designed and deployed educational AI workflows for personalized course outline generation.",
-        "Engineered context-aware conversational agents supporting multi-turn academic guidance.",
-        "Implemented secure internal tooling with authentication and domain-level access controls.",
+        "Designed course outline generation flows for personalized academic material.",
+        "Built context-aware conversational agents for multi-turn academic guidance.",
+        "Implemented internal tooling with authentication and domain-level access controls.",
         "Optimized agent workflows and prompt routing for faster, more relevant responses.",
       ],
     },
     {
-      company: "Pipeshub",
-      role: "SDE Intern",
-      period: "Dec 2025 – Jun 2026 · 7 mos",
-      location: "San Francisco, California, United States · Remote",
+      company: "PipesHub",
+      role: "Software Development Engineer Intern",
+      period: "Jan 2026 – Jun 2026",
+      location: "Remote",
       summary:
-        "Production SaaS connectors and a secure Electron filesystem bridge.",
+        "SaaS connectors and a secure Electron bridge between local files and cloud workflows.",
       highlights: [
-        "Built production-grade SaaS connectors for AI search, agents, workflow automation, and tool execution.",
-        "Engineered a secure Electron bridge for filesystem access, sandboxed execution, and desktop-to-cloud workflows.",
-        "Designed recursive file sync with delta tracking, resumability, conflict-safe writes, and failure recovery.",
-        "Implemented schema-driven LLM action validation for deterministic, safe tool execution.",
+        "Built SaaS connectors that linked enterprise apps with search, agents, workflow automation, and tool execution.",
+        "Designed an Electron bridge for filesystem access, sandboxed execution, host orchestration, and desktop-to-cloud workflows.",
+        "Built recursive file synchronization pipelines with delta tracking, resumability, conflict-safe writes, metadata handling, and failure recovery; applied schema-driven LLM action validation for deterministic tool execution.",
       ],
     },
     {
       company: "Acredge",
-      role: "SDE Intern",
-      period: "Nov 2025 – Apr 2026 · 6 mos",
-      location: "Gurugram, Haryana, India · Remote",
+      role: "Software Development Engineer Intern",
+      period: "Nov 2025 – Apr 2026",
+      location: "Remote",
       summary:
-        "Retrieval, ranking, and real-estate AI orchestration at production scale.",
+        "Retrieval latency work, orchestration flows, and recommendation pipelines for real-estate data.",
       highlights: [
-        "Reduced retrieval latency by 60% by parallelizing search pipelines and removing ranking bottlenecks.",
-        "Built an AI orchestration system for real-estate workflows using n8n, LLM APIs, ranking services, and webhooks.",
-        "Implemented Recombee pipelines for relevance ranking, personalization, and retrieval quality.",
-        "Resolved production bottlenecks across retrieval, orchestration, recommendations, and API response paths.",
+        "Reduced retrieval latency by 60% by parallelizing search pipelines, optimizing ranking stages, and eliminating API response bottlenecks.",
+        "Built an orchestration system for real-estate workflows using n8n, LLM APIs, automation tools, and webhooks.",
+        "Executed recommendation pipelines using graph databases to enable relevance ranking, personalization, behavioral recommendations, and improved retrieval quality.",
       ],
     },
     {
-      company: "LeastAction Labs",
-      role: "Software Engineer",
-      period: "Oct 2025 – Feb 2026 · 5 mos",
-      location: "Vancouver, British Columbia, Canada · Remote",
+      company: "LeastActions",
+      role: "Software Development Engineer Intern",
+      period: "Oct 2025 – Feb 2026",
+      location: "Remote",
       summary:
-        "Sandboxed code execution APIs and AWS production hardening.",
+        "Sandboxed execution APIs, collaborative IDE workflows, and AWS deployment work.",
       highlights: [
-        "Built backend APIs for sandboxed code execution, collaborative IDE workflows, and job results.",
-        "Designed modular API contracts, validation layers, and request flows to reduce regressions.",
-        "Deployed services on AWS EC2 with CI/CD, Nginx reverse proxying, and process management.",
-        "Improved reliability by refining APIs, simplifying deployments, and debugging runtime failures.",
+        "Built backend APIs for sandboxed code execution and collaborative IDE workflows, including workspace state, execution metadata, and job results.",
+        "Structured modular API contracts, validation layers, and request-state flows to improve service stability and reduce regressions.",
+        "Deployed services to AWS EC2 through CI/CD pipelines, configuring Linux, Nginx, reverse proxying, and production process management.",
       ],
     },
     {
@@ -107,9 +103,9 @@ export const content: SiteContent = {
       period: "Dec 2025 – Jan 2026 · 2 mos",
       location: "Remote",
       summary:
-        "AI-powered interview platform with speech transcription, media storage, and structured interview workflows.",
+        "Interview platform work across transcription, media storage, and structured capture flows.",
       highlights: [
-        "Developed an AI-powered interview system using Django for backend orchestration and API management.",
+        "Developed an interview system using Django for backend orchestration and API management.",
         "Integrated OpenAI Whisper with PCM16 audio pipelines for accurate real-time speech-to-text transcription.",
         "Designed scalable media storage using Google Cloud Storage for interview audio and metadata.",
         "Implemented end-to-end interview workflows covering capture, transcription, and response persistence.",
@@ -159,35 +155,35 @@ export const content: SiteContent = {
     {
       title: "Gapi",
       description:
-        "FastAPI-inspired Go framework with typed generic handlers, OpenAPI 3.1, and CLI tooling.",
+        "A Go web framework exploring typed handlers, OpenAPI 3.1 generation, validation, and CLI ergonomics.",
       period: "Jun 2026 – Jul 2026",
       featured: true,
       highlights: [
-        "Typed generic handlers, route helpers, middleware, groups, and idiomatic net/http.",
-        "Request binding for path, query, header, cookie, body with validation tags.",
-        "OpenAPI 3.1 generation, docs UIs, RFC 9457 problem details, and testing helpers.",
+        "Built on net/http with generic handlers, route groups, middleware, dependency injection, and type-safe routing APIs.",
+        "Added request binding and validation for path, query, header, cookie, and body parameters with validation tags and custom validators.",
+        "Implemented OpenAPI 3.1 generation, interactive API documentation, RFC 9457 problem details, response serialization, security metadata, testing helpers, and CLI tooling.",
       ],
-      technologies: ["Go", "net/http", "OpenAPI 3.1", "CLI", "Validation"],
-      github: "https://github.com/Kushagra1122/gapi",
+      technologies: ["Go", "net/http", "OpenAPI 3.1", "Generics", "Validation", "Dependency Injection", "CLI"],
+      github: "https://github.com/gapi-org/gapi",
     },
     {
       title: "VaultLens",
       description:
-        "Local-first AI memory engine with SQLite, embeddings, semantic retrieval, and citations.",
+        "A local-first memory engine that indexes desktop context with SQLite, embeddings, semantic search, and citations.",
       period: "May 2026 – Jun 2026",
       featured: true,
       highlights: [
-        "Private desktop indexing with vector embeddings and local storage.",
-        "RAG pipelines with chunking, metadata extraction, and evidence-grounded generation.",
-        "Retrieval tracing, task extraction, timeline reconstruction, and memory workflows.",
+        "Built a private, local-first memory engine using Electron, TypeScript, SQLite, vector embeddings, semantic search, and desktop content indexing.",
+        "Modeled RAG indexing and retrieval pipelines with chunking, metadata extraction, evidence-grounded generation, and source citations.",
+        "Launched retrieval tracing, task extraction, timeline reconstruction, and context-aware synthesis to transform indexed content into actionable memory workflows.",
       ],
-      technologies: ["Electron", "TypeScript", "SQLite", "RAG", "Embeddings"],
+      technologies: ["Electron", "TypeScript", "SQLite", "RAG", "Embeddings", "Vector Search"],
       github: "https://github.com/Kushagra1122/VaultLens",
     },
     {
       title: "PokeShoot",
       description:
-        "Real-time multiplayer game with Phaser.js, Socket.io, and Moonbeam NFT contracts.",
+        "A realtime multiplayer game built around low-latency rooms, player state, and on-chain asset flows.",
       period: "Oct 2025 – Nov 2025",
       highlights: [
         "Built low-latency multiplayer gameplay loops with Phaser.js rendering and Socket.io event synchronization.",
@@ -200,7 +196,7 @@ export const content: SiteContent = {
     {
       title: "ReplayX",
       description:
-        "Codex-first incident response system that turns production failures into diagnosis, fixes, verification plans, and postmortems.",
+        "An incident response workflow that turns failures into diagnosis, fix plans, verification notes, and postmortems.",
       period: "Apr 2026",
       highlights: [
         "Built an incident orchestration pipeline covering intake, skill matching, repro, diagnosis, challenger review, fix planning, and artifact generation.",
@@ -214,7 +210,7 @@ export const content: SiteContent = {
     {
       title: "Approval Orchestrator",
       description:
-        "Workflow automation with audit trails, rollback, and multi-channel approvals.",
+        "Approval workflow automation with audit history, rollback paths, retries, and multi-channel routing.",
       period: "Sep 2025 – Oct 2025",
       highlights: [
         "Designed multi-step approval workflows with audit trails, rollback paths, and stateful decision history.",
@@ -227,7 +223,7 @@ export const content: SiteContent = {
     {
       title: "StreamSync",
       description:
-        "Low-latency real-time video streaming with chat, donations, and WebRTC.",
+        "Realtime video streaming with WebRTC, chat, donations, room metadata, and reconnect-aware signaling.",
       period: "Mar 2025 – Jul 2025",
       highlights: [
         "Built WebRTC-based live streaming with concurrent rooms, chat, donations, and screen-sharing workflows.",
@@ -241,31 +237,27 @@ export const content: SiteContent = {
   skills: [
     {
       label: "Languages",
-      items: ["TypeScript", "JavaScript", "Python", "Go", "SQL", "C++", "Bash"],
+      items: ["Go", "TypeScript", "JavaScript", "Python", "SQL", "C++"],
     },
     {
-      label: "Backend",
-      items: ["Node.js", "NestJS", "Express.js", "FastAPI", "Django", "REST", "WebSockets", "JWT", "RBAC"],
+      label: "Backend and APIs",
+      items: ["Node.js", "NestJS", "Express.js", "FastAPI", "Django", "REST APIs", "WebSockets", "RBAC"],
     },
     {
       label: "AI",
-      items: ["RAG", "AI Agents", "Agent APIs", "LangChain", "LangGraph", "Tool Calling", "Embeddings", "Vector Search"],
+      items: ["Gen AI", "RAG", "AI Agents", "MCP", "LangChain", "LangGraph", "Tool Calling", "Embeddings", "Vector Search", "Semantic Search"],
     },
     {
-      label: "Systems",
-      items: ["Redis", "Kafka", "Celery", "BullMQ", "Job Queues", "Event-Driven Systems"],
+      label: "Systems and Data",
+      items: ["Distributed Systems", "Event-Driven Systems", "Async Workers", "Job Queues", "Cron Schedulers", "PostgreSQL", "MongoDB", "SQLite", "Redis", "Kafka", "Celery", "BullMQ", "Firebase"],
     },
     {
-      label: "Databases",
-      items: ["PostgreSQL", "MongoDB", "SQLite", "Redis", "Firebase", "Vector DBs"],
-    },
-    {
-      label: "DevOps",
-      items: ["Docker", "AWS EC2", "Linux", "Nginx", "GitHub Actions", "CI/CD"],
+      label: "Cloud and DevOps",
+      items: ["AWS EC2", "Docker", "Linux", "Nginx", "Git", "CI/CD"],
     },
     {
       label: "Frontend",
-      items: ["React", "Next.js", "Electron", "React Native", "Flutter", "Tailwind CSS"],
+      items: ["React", "Next.js", "Electron", "React Native", "Flutter", "Swift"],
     },
   ],
   education: [
@@ -277,7 +269,7 @@ export const content: SiteContent = {
     },
   ],
   cta: {
-    headline: "Let’s build something reliable.",
-    body: "Open to full-time and internship opportunities across frontend, backend, full-stack, DevOps, QA, systems, and product engineering.",
+    headline: "Bring me into the part of the product that has to hold.",
+    body: "Open to backend, software, and applied AI internships or new grad roles where ownership matters.",
   },
 };
