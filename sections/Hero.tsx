@@ -5,13 +5,49 @@ import { Button } from "@/components/ui/Button";
 import { content } from "@/content/site";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { openTerminal } from "@/utils/terminalEvents";
+import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
+
+const heroScrollStages = [
+  {
+    label: "01",
+    detail: "Platform foundations",
+    title: "Design the system before the service.",
+    body: "Architecture, API boundaries, data models, auth paths, scale assumptions, and failure modes are shaped before implementation gets clever.",
+    evidence: ["system design", "typed contracts", "secure defaults"],
+  },
+  {
+    label: "02",
+    detail: "Distributed execution",
+    title: "Move work through reliable systems.",
+    body: "Queues, workers, schedulers, retries, and observability keep background workflows understandable in production.",
+    evidence: ["workers", "queues", "job orchestration"],
+  },
+  {
+    label: "03",
+    detail: "AI infrastructure",
+    title: "Make AI features measurable and operable.",
+    body: "Retrieval, agent APIs, evaluation hooks, and guardrails turn prototypes into systems that teams can trust.",
+    evidence: ["RAG", "agent APIs", "eval loops"],
+  },
+  {
+    label: "04",
+    detail: "Production delivery",
+    title: "Ship with DevOps and operations covered.",
+    body: "CI/CD, deployment paths, environment config, logs, monitoring, docs, and handoff details are part of the build, not afterthoughts.",
+    evidence: ["CI/CD", "deployments", "observability"],
+  },
+];
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const progressRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef(0);
   const reduced = usePrefersReducedMotion();
   const [ready, setReady] = useState(false);
+  const [activeStage, setActiveStage] = useState(0);
+  const selectedStage = heroScrollStages[activeStage];
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -29,6 +65,18 @@ export function Hero() {
       end: "+=220%",
       pin: true,
       onReady: () => setReady(true),
+      onUpdate: (progress) => {
+        progressRef.current?.style.setProperty("--hero-progress", `${progress * 100}%`);
+
+        const nextStage = Math.min(
+          heroScrollStages.length - 1,
+          Math.floor(progress * heroScrollStages.length),
+        );
+        if (nextStage !== stageRef.current) {
+          stageRef.current = nextStage;
+          setActiveStage(nextStage);
+        }
+      },
     });
 
     return () => {
@@ -69,26 +117,26 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 flex h-full items-center px-5 pt-16 md:px-8">
-        <div className="relative mx-auto w-full max-w-6xl">
-          <div className="max-w-4xl">
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_360px] xl:grid-cols-[minmax(0,1fr)_400px]">
+          <div className="max-w-3xl">
             <p
               className={`mb-5 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.28em] text-[var(--accent)] transition duration-700 ${ready || reduced ? "opacity-100" : "opacity-0"}`}
             >
               Backend · Systems · AI Infrastructure
             </p>
-            <h1 className="max-w-4xl font-[family-name:var(--font-display)] text-5xl leading-[0.95] tracking-[-0.055em] text-[var(--fg)] sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="max-w-4xl font-[family-name:var(--font-display)] text-4xl leading-[0.98] tracking-[-0.045em] text-[var(--fg)] sm:text-5xl md:text-6xl lg:text-7xl">
               {content.name}
             </h1>
-            <p className="mt-6 max-w-3xl font-[family-name:var(--font-display)] text-2xl leading-[1.12] tracking-tight text-[var(--fg)] md:text-4xl">
+            <p className="mt-5 max-w-3xl font-[family-name:var(--font-display)] text-xl leading-[1.16] tracking-tight text-[var(--fg)] md:text-3xl">
               I build dependable backend and AI systems for real products.
             </p>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--fg)]/85 md:text-xl">
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--fg)]/85 md:text-lg">
               Focused on production APIs, distributed execution, retrieval pipelines, secure local-to-cloud workflows, and developer tooling that stays easy to operate.
             </p>
-            <p className="mt-5 max-w-2xl font-[family-name:var(--font-mono)] text-xs leading-6 text-[var(--muted)] md:text-sm">
+            <p className="mt-4 max-w-2xl font-[family-name:var(--font-mono)] text-[11px] leading-5 text-[var(--muted)] md:text-xs">
               TypeScript · Go · Python · Node.js · FastAPI · distributed systems · RAG · infrastructure tooling
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3">
               <Button href={content.resumePath}>Download Resume</Button>
               <Button variant="outline" href="#contact">
                 Contact
@@ -97,23 +145,72 @@ export function Hero() {
                 Open Terminal
               </Button>
             </div>
-            <div className="mt-10 flex max-w-3xl flex-wrap gap-x-6 gap-y-3 border-t border-white/10 pt-5 font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[0.18em] text-[var(--muted)]">
-              {[
-                "Backend architecture",
-                "Distributed jobs",
-                "Retrieval systems",
-                "Secure execution",
-              ].map((item, index) => (
-                <span key={item} className={index === 0 ? "text-[var(--accent)]" : ""}>
-                  {item}
-                </span>
-              ))}
-            </div>
           </div>
 
-          <p className="absolute bottom-[-4.5rem] left-0 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.25em] text-[var(--muted)]">
-            Scroll for motion · Open terminal for an interactive resume
-          </p>
+          <aside
+            ref={progressRef}
+            className="hidden font-[family-name:var(--font-mono)] text-[9px] uppercase tracking-[0.16em] text-[var(--muted)] lg:block"
+            style={{ "--hero-progress": "0%" } as CSSProperties}
+            aria-label="Scroll inspection"
+          >
+            <div className="border border-white/10 bg-[#05080a]/72 p-4 shadow-[0_18px_56px_rgba(0,0,0,0.34)] backdrop-blur-md">
+              <div className="mb-3 flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-[9px] text-[var(--muted)]">Scroll inspection</p>
+                  <p className="mt-1 text-[var(--fg)]">{selectedStage.detail}</p>
+                </div>
+                <span className="text-[var(--accent)]">
+                  {String(activeStage + 1).padStart(2, "0")} / 04
+                </span>
+              </div>
+
+              <div className="relative h-px overflow-hidden bg-white/15">
+                <div className="h-full w-[var(--hero-progress)] bg-[var(--accent)] shadow-[0_0_18px_rgba(50,245,208,0.7)]" />
+              </div>
+
+              <div className="mt-4">
+                <div>
+                  <p className="normal-case tracking-[-0.02em] text-[var(--fg)] text-sm leading-snug">
+                    {selectedStage.title}
+                  </p>
+                  <p className="mt-2 max-w-2xl normal-case tracking-normal text-[11px] leading-5 text-[var(--fg)]/72">
+                    {selectedStage.body}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {selectedStage.evidence.map((item) => (
+                      <span
+                        key={item}
+                        className="border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[8px] text-[var(--fg)]/78"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-4 grid gap-2">
+                  {heroScrollStages.map((stage, index) => (
+                    <button
+                      key={stage.label}
+                      type="button"
+                      onClick={() => setActiveStage(index)}
+                      className={`group border px-2.5 py-2 text-left transition duration-300 ${
+                        index === activeStage
+                          ? "border-[var(--accent)]/60 bg-[var(--accent)]/10 text-[var(--fg)]"
+                          : "border-white/10 bg-white/[0.02] text-[var(--muted)] hover:border-white/25 hover:text-[var(--fg)]"
+                      }`}
+                      aria-label={`Show ${stage.detail}`}
+                    >
+                      <span className="text-[var(--accent)]">{stage.label}</span>
+                      <span className="ml-3 normal-case tracking-normal text-[9px] leading-4">
+                        {stage.detail}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>

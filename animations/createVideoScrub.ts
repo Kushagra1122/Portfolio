@@ -8,6 +8,7 @@ type VideoScrubOpts = {
   end?: string;
   pin?: boolean;
   onReady?: () => void;
+  onUpdate?: (progress: number) => void;
 };
 
 /**
@@ -21,6 +22,7 @@ export function createVideoScrub({
   end = "+=200%",
   pin = true,
   onReady,
+  onUpdate,
 }: VideoScrubOpts) {
   if (AnimationController.prefersReducedMotion) {
     video.pause();
@@ -53,7 +55,10 @@ export function createVideoScrub({
         scrub: 0.4,
         pin,
         anticipatePin: 1,
-        onUpdate: (self) => sync(self.progress),
+        onUpdate: (self) => {
+          sync(self.progress);
+          onUpdate?.(self.progress);
+        },
       },
     });
 
