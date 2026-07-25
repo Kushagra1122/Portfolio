@@ -35,7 +35,7 @@ export function Hero() {
         <div className="grain" />
       </div>
 
-      <div className="relative z-10 flex h-full items-center px-5 pt-16 md:px-8">
+      <div className="relative z-10 flex h-full items-start px-5 pt-28 md:items-center md:px-8 md:pt-16">
         <div className="mx-auto w-full max-w-6xl">
           <div className="max-w-4xl">
             <p
