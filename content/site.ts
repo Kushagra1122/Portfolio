@@ -1,7 +1,7 @@
 import type { SiteContent } from "@/types/content";
 
 export const siteConfig = {
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://kushagraportfolio12.netlify.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio.kushagratiwari.xyz",
   name: "Kushagra Tiwari",
   description:
     "Kushagra Tiwari is a software engineer building APIs, automation runtimes, retrieval systems, and reliable product infrastructure.",
