@@ -26,7 +26,7 @@ export const content: SiteContent = {
     headline: "I work closest to the parts users rarely see, but always feel.",
     paragraphs: [
       "I build service layers, automation runtimes, retrieval paths, and developer-facing tools across TypeScript, Go, and Python.",
-      "Recent work includes recurring job schedulers, SaaS connectors, local-first memory systems, secure desktop-to-cloud bridges, and AWS-backed services with CI/CD.",
+      "Recent work includes an MCP server with OAuth 2.0 and SSO, Google Chat and Slack apps, crash-safe file sync for an open-source AI platform, local-first memory systems, and AWS-backed services with CI/CD.",
       "I'm studying Electrical and Electronics Engineering at NITK Surathkal, and I'm looking for software roles where I can own systems from design through launch.",
     ],
   },
@@ -34,14 +34,14 @@ export const content: SiteContent = {
     {
       company: "Magi",
       role: "Software Development Engineer Intern",
-      period: "Apr 2026 – Present",
+      period: "Apr 2026 – Oct 2026",
       location: "Remote",
       summary:
-        "Recurring automation, workflow state, and backend APIs for agent-triggered jobs.",
+        "Google Chat and Slack apps, the platform MCP server, and notification delivery for an AI marketing platform.",
       highlights: [
-        "Built an event-driven scheduler covering recurring jobs, delayed execution, contextual dispatch, retries, and recovery.",
-        "Integrated scheduler execution with a workflow orchestrator to chain tasks, manage workflow state, and launch agent-triggered jobs.",
-        "Designed REST APIs for competitive intelligence, content pipelines, job lifecycle management, and schema-validated MCP tools.",
+        "Built the @Magi Google Chat and Slack apps (slash commands, @mentions, interactive cards) for briefs, brand audits, knowledge search, and approvals, on a transport-neutral Concierge layer so Chat, Slack, Asana, and the web app share one service; verified inbound requests via Google-signed JWTs.",
+        "Owned the platform's MCP server: 59 schema-validated tools across 8 domains with RBAC, secured by OAuth 2.0 (PKCE, refresh tokens, RFC 7591 dynamic client registration) and Microsoft Entra ID SSO.",
+        "Added room-scoped notification delivery with retry/backoff and permanent-failure cancellation, and shipped Sanity CMS, Asana, and competitive-intelligence agent integrations; 150+ commits across backend and frontend, backed by 850+ tests.",
       ],
     },
     {
@@ -61,40 +61,40 @@ export const content: SiteContent = {
     {
       company: "PipesHub",
       role: "Software Development Engineer Intern",
-      period: "Jan 2026 – Jun 2026",
+      period: "Dec 2025 – Apr 2026",
       location: "Remote",
       summary:
-        "SaaS connectors and a secure Electron bridge between local files and cloud workflows.",
+        "Electron desktop app, crash-safe file sync, and cloud connectors for an open-source AI platform.",
       highlights: [
-        "Built SaaS connectors that linked enterprise apps with search, agents, workflow automation, and tool execution.",
-        "Designed an Electron bridge for filesystem access, sandboxed execution, host orchestration, and desktop-to-cloud workflows.",
-        "Built recursive file synchronization pipelines with delta tracking, resumability, conflict-safe writes, metadata handling, and failure recovery; applied schema-driven LLM action validation for deterministic tool execution.",
+        "Merged 31 pull requests into an open-source AI platform (3.2k+ GitHub stars); owned the Electron desktop app, its build and packaging pipeline, and a WebSocket proxy gateway with path-based access control.",
+        "Engineered crash-safe local file synchronization using file watchers, a write-ahead journal, resumable batch cursors, deduplication windows, and poison-batch quarantine, feeding Python ingestion services; covered by 250+ tests.",
+        "Shipped 5 cloud storage connectors (AWS S3, GCS, Azure Blob, Azure Files, GitLab) with revision-based change detection, and added a CI integration-test workflow that gates every pull request.",
       ],
     },
     {
       company: "Acredge",
       role: "Software Development Engineer Intern",
-      period: "Nov 2025 – Apr 2026",
+      period: "Aug 2025 – Dec 2025",
       location: "Remote",
       summary:
-        "Retrieval latency work, orchestration flows, and recommendation pipelines for real-estate data.",
+        "Retrieval latency, WhatsApp and web assistant channels, and recommendations for real-estate search.",
       highlights: [
-        "Reduced retrieval latency by 60% by parallelizing search pipelines, optimizing ranking stages, and eliminating API response bottlenecks.",
-        "Built an orchestration system for real-estate workflows using n8n, LLM APIs, automation tools, and webhooks.",
-        "Executed recommendation pipelines using graph databases to enable relevance ranking, personalization, behavioral recommendations, and improved retrieval quality.",
+        "Cut property-search retrieval latency by 60% by parallelizing vector and keyword retrieval, collapsing ranking stages, and removing blocking external API calls.",
+        "Extended the AI property-enquiry assistant to website and WhatsApp channels using webhook-driven inbound message processing on the WhatsApp Business API.",
+        "Built personalized property recommendations on Recombee by streaming user–item interaction events, and automated workflows across Google Sheets, email, and internal APIs.",
       ],
     },
     {
-      company: "LeastActions",
+      company: "LeastAction Labs",
       role: "Software Development Engineer Intern",
-      period: "Oct 2025 – Feb 2026",
+      period: "Apr 2025 – Aug 2025",
       location: "Remote",
       summary:
-        "Sandboxed execution APIs, collaborative IDE workflows, and AWS deployment work.",
+        "Product surfaces, execution APIs, and AWS deployment for a self-hosted data workflow platform.",
       highlights: [
-        "Built backend APIs for sandboxed code execution and collaborative IDE workflows, including workspace state, execution metadata, and job results.",
-        "Structured modular API contracts, validation layers, and request-state flows to improve service stability and reduce regressions.",
-        "Deployed services to AWS EC2 through CI/CD pipelines, configuring Linux, Nginx, reverse proxying, and production process management.",
+        "Shipped 3 core product surfaces of a self-hosted data workflow platform in React: pipeline authoring, embedded editing, and live execution output.",
+        "Unified task orchestration behind a validated API contract to trigger and track sandboxed runs, returning workspace state, execution metadata, and job results.",
+        "Deployed the marketplace and core platform to production on AWS EC2 with containerized Docker builds and a CI/CD pipeline, configuring Nginx as the reverse proxy routing traffic to 2 Linux services.",
       ],
     },
     {
@@ -159,9 +159,9 @@ export const content: SiteContent = {
       period: "Jun 2026 – Jul 2026",
       featured: true,
       highlights: [
-        "Built on net/http with generic handlers, route groups, middleware, dependency injection, and type-safe routing APIs.",
-        "Added request binding and validation for path, query, header, cookie, and body parameters with validation tags and custom validators.",
-        "Implemented OpenAPI 3.1 generation, interactive API documentation, RFC 9457 problem details, response serialization, security metadata, testing helpers, and CLI tooling.",
+        "Built a zero-dependency Go web framework on the standard net/http stack, using generics for compile-time type-safe handlers, route groups, middleware, and dependency injection.",
+        "Auto-generated OpenAPI 3.1 specs and interactive API docs from typed handler definitions, with RFC 9457 problem-details error responses.",
+        "Implemented request binding and validation for path, query, header, cookie, and body parameters with custom validators; 43 tests including fuzzing and benchmarks.",
       ],
       technologies: ["Go", "net/http", "OpenAPI 3.1", "Generics", "Validation", "Dependency Injection", "CLI"],
       github: "https://github.com/gapi-org/gapi",
@@ -170,14 +170,14 @@ export const content: SiteContent = {
       title: "VaultLens",
       description:
         "A local-first memory engine that indexes desktop context with SQLite, embeddings, semantic search, and citations.",
-      period: "May 2026 – Jun 2026",
+      period: "May 2026",
       featured: true,
       highlights: [
-        "Built a private, local-first memory engine using Electron, TypeScript, SQLite, vector embeddings, semantic search, and desktop content indexing.",
-        "Modeled RAG indexing and retrieval pipelines with chunking, metadata extraction, evidence-grounded generation, and source citations.",
-        "Launched retrieval tracing, task extraction, timeline reconstruction, and context-aware synthesis to transform indexed content into actionable memory workflows.",
+        "Built a local-first RAG engine that indexes desktop files into SQLite + sqlite-vec for natural-language search using local embedding models via Ollama.",
+        "Implemented semantic chunking, metadata extraction, mandatory source citations, and task extraction to keep LLM answers grounded in indexed data.",
+        "Enforced filesystem isolation via path canonicalization, symlink-escape prevention, and credential-file exclusion, with per-query privacy receipts and 73 tests.",
       ],
-      technologies: ["Electron", "TypeScript", "SQLite", "RAG", "Embeddings", "Vector Search"],
+      technologies: ["Electron", "TypeScript", "SQLite", "sqlite-vec", "RAG", "Embeddings", "Ollama"],
       github: "https://github.com/Kushagra1122/VaultLens",
     },
     {
@@ -237,34 +237,38 @@ export const content: SiteContent = {
   skills: [
     {
       label: "Languages",
-      items: ["Go", "TypeScript", "JavaScript", "Python", "SQL", "C++"],
+      items: ["Go", "TypeScript", "JavaScript", "Python", "SQL", "C++", "Rust"],
     },
     {
       label: "Backend and APIs",
-      items: ["Node.js", "NestJS", "Express.js", "FastAPI", "Django", "REST APIs", "WebSockets", "RBAC"],
+      items: ["Node.js", "NestJS", "Express.js", "FastAPI", "Django", "REST APIs", "WebSockets", "gRPC", "Celery", "BullMQ", "OAuth 2.0", "SSO", "RBAC"],
     },
     {
       label: "AI",
-      items: ["Gen AI", "RAG", "AI Agents", "MCP", "LangChain", "LangGraph", "Tool Calling", "Embeddings", "Vector Search", "Semantic Search"],
+      items: ["MCP", "AI Agents", "LLM Tool Calling", "RAG", "Embeddings", "Vector Search", "Ollama", "LangChain", "LangGraph"],
     },
     {
-      label: "Systems and Data",
-      items: ["Distributed Systems", "Event-Driven Systems", "Async Workers", "Job Queues", "Cron Schedulers", "PostgreSQL", "MongoDB", "SQLite", "Redis", "Kafka", "Celery", "BullMQ", "Firebase"],
+      label: "Data and Messaging",
+      items: ["PostgreSQL", "Redis", "MongoDB", "SQLite", "Kafka", "Firebase"],
     },
     {
       label: "Cloud and DevOps",
-      items: ["AWS EC2", "Docker", "Linux", "Nginx", "Git", "CI/CD"],
+      items: ["AWS (EC2, S3)", "Azure", "GCP", "Docker", "Kubernetes", "Nginx", "Linux", "CI/CD", "GitHub Actions"],
     },
     {
-      label: "Frontend",
-      items: ["React", "Next.js", "Electron", "React Native", "Flutter", "Swift"],
+      label: "Frontend and Mobile",
+      items: ["React", "Next.js", "Electron", "Material UI", "React Native", "Flutter", "Swift"],
+    },
+    {
+      label: "Concepts",
+      items: ["System Design", "Distributed Systems", "Event-Driven Architecture", "TCP/IP", "DNS", "TLS", "Unit/Integration Testing"],
     },
   ],
   education: [
     {
       school: "National Institute of Technology Karnataka (NITK), Surathkal",
       degree: "B.Tech in Electrical and Electronics Engineering",
-      period: "Aug 2023 – Present",
+      period: "Aug 2023 – May 2027",
       detail: "CGPA: 7.14/10",
     },
   ],
